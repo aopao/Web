@@ -1,0 +1,44 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateAgentsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('agents', function (Blueprint $table) {
+            $table->string('username', 50)->nullable()->unique()->comment('也可用用户名登录,可不用');
+            $table->string('mobile', 11)->index()->unique()->comment('也可用手机号登录,可不用');
+            $table->string('password');
+            $table->string('nickname', 100)->nullable();
+            $table->string('avatar')->nullable();
+            $table->string('email', 50)->nullable();
+            $table->integer('qq')->nullable();
+            $table->string('register_ip', 15)->nullable();
+            $table->string('last_login_ip', 15)->nullable();
+            $table->string('last_login_time', 20)->nullable();
+            $table->boolean('status')->default(1)->comment('账户状态0:禁封,1:正常');
+            $table->string('verify_token', 128)->nullable()->comment('邮箱验证Token');
+            $table->boolean('email_is_active')->default(0)->comment('邮箱是否已经验证,默认不认证');
+            $table->rememberToken();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('agents');
+    }
+}
