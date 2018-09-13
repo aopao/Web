@@ -18,7 +18,6 @@ class CreateAdminsTable extends Migration
          */
         Schema::create('admins', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('account', 50)->nullable()->unique()->comment('也可用用户名登录,可不用');
             $table->string('mobile', 11)->index()->unique();
             $table->string('password');
             $table->string('nickname', 100)->nullable();

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Agent;
 
 /**
  * Class DashboardController
@@ -15,6 +15,7 @@ class DashboardController extends BaseController
      */
     public function __construct()
     {
+
     }
 
     /**
@@ -24,6 +25,6 @@ class DashboardController extends BaseController
      */
     public function index()
     {
-        return view('admin.dashboard.index');
+        return view('agent.dashboard.index');
     }
 }

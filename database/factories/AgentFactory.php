@@ -17,8 +17,7 @@ $factory->define(App\Models\Agent::class, function (Faker $faker) {
     static $password;
 
     return [
-        'username' => $faker->name,
-        'mobile' => '18978199938',
+        'mobile' => '18678199938',
         'password' => $password ?: $password = bcrypt('admin'),
         'nickname' => $faker->name,
         'email' => $faker->unique()->safeEmail,

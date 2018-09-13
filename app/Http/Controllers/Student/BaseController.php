@@ -1,12 +1,13 @@
 <?php
 /**
- * 后台所有管理模块的基类
+ * 学生所有管理模块的基类
  */
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Student;
 
 use App\Http\Controllers\Controller;
 
 class BaseController extends Controller
 {
+    //
 }

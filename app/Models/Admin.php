@@ -2,17 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Admin extends Authenticatable
 {
-    use Notifiable;
-
     protected $table = "admins";
 
     protected $fillable = [
-        'account',
         'mobile',
         'password',
         'nickname',
@@ -32,4 +28,9 @@ class Admin extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
+    }
 }

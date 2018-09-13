@@ -1,29 +1,30 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Student;
 
 /**
  * Class DashboardController
  *
- * @package App\Http\Controllers\Admin
+ * @package App\Http\Controllers\Student
  */
 class DashboardController extends BaseController
 {
     /**
-     * 管理后台首页构造函数
+     * 学生会员中心首页构造函数
      * DashboardController constructor.
      */
     public function __construct()
     {
+
     }
 
     /**
-     * 管理后台首页视图
+     * 学生会员中心首页视图
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
-        return view('admin.dashboard.index');
+        return view('student.dashboard.index');
     }
 }

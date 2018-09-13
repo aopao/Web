@@ -12,13 +12,11 @@ use Faker\Generator as Faker;
 | model instances for testing / seeding your application's database.
 |
 */
-
 $factory->define(App\Models\Admin::class, function (Faker $faker) {
     static $password;
 
     return [
-        'account' => $faker->name,
-        'mobile' => '18978199939',
+        'mobile' => '18678199939',
         'password' => $password ?: $password = bcrypt('admin'),
         'nickname' => $faker->name,
         'email' => $faker->unique()->safeEmail,

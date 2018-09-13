@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Student;
 
 use Auth;
 use Illuminate\Http\Request;
@@ -19,8 +19,8 @@ class LoginController extends BaseController
      */
     public function __construct()
     {
-        $this->middleware('guest:admin')->except('logout');
-        $this->redirectTo = config('admin.admin_prefix').'/dashboard';
+        $this->middleware('guest:student')->except('logout');
+        $this->redirectTo = config('student.student_prefix').'/dashboard';
     }
 
     /**
@@ -30,7 +30,7 @@ class LoginController extends BaseController
      */
     public function showLoginForm()
     {
-        return view('admin.login.show');
+        return view('student.login.show');
     }
 
     /**
@@ -45,7 +45,7 @@ class LoginController extends BaseController
         $request->session()->forget($this->guard()->getName());
         $request->session()->regenerate();
 
-        return redirect(config('admin.admin_prefix').'/login');
+        return redirect(config('student.student_prefix').'/login');
     }
 
     /**
@@ -55,7 +55,7 @@ class LoginController extends BaseController
      */
     protected function guard()
     {
-        return Auth::guard('admin');
+        return Auth::guard('student');
     }
 
     /**

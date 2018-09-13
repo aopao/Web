@@ -2,9 +2,35 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Agent extends Model
+class Agent extends Authenticatable
 {
-    //
+    protected $table = "agents";
+
+    protected $fillable = [
+        'mobile',
+        'password',
+        'nickname',
+        'avatar',
+        'email',
+        'qq',
+        'status',
+        'register_ip',
+        'login_number',
+        'last_login_ip',
+        'last_login_time',
+        'verify_token',
+        'email_is_active',
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
+    }
 }

@@ -6,11 +6,11 @@ use Auth;
 use Closure;
 
 /**
- * 后台管理模块中间件
+ * 学生会员中心管理模块中间件
  *
  * @package App\Http\Middleware
  */
-class AdminMiddleWare
+class StudentMiddleWare
 {
     /**
      * @param          $request
@@ -22,7 +22,7 @@ class AdminMiddleWare
     {
 
         if (! Auth::guard($guard)->check()) {
-            return redirect(config('admin.admin_prefix').'/login');
+            return redirect(config('student.student_prefix').'/login');
         }
 
         return $next($request);

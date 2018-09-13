@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Student_source_record extends Model
+class Student_score_record extends Model
 {
     //
 }

@@ -6,11 +6,11 @@ use Auth;
 use Closure;
 
 /**
- * 后台管理模块中间件
+ * 代理商管理模块中间件
  *
  * @package App\Http\Middleware
  */
-class AdminMiddleWare
+class AgentMiddleWare
 {
     /**
      * @param          $request
@@ -22,7 +22,7 @@ class AdminMiddleWare
     {
 
         if (! Auth::guard($guard)->check()) {
-            return redirect(config('admin.admin_prefix').'/login');
+            return redirect(config('agent.agent_prefix').'/login');
         }
 
         return $next($request);
