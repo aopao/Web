@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+#加载后台管理模块路由
+include_once __DIR__.'/admin.php';
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

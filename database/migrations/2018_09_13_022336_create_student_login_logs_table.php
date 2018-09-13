@@ -29,6 +29,6 @@ class CreateStudentLoginLogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('student_logs');
+        Schema::dropIfExists('student_login_logs');
     }
 }

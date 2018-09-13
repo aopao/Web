@@ -14,6 +14,7 @@ class CreateStudentsTable extends Migration
     public function up()
     {
         Schema::create('students', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('username', 50)->nullable()->unique()->comment('也可用用户名登录,可不用');
             $table->string('mobile', 11)->index()->unique()->comment('也可用手机号登录,可不用');
             $table->string('password');
@@ -24,6 +25,8 @@ class CreateStudentsTable extends Migration
             $table->string('verify_token', 128)->nullable()->comment('邮箱验证Token');
             $table->integer('plan_number')->default(0)->comment('学生总计数数');
             $table->boolean('email_is_active')->default(0)->comment('邮箱是否已经验证,默认不认证');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 

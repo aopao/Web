@@ -29,6 +29,6 @@ class CreateAdminLoginLogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admin_logs');
+        Schema::dropIfExists('admin_login_logs');
     }
 }

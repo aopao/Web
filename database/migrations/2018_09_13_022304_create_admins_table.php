@@ -17,6 +17,7 @@ class CreateAdminsTable extends Migration
          * 管理员表
          */
         Schema::create('admins', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('account', 50)->nullable()->unique()->comment('也可用用户名登录,可不用');
             $table->string('mobile', 11)->index()->unique();
             $table->string('password');
@@ -26,7 +27,7 @@ class CreateAdminsTable extends Migration
             $table->integer('qq')->nullable();
             $table->boolean('status')->default(1)->comment('账户状态0:禁封,1:正常');
             $table->string('register_ip', 15)->nullable();
-            $table->integer('login_number', 10)->default(0);
+            $table->integer('login_number')->default(0);
             $table->string('last_login_ip', 15)->nullable();
             $table->string('last_login_time', 20)->nullable();
             $table->string('verify_token', 128)->nullable()->comment('邮箱验证Token');

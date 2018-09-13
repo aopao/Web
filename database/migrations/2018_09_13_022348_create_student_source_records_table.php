@@ -41,6 +41,6 @@ class CreateStudentSourceRecordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('student_source_records');
+        Schema::dropIfExists('student_score_records');
     }
 }

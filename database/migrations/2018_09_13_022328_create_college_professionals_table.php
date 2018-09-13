@@ -29,6 +29,6 @@ class CreateCollegeProfessionalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('college_majors');
+        Schema::dropIfExists('college_professionals');
     }
 }

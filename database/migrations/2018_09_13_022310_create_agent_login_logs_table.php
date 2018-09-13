@@ -29,6 +29,6 @@ class CreateAgentLoginLogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('agent_logs');
+        Schema::dropIfExists('agent_login_logs');
     }
 }

@@ -30,6 +30,6 @@ class CreateProfessionalCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('major_categories');
+        Schema::dropIfExists('professional_categories');
     }
 }

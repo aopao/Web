@@ -17,11 +17,10 @@ $factory->define(App\Models\Student::class, function (Faker $faker) {
     static $password;
 
     return [
-        'account' => $faker->name,
+        'username' => $faker->name,
         'mobile' => '18978199937',
         'password' => $password ?: $password = bcrypt('admin'),
         'nickname' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
         'remember_token' => str_random(10),
     ];
 });

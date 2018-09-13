@@ -38,6 +38,6 @@ class CreateCollegeAdmitScoresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('college_admit_scoures');
+        Schema::dropIfExists('college_admit_scores');
     }
 }
