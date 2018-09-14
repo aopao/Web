@@ -19,4 +19,5 @@ Route::namespace('Admin')->prefix(ADMIN_PREFIX)->middleware('AdminAuth:admin')->
     Route::get('/', 'DashboardController@index')->name('admin.index');
     Route::get('/dashboard', 'DashboardController@index')->name('admin.dashboard');
     Route::post('/logout', 'LoginController@logout')->name('admin.logout');
+    Route::resource('/admin', 'AdminController');
 });

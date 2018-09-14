@@ -26,6 +26,8 @@ class Admin extends Authenticatable
 
     protected $hidden = [
         'password',
+        'register_ip',
+        'verify_token',
         'remember_token',
     ];
 
