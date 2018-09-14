@@ -30,7 +30,12 @@ class AdminRepository extends Repository
      */
     public function findBy($id)
     {
-        return $this->model->where('id', $id)->first()->toArray();
+        return $this->model->where('id', $id)->first();
+    }
+
+    public function findOrFail($id)
+    {
+        return $this->model->findOrFail($id);
     }
 
     /**
