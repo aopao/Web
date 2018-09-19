@@ -31,6 +31,17 @@ class DashboardController extends BaseController
      */
     public function index()
     {
+
         return view('admin.dashboard.index');
+    }
+
+    /**
+     * 管理后台右侧首页视图
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function show()
+    {
+        return view("admin.dashboard.show");
     }
 }

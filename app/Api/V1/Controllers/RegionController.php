@@ -41,6 +41,32 @@ class RegionController extends BaseController
     }
 
     /**
+     * 临时使用
+     * 临时生成所有城市的 ID
+     */
+    public function Js()
+    {
+        $data = [];
+        $provinces = $this->province->getAllProvinces();
+        foreach ($provinces as $key => $value) {
+            $data[$key]['value'] = "{$value['id']}";
+            $data[$key]['text'] = $value['province_name'];
+            $cities = $this->province->getAllCityByProvinceId($value['id']);
+            foreach ($cities as $ke => $va) {
+                $data[$key]['children'][$ke]['value'] = "{$va['id']}";
+                $data[$key]['children'][$ke]['text'] = $va['city_name'];
+                $areas = $this->province->getAllAreaByCityId($va['id']);
+                foreach ($areas as $k => $v) {
+                    $data[$key]['children'][$ke]['children'][$k]['value'] = "{$v['id']}";
+                    $data[$key]['children'][$ke]['children'][$k]['text'] = $v['area_name'];
+                }
+            }
+        }
+
+        return $data;
+    }
+
+    /**
      * 获取所有省份
      *
      * @throws \ErrorException

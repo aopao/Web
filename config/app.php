@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'zh-cn',
 
     /*
     |--------------------------------------------------------------------------
@@ -180,6 +180,8 @@ return [
           * Our Service Providers...
           */
         Aopao\Region\RegionServiceProvider::class,
+        Jenssegers\Agent\AgentServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class,
 
     ],
 
@@ -230,11 +232,12 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         /**
-         * 自定义中间件
+         * 自定义Facade
          */
         'AdminAuth' => \App\Http\Middleware\AdminMiddleWare::class,
         'AgentAuth' => \App\Http\Middleware\AgentMiddleWare::class,
         'StudentAuth' => \App\Http\Middleware\StudentMiddleWare::class,
+        'Ip' => 'Zhuzhichao\IpLocationZh\Ip',
     ],
 
 ];

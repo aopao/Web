@@ -10,7 +10,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Agent Module Config Setting
+    | Agent Module Config Config
     |--------------------------------------------------------------------------
     */
     'agent_prefix' => env('AGENT_PREFIX', "agent"),

@@ -30,9 +30,4 @@ class Admin extends Authenticatable
         'verify_token',
         'remember_token',
     ];
-
-    public function setPasswordAttribute($password)
-    {
-        $this->attributes['password'] = bcrypt($password);
-    }
 }

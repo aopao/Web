@@ -15,10 +15,11 @@ class CreateCollegesTable extends Migration
     {
         Schema::create('colleges', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('college_id')->index();
             $table->string('college_name', 100)->index();
             $table->string('college_english_name', 200)->unllable()->comment('学校英文名称');
             $table->integer('college_rank')->comment('学校排名');
-            $table->integer('province_id')->index();
+            $table->integer('province_id')->default(0)->index();
             $table->integer('city_id')->unllable()->index();
             $table->integer('college_level_id')->unllable()->index()->comment('层次|eg:本科/大专');
             $table->integer('college_category_id')->unllable()->index()->comment('科类|eg:工科类');

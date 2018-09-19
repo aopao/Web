@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
 use App\Http\Requests\AdminRequest;
 use App\Repositories\Eloquent\AdminRepository;
-use Illuminate\Http\Request;
 
 class AdminController extends BaseController
 {

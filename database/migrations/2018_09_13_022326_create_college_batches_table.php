@@ -18,7 +18,7 @@ class CreateCollegeBatchesTable extends Migration
             $table->integer('college_id')->index();
             $table->string('batch_name', 50)->index();
             $table->integer('year')->default(0);
-            $table->string('description')->default('');
+            $table->string('description')->nullable();
             $table->timestamps();
         });
     }

@@ -1,0 +1,54 @@
+[
+  {
+    "category_name": "综合类",
+    "created_at": "2018-09-18 12:31:22"
+  },
+  {
+    "category_name": "财经类",
+    "created_at": "2018-09-18 12:31:22"
+  },
+  {
+    "category_name": "农林类",
+    "created_at": "2018-09-18 12:31:22"
+  },
+  {
+    "category_name": "理工类",
+    "created_at": "2018-09-18 12:31:22"
+  },
+  {
+    "category_name": "师范类",
+    "created_at": "2018-09-18 12:31:22"
+  },
+  {
+    "category_name": "民族类",
+    "created_at": "2018-09-18 12:31:22"
+  },
+  {
+    "category_name": "体育类",
+    "created_at": "2018-09-18 12:31:22"
+  },
+  {
+    "category_name": "语言类",
+    "created_at": "2018-09-18 12:31:22"
+  },
+  {
+    "category_name": "艺术类",
+    "created_at": "2018-09-18 12:31:22"
+  },
+  {
+    "category_name": "政法类",
+    "created_at": "2018-09-18 12:31:22"
+  },
+  {
+    "category_name": "军事类",
+    "created_at": "2018-09-18 12:31:22"
+  },
+  {
+    "category_name": "医药类",
+    "created_at": "2018-09-18 12:31:22"
+  },
+  {
+    "category_name": "其他",
+    "created_at": "2018-09-18 12:31:22"
+  }
+]

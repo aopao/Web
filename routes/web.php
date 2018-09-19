@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
 #加载后台管理模块路由
 include_once __DIR__.'/admin.php';
 
@@ -24,6 +28,4 @@ include_once __DIR__.'/agent.php';
 #加载学生会员中心理模块路由
 include_once __DIR__.'/student.php';
 
-//Auth::routes();
-//
-//Route::get('/home', 'HomeController@index')->name('home');
+

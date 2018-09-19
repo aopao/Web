@@ -16,7 +16,7 @@ class CreateSchoolGradesTable extends Migration
         Schema::create('school_grades', function (Blueprint $table) {
             $table->increments('id');
             $table->string('school_grades_name', 20)->comment('高一|高二|高三');
-            $table->string('description')->default('')->comment('介绍');
+            $table->string('description')->nullable()->comment('介绍');
             $table->timestamps();
         });
     }

@@ -1,0 +1,21 @@
+<?php
+
+use App\Services\JsonToArray;
+use Illuminate\Database\Seeder;
+
+use App\Models\ProvinceControlScore;
+
+class ProvinceControlScoreTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $provinceControlScore = new ProvinceControlScore();
+        $province_control_score = JsonToArray::getJson('province_control_score.json');
+        $provinceControlScore->addAll($province_control_score);
+    }
+}

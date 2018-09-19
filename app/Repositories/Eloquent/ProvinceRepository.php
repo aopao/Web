@@ -36,6 +36,16 @@ class ProvinceRepository extends Repository
     }
 
     /**
+     * 获取所有省份总数
+     *
+     * @return mixed
+     */
+    public function getAllCount()
+    {
+        return $this->model->count();
+    }
+
+    /**
      * 获取所有省份
      *
      * @return mixed
@@ -43,6 +53,21 @@ class ProvinceRepository extends Repository
     public function getAllProvinces()
     {
         return $this->model->all();
+    }
+
+    /**
+     * 省份分页
+     *
+     * @param $data
+     * @return mixed
+     */
+    public function getAllByPage($data)
+    {
+        $page = $data['page'] - 1;
+        $limit = $data['limit'];
+        $offset = $page * $limit;
+
+        return $this->model->skip($offset)->limit($limit)->get();
     }
 
     /**
@@ -65,5 +90,41 @@ class ProvinceRepository extends Repository
     public function getAllAreaByCityId($id)
     {
         return Area::where("city_id", $id)->get();
+    }
+
+    /**
+     * 根据 ID 更新省份数据
+     *
+     * @param $id
+     * @param $data
+     * @return mixed
+     */
+    public function update($id, $data)
+    {
+        return $this->model->where('id', $id)->update($data);
+    }
+
+    /**
+     * 删除单个省份信息
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function destroy($id)
+    {
+        return $this->model->destroy($id);
+    }
+
+    /**
+     * 批量删除省份信息
+     *
+     * @param $ids
+     * @return mixed
+     */
+    public function batchDelete($ids)
+    {
+        $id_array = array_filter(explode('|', $ids));
+
+        return $this->destroy($id_array);
     }
 }

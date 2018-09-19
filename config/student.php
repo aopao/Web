@@ -10,7 +10,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Student Module Config Setting
+    | Student Module Config Config
     |--------------------------------------------------------------------------
     */
     'student_prefix' => env('STUDENT_PREFIX', "student"),

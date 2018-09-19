@@ -19,7 +19,7 @@ class CreateSchoolsTable extends Migration
             $table->integer('province_id')->index();
             $table->integer('city_id')->default(0);
             $table->integer('area_id')->default(0);
-            $table->string('address')->default('');
+            $table->string('address')->nullable();
             $table->timestamps();
         });
     }

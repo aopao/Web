@@ -16,7 +16,7 @@ class CreateCollegeLevelsTable extends Migration
         Schema::create('college_levels', function (Blueprint $table) {
             $table->increments('id');
             $table->string('level_name', 50)->index();
-            $table->string('level_description')->default('');
+            $table->string('level_description')->nullable();
             $table->timestamps();
         });
     }

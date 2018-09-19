@@ -16,8 +16,8 @@ class CreateCollegeProfessionalsTable extends Migration
         Schema::create('college_professionals', function (Blueprint $table) {
             $table->increments('id');
             $table->string('college_professional_name', 100)->comment('专业名称');
-            $table->integer('is_important')->comment('是不是重点专业');
-            $table->text('description')->comment('介绍');
+            $table->Boolean('is_important')->default(1)->comment('是不是重点专业');
+            $table->text('description')->nullable()->comment('介绍');
             $table->timestamps();
         });
     }

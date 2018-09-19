@@ -14,11 +14,10 @@ use Faker\Generator as Faker;
 */
 
 $factory->define(App\Models\Student::class, function (Faker $faker) {
-    static $password;
 
     return [
         'mobile' => '18678199937',
-        'password' => $password ?: $password = bcrypt('admin'),
+        'password' => bcrypt('admin'),
         'nickname' => $faker->name,
         'remember_token' => str_random(10),
     ];

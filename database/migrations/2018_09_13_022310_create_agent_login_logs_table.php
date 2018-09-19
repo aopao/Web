@@ -15,9 +15,12 @@ class CreateAgentLoginLogsTable extends Migration
     {
         Schema::create('agent_login_logs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('agent_id')->comment('代理商 ID');
-            $table->string('ip', 15);
-            $table->string('address', 200)->comment('登陆地点');
+            $table->string('agent_mobile', 20)->comment('代理商 ID');
+            $table->string('ip', 15)->nullable();
+            $table->string('platform', 200)->nullable()->comment('登录平台PC|Mobile');
+            $table->string('device', 200)->nullable()->comment('使用是安卓还是 IOS');
+            $table->string('browser')->nullable()->comment('使用的浏览器');
+            $table->string('address', 200)->nullable()->comment('登陆地点');
             $table->timestamps();
         });
     }

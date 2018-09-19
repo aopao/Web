@@ -16,14 +16,14 @@ class CreateProfessionalDetailsTable extends Migration
         Schema::create('professional_details', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('professional_id')->comment('专业 ID');
-            $table->integer('clicks')->comment('总点击');
+            $table->integer('clicks')->default(0)->comment('总点击');
             $table->string('awarded_degree')->nullable()->comment('毕业授予学位');
             $table->string('job_direction')->nullable()->comment('就业方向');
             $table->integer('graduation_student_num')->default(0)->comment('毕业学生数');
-            $table->string('work_rate')->comment('就业率');
-            $table->string('subject_rate')->comment('文理科比例');
-            $table->string('gender_rate')->comment('男女生比例');
-            $table->string('description')->comment('简介');
+            $table->string('work_rate')->nullable()->comment('就业率');
+            $table->string('subject_rate')->nullable()->comment('文理科比例');
+            $table->string('gender_rate')->nullable()->comment('男女生比例');
+            $table->string('description')->nullable()->comment('简介');
             $table->timestamps();
         });
     }

@@ -1,27 +1,47 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<form action="{{ route('admin.login') }}" method="post">
-    <input type="text" name="mobile" value=""/>
-    <input type="text" name="password" value="">
-    {{ csrf_field() }}
-    <input type="submit" value="登录">
-    @if ($errors->has('mobile'))
-        <span class="help-block">
-            <strong>{{ $errors->first('mobile') }}</strong>
-        </span>
-    @endif
-    @if ($errors->has('password'))
-        <span class="invalid-feedback">
-            <strong>{{ $errors->first('password') }}</strong>
-        </span>
-    @endif
-</form>
-</body>
-</html>
+@extends('admin.layouts.wrap')
+@section('css')
+	<link rel="stylesheet" href="{{ asset("theme/style/login.css") }}" media="all">
+@endsection()
+@section('content')
+	<div class="layadmin-user-login layadmin-user-display-show" id="LAY-user-login" style="display: none;">
+		<div class="layadmin-user-login-main">
+
+			<div class="layadmin-user-login-box layadmin-user-login-header">
+				<h2>{{ $config["web_name"] }}</h2>
+			</div>
+
+			<div class="layadmin-user-login-box layadmin-user-login-body layui-form">
+
+				<div class="layui-form-item">
+					<label class="layadmin-user-login-icon layui-icon layui-icon-username" for="LAY-user-login-account"></label>
+					<input type="text" name="mobile" id="LAY-user-login-account" lay-verify="required" placeholder="@lang('admin/login.mobile')" class="layui-input">
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layadmin-user-login-icon layui-icon layui-icon-password" for="LAY-user-login-password"></label>
+					<input type="password" name="password" id="LAY-user-login-password" lay-verify="required" placeholder="@lang('admin/login.password')" class="layui-input">
+				</div>
+
+				<div class="layui-form-item" style="margin-bottom: 20px;">
+					<input type="checkbox" name="remember" lay-skin="primary" title="@lang('admin/login.remember')">
+					<a href="forget.html" class="layadmin-user-jump-change layadmin-link" style="margin-top: 7px;">@lang('admin/login.forget')</a>
+				</div>
+
+				<div class="layui-form-item">
+					{{ csrf_field() }}
+					<button class="layui-btn layui-btn-fluid" id="submit" lay-submit lay-filter="LAY-user-login-submit">@lang('admin/login.login')</button>
+				</div>
+
+			</div>
+		</div>
+		<div class="layui-trans layadmin-user-login-footer">
+			<p>{{ $config["copyright"] }}</p>
+		</div>
+	</div>
+@endsection()
+@section('js')
+	<script>
+        let LoginUrl = "{{route('admin.login')}}"
+	</script>
+	<script src="{{ asset("theme/js/login.js") }}"></script>
+@endsection()

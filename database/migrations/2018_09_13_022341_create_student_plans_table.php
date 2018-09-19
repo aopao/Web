@@ -18,7 +18,7 @@ class CreateStudentPlansTable extends Migration
             $table->integer('agent_id')->default(0)->index()->comment('属于哪个代理商ID,0:代表为自由学生,不从属代理商,后台也可以添加');
             $table->integer('student_id')->index()->comment('属于哪个学生ID');
             $table->integer('plan_category_id')->index()->default(0)->comment('计划方案类型');
-            $table->string('plan_name', 200);
+            $table->string('plan_name', 200)->nullable();
             $table->string('plan_number', 50)->index()->default(0)->comment('计划序号');
             $table->string('plan_query')->default(0)->comment('方案查询条件');
             $table->boolean('is_save')->default(0)->comment('0:暂存,1:保存');

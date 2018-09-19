@@ -16,7 +16,7 @@ class CreateStudentPlanCategoriesTable extends Migration
         Schema::create('student_plan_categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('plan_category_name', 20)->comment('方案名称');
-            $table->string('plan_category_desc')->comment('方案简介');
+            $table->string('plan_category_desc')->nullable()->comment('方案简介');
             $table->timestamps();
         });
     }

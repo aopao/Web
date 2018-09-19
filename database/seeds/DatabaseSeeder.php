@@ -14,5 +14,13 @@ class DatabaseSeeder extends Seeder
         $this->call(AdminTableSeeder::class);
         $this->call(AgentTableSeeder::class);
         $this->call(StudentTableSeeder::class);
+        $this->call(CollegelevelTableSeeder::class);
+        $this->call(CollegeCategoryTableSeeder::class);
+        $this->call(ProvinceControlScoreTableSeeder::class);
+        $this->call(ProfessionalCategoryTableSeeder::class);
+        $this->call(ProfessionalTableSeeder::class);
+        $this->call(ProfessionalDetailTableSeeder::class);
+        $this->call(CollegeTableSeeder::class);
+        $this->call(CollegeDetailsTableSeeder::class);
     }
 }

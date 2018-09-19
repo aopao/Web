@@ -15,6 +15,7 @@ class CreateRegionsTable extends Migration
             $table->increments('id');
             $table->string('province_name');
             $table->string('code')->nullable()->index();
+            $table->timestamps();
         });
 
         Schema::create('cities', function (Blueprint $table) {
@@ -22,6 +23,7 @@ class CreateRegionsTable extends Migration
             $table->unsignedInteger('province_id')->index();
             $table->string('city_name');
             $table->string('code')->nullable()->index();
+            $table->timestamps();
         });
 
         Schema::create('areas', function (Blueprint $table) {
@@ -29,6 +31,7 @@ class CreateRegionsTable extends Migration
             $table->unsignedInteger('city_id')->index();
             $table->string('area_name');
             $table->string('code')->nullable()->index();
+            $table->timestamps();
         });
 
         // 存储行政编码 数据源有问题，极力不建议使用

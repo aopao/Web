@@ -16,7 +16,7 @@ class CreateSchoolExamCategoriesTable extends Migration
         Schema::create('school_exam_categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('school_exam_category_name', 20)->comment('期中|月考|期末');
-            $table->string('description')->default('')->comment('介绍');
+            $table->string('description')->nullable()->comment('介绍');
             $table->timestamps();
         });
     }

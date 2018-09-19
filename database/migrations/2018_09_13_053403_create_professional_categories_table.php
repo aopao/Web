@@ -15,10 +15,10 @@ class CreateProfessionalCategoriesTable extends Migration
     {
         Schema::create('professional_categories', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('Professional_categories_name', 100)->comment('根分类名称');
-            $table->string('Professional_categories_code')->comment('根分类ID');
+            $table->string('professional_category_name', 100)->comment('根分类名称');
+            $table->string('professional_category_code')->comment('根分类ID');
             $table->integer('parent_id')->comment('父类 ID');
-            $table->string('description')->comment('简介');
+            $table->string('description')->nullable()->comment('简介');
             $table->timestamps();
         });
     }

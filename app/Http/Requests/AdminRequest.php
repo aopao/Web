@@ -54,6 +54,11 @@ class AdminRequest extends FormRequest
         return $rules;
     }
 
+    /**
+     * 错误返回信息
+     *
+     * @return array
+     */
     public function messages()
     {
         return [

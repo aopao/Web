@@ -29,7 +29,7 @@ class CreateStudentSourceRecordsTable extends Migration
             $table->string('geography',10)->default('0')->comment('地理考试分数');
             $table->string('science_comprehensive',10)->default('0')->comment('理综考试分数');
             $table->string('arts_comprehensive',10)->default('0')->comment('文综考试分数');
-            $table->string('note')->comment('备注');
+            $table->string('note')->nullable()->comment('备注');
             $table->timestamps();
         });
     }

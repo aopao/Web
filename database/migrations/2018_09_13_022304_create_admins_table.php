@@ -25,10 +25,6 @@ class CreateAdminsTable extends Migration
             $table->string('email', 100)->nullable();
             $table->integer('qq')->nullable();
             $table->boolean('status')->default(1)->comment('账户状态0:禁封,1:正常');
-            $table->string('register_ip', 15)->nullable();
-            $table->integer('login_number')->default(0);
-            $table->string('last_login_ip', 15)->nullable();
-            $table->string('last_login_time', 20)->nullable();
             $table->string('verify_token', 128)->nullable()->comment('邮箱验证Token');
             $table->boolean('email_is_active')->default(0)->comment('邮箱是否已经验证,默认不认证');
             $table->rememberToken();

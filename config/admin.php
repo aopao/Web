@@ -9,8 +9,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Admin Module Config Setting
+    | Admin Module Config Config
     |--------------------------------------------------------------------------
     */
     'admin_prefix' => env('ADMIN_PREFIX', "admin"),
+    'per_page' => env('PER_PAGE', 30),
+
+    //后台添加数据所需年份开始时间,部分模块使用
+    'start_year' => env('START_YEARS', 2013),
 ];
