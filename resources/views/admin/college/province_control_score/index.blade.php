@@ -174,14 +174,6 @@
                             }
                         });
                     });
-                } else if (obj.event === 'viewCities') {
-                    layer.open({
-                        type: 2
-                        , content: ProvinceControlScoreIndexUrl + '/' + data.id + '/edit'
-                        , shadeClose: true
-                        , area: admin.screen() < 2 ? ['100%', '80%'] : ['50%', '500px']
-                        , maxmin: true
-                    });
                 } else if (layEvent === 'view') {
                     window.location.href = ProvinceControlScoreIndexUrl + '/' + data.province.id
                 }

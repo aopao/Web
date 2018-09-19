@@ -10,6 +10,8 @@ return [
     'professional_specialist' => '专科',
 
     /*  专业分类部分 */
+    'hot_clicks' => '关注热度',
+    'belonf_to_professional_category' => '所属专业',
     'professional_category_code' => '专业编码',
     'professional_category_son_id' => '子分类',
     'professional_category_name' => '专业名称',

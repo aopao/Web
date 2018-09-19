@@ -12,7 +12,6 @@ class Admin extends Authenticatable
         'mobile',
         'password',
         'nickname',
-        'avatar',
         'email',
         'qq',
         'status',

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Repositories\Eloquent\CollegeRepository;
 use Illuminate\Http\Request;
 use App\Repositories\Eloquent\ProvinceRepository;
 use App\Http\Requests\ProvinceControlScoreRequest;
@@ -117,19 +118,22 @@ class ProvinceControlScoreController extends ApiController
     /**
      * 历年省控线图图表分析页面
      *
-     * @param $id
+     * @param                                              $id
+     * @param \App\Repositories\Eloquent\CollegeRepository $collegeRepository
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show($id)
+    public function show($id, CollegeRepository $collegeRepository)
     {
         /* 获取当前省份的具体信息 */
         $province_data = [];
         $province_data['info'] = $this->provinceRepository->findById($id);
+        $province_data['province_college_sum'] = $collegeRepository->getAllCountByProvinceId($id);
         $province_data['year_interval'] = $this->provinceControlScoreRepository->getYearInterval($id);
 
         /* 历年理科柱状对比图 */
         $math = $this->provinceControlScoreRepository->parseSubjectCharsByProvinceId($id, 1)->Toarray();
         $math = $this->provinceControlScoreRepository->arrayToStringJson($math);
+
         /* 历年文科柱状对比图 */
         $art = $this->provinceControlScoreRepository->parseSubjectCharsByProvinceId($id, 0)->Toarray();
         $art = $this->provinceControlScoreRepository->arrayToStringJson($art);

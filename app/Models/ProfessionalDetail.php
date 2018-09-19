@@ -19,4 +19,10 @@ class ProfessionalDetail extends Model
     ];
 
     protected $hidden = [];
+
+    protected $casts = [
+        'work_rate' => 'Array',
+        'subject_rate' => 'Array',
+        'gender_rate' => 'Array',
+    ];
 }

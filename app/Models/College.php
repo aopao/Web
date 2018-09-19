@@ -39,7 +39,7 @@ class College extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function CollegeBatchs()
+    public function CollegeBatch()
     {
         return $this->hasMany('App\Models\CollegeBatch');
     }
@@ -49,8 +49,28 @@ class College extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function CollegeCategories()
+    public function CollegeCategory()
     {
         return $this->belongsTo('App\Models\CollegeCategory');
+    }
+
+    /**
+     * 关联大学层次
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function CollegeLevel()
+    {
+        return $this->belongsTo('App\Models\CollegeLevel');
+    }
+
+    /**
+     * 关联大学所在省份
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function province()
+    {
+        return $this->belongsTo('App\Models\Province');
     }
 }

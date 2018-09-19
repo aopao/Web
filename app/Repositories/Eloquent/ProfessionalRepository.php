@@ -34,6 +34,20 @@ class ProfessionalRepository extends Repository
     }
 
     /**
+     * 根据 ID 查询专业详细信息
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function findAllById($id)
+    {
+        return $this->model->with('professionalDetail')
+            ->with('professionalParentCategory')
+            ->with('professionalTopCategory')
+            ->where('id', $id)->first();
+    }
+
+    /**
      * 获取所有专业
      *
      * @return mixed
@@ -119,7 +133,7 @@ class ProfessionalRepository extends Repository
      * @param $ids
      * @return mixed
      */
-    public function ProfessionalDelete($ids)
+    public function batchDelete($ids)
     {
         $id_array = array_filter(explode('|', $ids));
 

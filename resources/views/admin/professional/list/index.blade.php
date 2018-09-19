@@ -27,6 +27,7 @@
 						</div>
 						<table class="layui-hide" id="professionalList" lay-filter="professionalList"></table>
 						<script type="text/html" id="professionalListOperate">
+							<button class="layui-btn layui-btn-primary layui-btn-xs" lay-event="view">@lang('comment/form.view')</button>
 							<button class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit">@lang('comment/form.edit')</button>
 							<button class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">@lang('comment/form.del')</button>
 						</script>
@@ -173,6 +174,8 @@
                             }
                         });
                     });
+                } else if (layEvent === 'view') {
+                    location.href = professionalIndexUrl + '/' + data.id
                 }
             });
         });

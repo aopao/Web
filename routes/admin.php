@@ -38,6 +38,8 @@ Route::namespace('Admin')->prefix(ADMIN_PREFIX)->middleware('AdminAuth:admin')->
     Route::resource('college/level', 'CollegeLevelController', ['as' => 'admin.college']);
 
     /* 大学管理路由 */
+    Route::delete('college/delete', 'CollegeController@deleteByIds')->name('admin.college.delete');
+    Route::get('college/page', 'CollegeController@getListByPageId')->name('admin.college.page');
     Route::resource('college', 'CollegeController', ['as' => 'admin']);
 
     /* 专业大分类管理路由 */
@@ -50,11 +52,16 @@ Route::namespace('Admin')->prefix(ADMIN_PREFIX)->middleware('AdminAuth:admin')->
     Route::get('professional/page', 'ProfessionalController@getListByPageId')->name('admin.professional.page');
     Route::resource('professional', 'ProfessionalController', ['as' => 'admin']);
 
-
     /* 省控线管理路由 */
     Route::delete('province/score/delete', 'ProvinceControlScoreController@deleteByIds')->name('admin.province.score.delete');
     Route::get('province/score/page', 'ProvinceControlScoreController@getListByPageId')->name('admin.province.score.page');
     Route::resource('province/score', 'ProvinceControlScoreController', ['as' => 'admin.province']);
+
+    /* 代理商列表管理路由 */
+    Route::delete('agent/delete', 'AgentController@deleteByIds')->name('admin.agent.delete');
+    Route::get('agent/page', 'AgentController@getListByPageId')->name('admin.agent.page');
+    Route::match(['GET', 'PUT'], 'agent/{agent_id}/change', 'AgentController@changeMobile')->name('admin.agent.change');
+    Route::resource('agent', 'AgentController', ['as' => 'admin']);
 
     /* 地域管理路由 -> 省份管理界面 */
     Route::delete('province/delete', 'ProvinceController@deleteByIds')->name('admin.province.delete');

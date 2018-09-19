@@ -47,32 +47,32 @@
 			</div>
 			<div class="layui-col-md6">
 				<div class="layui-card">
-					<div class="layui-card-header">待办事项</div>
+					<div class="layui-card-header">@lang('admin/college.extend_data')</div>
 					<div class="layui-card-body">
 						<div class="layui-carousel layadmin-carousel layadmin-backlog">
 							<div>
 								<ul class="layui-row layui-col-space10">
 									<li class="layui-col-xs6">
-										<a lay-href="app/content/comment.html" class="layadmin-backlog-body">
-											<h3>待审评论</h3>
-											<p><cite>66</cite></p>
+										<a class="layadmin-backlog-body">
+											<h3>@lang('admin/college.province_college_sum')</h3>
+											<p><cite> {{$province_data['province_college_sum']}} </cite></p>
 										</a>
 									</li>
 									<li class="layui-col-xs6">
 										<a lay-href="app/forum/list.html" class="layadmin-backlog-body">
-											<h3>待审帖子</h3>
+											<h3>待定</h3>
 											<p><cite>12</cite></p>
 										</a>
 									</li>
 									<li class="layui-col-xs6">
 										<a lay-href="template/goodslist.html" class="layadmin-backlog-body">
-											<h3>待审商品</h3>
+											<h3>待定</h3>
 											<p><cite>99</cite></p>
 										</a>
 									</li>
 									<li class="layui-col-xs6">
 										<a href="javascript:;" onclick="layer.tips('不跳转', this, {tips: 3});" class="layadmin-backlog-body">
-											<h3>待发货</h3>
+											<h3>待定</h3>
 											<p><cite>20</cite></p>
 										</a>
 									</li>
@@ -119,9 +119,9 @@
 	</div>
 @endsection()
 @section('js')
-	<!-- 引入在线资源 -->
-	<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.2.8/dist/g2.min.js"></script>
-	<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.9.6/dist/data-set.min.js"></script>
+	<!-- 引入资源 -->
+	<script src="{{ asset("theme/js/g2.min.js") }}"></script>
+	<script src="{{ asset("theme/js/data-set.min.js") }}"></script>
 	<script>
         let math =
 				{!! $math !!}

@@ -18,7 +18,6 @@ class CreateAgentsTable extends Migration
             $table->string('mobile', 11)->index()->unique()->comment('也可用手机号登录,可不用');
             $table->string('password');
             $table->string('nickname', 100)->nullable();
-            $table->string('avatar')->nullable();
             $table->string('email', 50)->nullable();
             $table->integer('qq')->nullable();
             $table->boolean('status')->default(1)->comment('账户状态0:禁封,1:正常');

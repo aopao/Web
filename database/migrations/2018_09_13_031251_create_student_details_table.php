@@ -31,7 +31,6 @@ class CreateStudentDetailsTable extends Migration
             $table->integer('qq')->nullable();
             $table->string('intention_major')->nullable()->comment('意向专业');
             $table->string('intention_college')->nullable()->comment('意向院校地区');
-            $table->string('register_ip', 15)->nullable();
             $table->timestamps();
         });
     }

@@ -15,7 +15,6 @@ class CreateCollegesTable extends Migration
     {
         Schema::create('colleges', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('college_id')->index();
             $table->string('college_name', 100)->index();
             $table->string('college_english_name', 200)->unllable()->comment('学校英文名称');
             $table->integer('college_rank')->comment('学校排名');

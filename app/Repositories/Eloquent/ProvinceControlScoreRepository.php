@@ -34,6 +34,7 @@ class ProvinceControlScoreRepository extends Repository
         return $this->model->where('id', $id)->first();
     }
 
+
     /**
      * 获取所有省控线总数
      *

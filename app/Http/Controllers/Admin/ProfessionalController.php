@@ -56,7 +56,7 @@ class ProfessionalController extends ApiController
      */
     public function create()
     {
-        return view('admin.professional.create');
+        return view('admin.professional.list.create');
     }
 
     /**
@@ -67,11 +67,24 @@ class ProfessionalController extends ApiController
      */
     public function store(ProfessionalCategoryRequest $professionalCategoryRequest)
     {
-        if ($this->professionalCategoryRepository->store($professionalCategoryRequest->all())) {
+        if ($this->professionalRepository->store($professionalCategoryRequest->all())) {
             return redirect()->back()->with("message", "添加成功");
         } else {
             return redirect()->back()->with("message", "添加失败");
         }
+    }
+
+    /**
+     * 专业详细信息展示方法
+     *
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function show($id)
+    {
+        $info = $this->professionalRepository->findAllById($id)->ToArray();
+
+        return view('admin.professional.list.show', compact('info'));
     }
 
     /**
@@ -82,21 +95,21 @@ class ProfessionalController extends ApiController
      */
     public function edit($id)
     {
-        $info = $this->professionalCategoryRepository->findById($id);
+        $info = $this->professionalRepository->findById($id);
 
-        return view('admin.professional.edit', compact('info'));
+        return view('admin.professional.list.edit', compact('info'));
     }
 
     /**
      * 处理修改专业列表方法
      *
-     * @param                                                $id
-     * @param \App\Http\Requests\ProfessionalCategoryRequest $professionalCategoryRequest
+     * @param                                                   $id
+     * @param \App\Repositories\Eloquent\ProfessionalRepository $professionalRepository
      * @return \Illuminate\Http\Response
      */
-    public function update($id, ProfessionalCategoryRequest $professionalCategoryRequest)
+    public function update($id, ProfessionalRepository $professionalRepository)
     {
-        if ($this->professionalCategoryRepository->update($id, $professionalCategoryRequest->except(['_token', '_method']))) {
+        if ($this->professionalRepository->update($id, $professionalRepository->except(['_token', '_method']))) {
             return redirect()->back()->with("message", "修改成功");
         } else {
             return redirect()->back()->with("message", "修改失败");
@@ -111,7 +124,7 @@ class ProfessionalController extends ApiController
      */
     public function destroy($id)
     {
-        $code = $this->professionalCategoryRepository->destroy($id);
+        $code = $this->professionalRepository->destroy($id);
         if ($code && $code != '201') {
             return $this->responseSuccess();
         } else {
@@ -128,7 +141,7 @@ class ProfessionalController extends ApiController
     public function deleteByIds(Request $request)
     {
         $ids = $request->get('ids', '|');
-        $code = $this->professionalCategoryRepository->batchDelete($ids);
+        $code = $this->professionalRepository->batchDelete($ids);
         if ($code && $code != '201') {
             return $this->responseSuccess();
         } else {

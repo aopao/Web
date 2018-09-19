@@ -68,26 +68,6 @@
 					</dd>
 				</dl>
 			</li>
-			<li data-name="data_import" class="layui-nav-item">
-				<a href="javascript:void(0);" lay-tips="数据维护" lay-direction="3">
-					<i class="layui-icon layui-icon-list"></i>
-					<cite>数据维护</cite>
-				</a>
-				<dl class="layui-nav-child">
-					<dd>
-						<a lay-href="{{ route('admin.province.score.index') }}">数据检索</a>
-					</dd>
-					<dd>
-						<a lay-href="{{ route('admin.college.create') }}">数据查重</a>
-					</dd>
-					<dd>
-						<a lay-href="{{ route('admin.province.score.create') }}">数据采集</a>
-					</dd>
-					<dd>
-						<a lay-href="{{ route('admin.province.score.create') }}">高级导入</a>
-					</dd>
-				</dl>
-			</li>
 			<li data-name="agent" class="layui-nav-item">
 				<a href="javascript:void(0);" lay-tips="代理管理" lay-direction="4">
 					<i class="layui-icon layui-icon-user"></i>
@@ -95,10 +75,7 @@
 				</a>
 				<dl class="layui-nav-child">
 					<dd>
-						<a lay-href="{{ route('admin.province.index') }}">代理商列表</a>
-					</dd>
-					<dd>
-						<a lay-href="{{ route('admin.college.create') }}">添加代理商</a>
+						<a lay-href="{{ route('admin.agent.index') }}">代理商列表</a>
 					</dd>
 				</dl>
 			</li>
@@ -110,9 +87,6 @@
 				<dl class="layui-nav-child">
 					<dd>
 						<a lay-href="{{ route('admin.province.index') }}">学生列表</a>
-					</dd>
-					<dd>
-						<a lay-href="{{ route('admin.college.create') }}">添加学生</a>
 					</dd>
 				</dl>
 			</li>
@@ -144,6 +118,27 @@
 					</dd>
 				</dl>
 			</li>
+			<li data-name="data_import" class="layui-nav-item">
+				<a href="javascript:void(0);" lay-tips="数据维护" lay-direction="3">
+					<i class="layui-icon layui-icon-list"></i>
+					<cite>数据维护</cite>
+				</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a lay-href="{{ route('admin.province.score.index') }}">数据检索</a>
+					</dd>
+					<dd>
+						<a lay-href="{{ route('admin.college.create') }}">数据查重</a>
+					</dd>
+					<dd>
+						<a lay-href="{{ route('admin.province.score.create') }}">数据采集</a>
+					</dd>
+					<dd>
+						<a lay-href="{{ route('admin.province.score.create') }}">高级导入</a>
+					</dd>
+				</dl>
+			</li>
+
 			<li data-name="region" class="layui-nav-item">
 				<a href="javascript:void(0);" lay-tips="地域" lay-direction="4">
 					<i class="layui-icon layui-icon-location"></i>

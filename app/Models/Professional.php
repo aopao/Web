@@ -19,12 +19,32 @@ class Professional extends Model
     protected $hidden = [];
 
     /**
-     * 关联专业详情表
+     * 关联专业详细表
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function professionalDetail()
     {
         return $this->hasOne('App\Models\ProfessionalDetail');
+    }
+
+    /**
+     * 关联专业分类表
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function professionalParentCategory()
+    {
+        return $this->belongsTo('App\Models\ProfessionalCategory', 'parent_id');
+    }
+
+    /**
+     * 关联顶级专业分类表
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function professionalTopCategory()
+    {
+        return $this->belongsTo('App\Models\ProfessionalCategory', 'top_parent_id');
     }
 }

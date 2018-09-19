@@ -12,51 +12,51 @@
 									<div carousel-item>
 										<ul class="layui-row layui-col-space10">
 											<li class="layui-col-xs3">
-												<a lay-href="component/layer/list.html">
+												<a lay-href="{{ route('admin.agent.index') }}">
 													<i class="layui-icon layui-icon-website"></i>
-													<cite>弹层</cite>
+													<cite>@lang('admin/dashboard.agent_list')</cite>
 												</a>
 											</li>
 											<li class="layui-col-xs3">
-												<a lay-href="component/button/index.html">
+												<a lay-href="{{ route('admin.college.index') }}">
 													<i class="layui-icon layui-icon-find-fill"></i>
-													<cite>按钮</cite>
+													<cite>@lang('admin/dashboard.college_list')</cite>
 												</a>
 											</li>
 											<li class="layui-col-xs3">
-												<a lay-href="component/progress/index.html">
+												<a lay-href="{{ route('admin.college.category.index') }}">
 													<i class="layui-icon layui-icon-loading-2"></i>
-													<cite>进度条</cite>
+													<cite>@lang('admin/dashboard.college_category_list')</cite>
 												</a>
 											</li>
 											<li class="layui-col-xs3">
-												<a layadmin-event="im">
+												<a lay-href="{{ route('admin.college.level.index') }}">
 													<i class="layui-icon layui-icon-chat"></i>
-													<cite>聊天</cite>
+													<cite>@lang('admin/dashboard.college_level_list')</cite>
 												</a>
 											</li>
 											<li class="layui-col-xs3">
-												<a lay-href="component/panel/index.html">
+												<a lay-href="{{ route('admin.professional.index') }}">
 													<i class="layui-icon layui-icon-read"></i>
-													<cite>面板</cite>
+													<cite>@lang('admin/dashboard.professional_list')</cite>
 												</a>
 											</li>
 											<li class="layui-col-xs3">
-												<a lay-href="component/badge/index.html">
+												<a lay-href="{{ route('admin.province.score.index') }}">
 													<i class="layui-icon layui-icon-tree"></i>
-													<cite>徽章</cite>
+													<cite>@lang('admin/dashboard.province_control_score_list')</cite>
 												</a>
 											</li>
 											<li class="layui-col-xs3">
-												<a lay-href="set/system/website.html">
+												<a lay-href="{{ route('admin.agent.index') }}">
 													<i class="layui-icon layui-icon-set"></i>
-													<cite>网站设置</cite>
+													<cite>@lang('admin/dashboard.student_list')</cite>
 												</a>
 											</li>
 											<li class="layui-col-xs3">
-												<a lay-href="set/user/password.html">
+												<a lay-href="{{ route('admin.agent.index') }}">
 													<i class="layui-icon layui-icon-password"></i>
-													<cite>密码</cite>
+													<cite>@lang('admin/dashboard.student_list')</cite>
 												</a>
 											</li>
 										</ul>
