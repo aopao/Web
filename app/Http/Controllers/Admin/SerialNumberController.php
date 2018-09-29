@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Services\SerialNumberService;
 use Illuminate\Http\Request;
 use App\Repositories\Eloquent\SerialNumberRepository;
+use Maatwebsite\Excel\Facades\Excel;
 
 class SerialNumberController extends ApiController
 {
@@ -76,5 +77,23 @@ class SerialNumberController extends ApiController
         } else {
             return redirect()->back()->with("message", "添加失败");
         }
+    }
+
+    public function export()
+    {
+        return 111;
+    }
+
+    public function doexport(SerialNumberRepository $serialNumberRepository)
+    {
+        $cellData = $serialNumberRepository->getAllSerialNumbers()->ToArray();
+        Excel::create('序列号表-有效', function ($excel) use ($cellData) {
+            $excel->sheet('有效', function ($sheet) use ($cellData) {
+                $sheet->rows($cellData);
+            });
+            $excel->sheet('无效', function ($sheet) use ($cellData) {
+                $sheet->rows($cellData);
+            });
+        })->export('xls');
     }
 }

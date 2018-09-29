@@ -81,7 +81,9 @@ class SerialNumberRepository extends Repository
      */
     public function getAllSerialNumbers()
     {
-        return $this->model->all();
+        return $this->model->limit(10000)->get();
+
+        //return $this->model->all();
     }
 
     /**

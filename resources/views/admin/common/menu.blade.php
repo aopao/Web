@@ -77,6 +77,9 @@
 					<dd>
 						<a lay-href="{{ route('admin.serial.index') }}">序列号列表</a>
 					</dd>
+					<dd>
+						<a lay-href="{{ route('admin.serial.export') }}">序列号导出</a>
+					</dd>
 				</dl>
 			</li>
 			<li data-name="assessment" class="layui-nav-item">
@@ -87,6 +90,17 @@
 				<dl class="layui-nav-child">
 					<dd>
 						<a lay-href="{{ route('admin.assessment.index') }}">测评报告列表</a>
+					</dd>
+				</dl>
+			</li>
+			<li data-name="student" class="layui-nav-item">
+				<a href="javascript:void(0);" lay-tips="代理管理" lay-direction="4">
+					<i class="layui-icon layui-icon-username"></i>
+					<cite>代理管理</cite>
+				</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a lay-href="{{ route('admin.agent.index') }}">代理商列表</a>
 					</dd>
 				</dl>
 			</li>

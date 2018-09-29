@@ -182,7 +182,7 @@ return [
         Aopao\Region\RegionServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
-
+        Maatwebsite\Excel\ExcelServiceProvider::class,
     ],
 
     /*
@@ -238,6 +238,7 @@ return [
         'AgentAuth' => \App\Http\Middleware\AgentMiddleWare::class,
         'StudentAuth' => \App\Http\Middleware\StudentMiddleWare::class,
         'Ip' => 'Zhuzhichao\IpLocationZh\Ip',
+        'Excel' => 'Maatwebsite\Excel\Facades\Excel',
     ],
 
 ];

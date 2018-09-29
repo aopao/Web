@@ -9,7 +9,7 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\ProvinceControlScore;
-use App\Services\ArrayTranforms;
+use App\Services\ArrayTranformsService;
 
 class ProvinceControlScoreRepository extends Repository
 {
@@ -33,7 +33,6 @@ class ProvinceControlScoreRepository extends Repository
     {
         return $this->model->where('id', $id)->first();
     }
-
 
     /**
      * 获取所有省控线总数
@@ -160,7 +159,7 @@ class ProvinceControlScoreRepository extends Repository
      */
     public function arrayToStringJson($subject)
     {
-        $arrayToJson = new ArrayTranforms();
+        $arrayToJson = new ArrayTranformsService();
         $arrayToJson->arrayValuesToInt($subject);
 
         return json_encode($subject, true);

@@ -78,6 +78,7 @@ Route::namespace('Admin')->prefix(ADMIN_PREFIX)->middleware('AdminAuth:admin')->
 
     /* 序列号管理路由 */
     Route::get('serial/page', 'SerialNumberController@getListByPageId')->name('admin.serial.page');
+    Route::get('serial/export', 'SerialNumberController@export')->name('admin.serial.export');
     Route::resource('serial', 'SerialNumberController', ['as' => 'admin']);
 
     /* 测评管理路由 */
