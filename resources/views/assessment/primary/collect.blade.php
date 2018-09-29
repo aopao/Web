@@ -2,8 +2,8 @@
 <div class="bgf">
 	<div class="tem_div test_input">
 		<form action="{{ route('assessment.primary.issue') }}" class="form_info layui-form" method="post">
-			<input type="hidden" name="id" value="{{ $data['id'] }}">
-			<input type="hidden" name="number" value="{{ $data['number'] }}">
+			<input type="hidden" name="serial_number_id" value="{{ $data['id'] }}">
+			<input type="hidden" name="serial_number" value="{{ $data['number'] }}">
 			{{ csrf_field() }}
 			<h2 class="i_h">
 				<input type="text" lay-verify="phone" class="name_user w395" name="mobile" placeholder="请输入手机号">

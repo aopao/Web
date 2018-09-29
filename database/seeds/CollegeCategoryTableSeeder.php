@@ -1,6 +1,6 @@
 <?php
 
-use App\Services\JsonToArray;
+use App\Services\JsonToArrayService;
 use Illuminate\Database\Seeder;
 use App\Models\CollegeCategory;
 
@@ -14,7 +14,7 @@ class CollegeCategoryTableSeeder extends Seeder
     public function run()
     {
         $collegeCategory = new CollegeCategory();
-        $college_category = JsonToArray::getJson('college_category.json');
+        $college_category = JsonToArrayService::getJson('college_category.json');
         $collegeCategory->addAll($college_category);
     }
 }

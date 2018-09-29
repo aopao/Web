@@ -2,6 +2,12 @@
 
 namespace App\Services;
 
+/**
+ * 随机生成邮箱地址
+ * Class RandEmailService
+ *
+ * @package App\Services
+ */
 Class  RandEmailService
 {
     /**

@@ -1,6 +1,6 @@
 <?php
 
-use App\Services\JsonToArray;
+use App\Services\JsonToArrayService;
 use Illuminate\Database\Seeder;
 
 use App\Models\ProfessionalCategory;
@@ -15,7 +15,7 @@ class ProfessionalCategoryTableSeeder extends Seeder
     public function run()
     {
         $professionalCategory = new ProfessionalCategory();
-        $professional_category = JsonToArray::getJson('professional_category.json');
+        $professional_category = JsonToArrayService::getJson('professional_category.json');
         $professionalCategory->addAll($professional_category);
     }
 }

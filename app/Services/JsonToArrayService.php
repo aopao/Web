@@ -8,7 +8,7 @@
 
 namespace App\Services;
 
-class JsonToArray
+class JsonToArrayService
 {
     /**
      * 获取 json 源文件数据

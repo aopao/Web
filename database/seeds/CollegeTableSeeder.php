@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\College;
-use App\Services\JsonToArray;
+use App\Services\JsonToArrayService;
 use Illuminate\Database\Seeder;
 
 class CollegeTableSeeder extends Seeder
@@ -14,7 +14,7 @@ class CollegeTableSeeder extends Seeder
     public function run()
     {
         $college_model = new College();
-        $college = JsonToArray::getJson('colleges.json');
+        $college = JsonToArrayService::getJson('colleges.json');
         foreach ($college["RECORDS"] as $value) {
             $college_model->insert($value);
         }

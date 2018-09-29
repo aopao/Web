@@ -27,7 +27,7 @@ class SerialNumberRequest extends FormRequest
         return [
             'number' => [
                 Rule::exists('serial_numbers')->where(function ($query) {
-                    $query->where('is_invalid', 0);
+                    $query->where('is_senior', 0);
                 }),
             ],
         ];

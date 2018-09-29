@@ -42,9 +42,9 @@ class SerialNumberController extends ApiController
      */
     public function getListByPageId(Request $request)
     {
-        $count = $this->serialNumberRepository->getAllCount();
+        $count = $this->serialNumberRepository->getAllCount($request);
 
-        $province_list = $this->serialNumberRepository->getAllByPage($request->all());
+        $province_list = $this->serialNumberRepository->getAllByPage($request);
 
         return $this->responsePage($count, $province_list);
     }
@@ -68,8 +68,10 @@ class SerialNumberController extends ApiController
      */
     public function store(Request $request, SerialNumberService $serialNumberService)
     {
+        ini_set('memory_limit', '500M');
+        set_time_limit(0);//设置超时限制为0分钟
         $data = $serialNumberService->getSerialnunmbers($request->get('sum', 0), $request->get('is_senior', 0));
-        if ($this->serialNumberRepository->store($data)) {
+        if ($this->serialNumberRepository->addAll($data)) {
             return redirect()->back()->with("message", "添加成功");
         } else {
             return redirect()->back()->with("message", "添加失败");

@@ -1,6 +1,6 @@
 <?php
 
-use App\Services\JsonToArray;
+use App\Services\JsonToArrayService;
 use Illuminate\Database\Seeder;
 use App\Models\CollegeLevel;
 
@@ -14,7 +14,7 @@ class CollegelevelTableSeeder extends Seeder
     public function run()
     {
         $collegeLevel = new CollegeLevel();
-        $college_level = JsonToArray::getJson('college_level.json');
+        $college_level = JsonToArrayService::getJson('college_level.json');
         $collegeLevel->addAll($college_level);
     }
 }

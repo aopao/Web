@@ -1,6 +1,6 @@
 <?php
 
-use App\Services\JsonToArray;
+use App\Services\JsonToArrayService;
 use Illuminate\Database\Seeder;
 
 use App\Models\MbtiPrimaryIssue;
@@ -15,7 +15,7 @@ class MbtiPrimaryIusseTableSeeder extends Seeder
     public function run()
     {
         $mbti_primary_issue = new MbtiPrimaryIssue();
-        $issue = JsonToArray::getJson('mbti_primary_issue.json');
+        $issue = JsonToArrayService::getJson('mbti_primary_issue.json');
         $mbti_primary_issue->addAll($issue);
     }
 }

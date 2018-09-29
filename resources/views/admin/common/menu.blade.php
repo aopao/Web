@@ -68,7 +68,6 @@
 					</dd>
 				</dl>
 			</li>
-
 			<li data-name="serial_number" class="layui-nav-item">
 				<a href="javascript:void(0);" lay-tips="序列号管理" lay-direction="4">
 					<i class="layui-icon layui-icon-diamond"></i>
@@ -77,6 +76,17 @@
 				<dl class="layui-nav-child">
 					<dd>
 						<a lay-href="{{ route('admin.serial.index') }}">序列号列表</a>
+					</dd>
+				</dl>
+			</li>
+			<li data-name="assessment" class="layui-nav-item">
+				<a href="javascript:void(0);" lay-tips="测评报告管理" lay-direction="4">
+					<i class="layui-icon layui-icon-diamond"></i>
+					<cite>报告管理</cite>
+				</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a lay-href="{{ route('admin.assessment.index') }}">测评报告列表</a>
 					</dd>
 				</dl>
 			</li>

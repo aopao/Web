@@ -80,6 +80,10 @@ Route::namespace('Admin')->prefix(ADMIN_PREFIX)->middleware('AdminAuth:admin')->
     Route::get('serial/page', 'SerialNumberController@getListByPageId')->name('admin.serial.page');
     Route::resource('serial', 'SerialNumberController', ['as' => 'admin']);
 
+    /* 测评管理路由 */
+    Route::get('assessment/page', 'AssessmentController@getListByPageId')->name('admin.assessment.page');
+    Route::resource('assessment', 'AssessmentController', ['as' => 'admin']);
+
     /* 地域管理路由 -> 城市管理界面 */
     Route::delete('city/delete', 'CityController@deleteByIds')->name('admin.city.delete');
     Route::get('city/page', 'CityController@getListByPageId')->name('admin.city.page');

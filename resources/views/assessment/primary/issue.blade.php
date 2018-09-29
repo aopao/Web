@@ -1,11 +1,11 @@
 @include('assessment.comment.header')
 
-	<form id="question" action="{{ route('assessment.primary.report') }}" method="post">
-		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $data['id'] }}">
-		<input type="hidden" name="number" value="{{ $data['number'] }}">
-		<input type="hidden" name="mobile" value="{{ $data['mobile'] }}">
-		<input type="hidden" name="username" value="{{ $data['username'] }}">
+<form id="question" action="{{ route('assessment.primary.report') }}" method="post">
+	{{ csrf_field() }}
+	<input type="hidden" name="serial_number_id" value="{{ $data['serial_number_id'] }}">
+	<input type="hidden" name="serial_number" value="{{ $data['serial_number'] }}">
+	<input type="hidden" name="mobile" value="{{ $data['mobile'] }}">
+	<input type="hidden" name="username" value="{{ $data['username'] }}">
 	<div class="bgf">
 		@foreach ($issues as $key=>$issue)
 			<div class="mainbox_w ptbn unselected" @if($key==0) style="display: block;" @endif>

@@ -12,6 +12,8 @@ return [
     'senior' => '高级序列号',
     'primary' => '初级序列号',
     'is_invalid' => '状态',
+    'invalid' => '有效',
+    'not_invalid' => '无效',
     'serial_numbers_sum' => '生成个数',
 
     /* 序列号列表部分 */

@@ -50,7 +50,8 @@ class MbtiPramaryIssueRepository extends Repository
      */
     public function getAllMbtiPrimaryIssues()
     {
-        return $this->model->limit(30)->get();
+        return $this->model->get();
+        //return $this->model->limit(5)->get();
     }
 
     /**

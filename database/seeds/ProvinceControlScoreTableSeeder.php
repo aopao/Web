@@ -1,6 +1,6 @@
 <?php
 
-use App\Services\JsonToArray;
+use App\Services\JsonToArrayService;
 use Illuminate\Database\Seeder;
 
 use App\Models\ProvinceControlScore;
@@ -15,7 +15,7 @@ class ProvinceControlScoreTableSeeder extends Seeder
     public function run()
     {
         $provinceControlScore = new ProvinceControlScore();
-        $province_control_score = JsonToArray::getJson('province_control_score.json');
+        $province_control_score = JsonToArrayService::getJson('province_control_score.json');
         $provinceControlScore->addAll($province_control_score);
     }
 }

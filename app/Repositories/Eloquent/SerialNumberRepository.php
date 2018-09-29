@@ -47,11 +47,31 @@ class SerialNumberRepository extends Repository
     /**
      * 获取所有序列号总数
      *
+     * @param $request
      * @return mixed
      */
-    public function getAllCount()
+    public function getAllCount($request)
     {
-        return $this->model->count();
+        $number = $request->get('number');
+        $is_senior = $request->get('is_senior');
+        $is_invalid = $request->get('is_invalid');
+
+        $sql = $this->model;
+        if ($number || $is_senior || $is_senior === '0' || $is_invalid || $is_invalid === '0') {
+            if ($number) {
+                $sql = $sql->where('number', $number);
+            }
+            if ($is_senior || $is_senior === '0') {
+                $sql = $sql->where('is_senior', $is_senior);
+            }
+            if ($is_invalid || $is_invalid === '0') {
+                $sql = $sql->where('is_invalid', $is_invalid);
+            }
+
+            return $sql->count();
+        } else {
+            return $this->model->count();
+        }
     }
 
     /**
@@ -67,17 +87,36 @@ class SerialNumberRepository extends Repository
     /**
      * 序列号分页
      *
-     * @param $data
+     * @param $request
      * @return mixed
      */
-    public function getAllByPage($data)
+    public function getAllByPage($request)
     {
-        $page = $data['page'] - 1;
-        $limit = $data['limit'];
+        $page = $request->get('page') - 1;
+        $limit = $request->get('limit');
         $offset = $page * $limit;
 
-        return $this->model->orderBy('created_at', 'desc')
-            ->skip($offset)->limit($limit)->get();
+        $number = $request->get('number');
+        $is_senior = $request->get('is_senior');
+        $is_invalid = $request->get('is_invalid');
+
+        $sql = $this->model->skip($offset)->limit($limit)->orderBy('created_at', 'desc');
+
+        if ($number || $is_senior || $is_senior === '0' || $is_invalid || $is_invalid === '0') {
+            if ($number) {
+                $sql = $sql->where('number', $number);
+            }
+            if ($is_senior || $is_senior === '0') {
+                $sql = $sql->where('is_senior', $is_senior);
+            }
+            if ($is_invalid || $is_invalid === '0') {
+                $sql = $sql->where('is_invalid', $is_invalid);
+            }
+
+            return $sql->get();
+        } else {
+            return $sql->get();
+        }
     }
 
     /**
@@ -86,8 +125,31 @@ class SerialNumberRepository extends Repository
      * @param $data
      * @return mixed
      */
-    public function store($data)
+    public function addAll($data)
     {
         return $this->model->addAll($data);
+    }
+
+    /**
+     * 更新数据
+     *
+     * @param $id
+     * @param $data
+     * @return mixed
+     */
+    public function update($id, $data)
+    {
+        return $this->model->where('id', $id)->update($data);
+    }
+
+    /**
+     * 更新序列号为已使用
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function updateInvalid($id)
+    {
+        return $this->model->where('id', $id)->update(['is_invalid' => 1]);
     }
 }
