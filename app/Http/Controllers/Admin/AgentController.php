@@ -88,10 +88,17 @@ class AgentController extends ApiController
 
             return view('admin.agent.change', compact('info'));
         } else {
-            if ($this->agentRepository->update($agent_id, $request->except(['_token', '_method']))) {
-                return redirect()->back()->with("message", "修改成功");
+            $res = $this->agentRepository->update($agent_id, $request->except(['_token', '_method']));
+            if ($res == 1) {
+                $data['message'] = '修改成功';
+                $data['status_code'] = 200;
+
+                return redirect()->back()->with("data", $data);
             } else {
-                return redirect()->back()->with("message", "修改失败");
+                $data['message'] = '修改失败,手机号必须唯一!';
+                $data['status_code'] = 400;
+
+                return redirect()->back()->with("data", $data);
             }
         }
     }
@@ -149,6 +156,29 @@ class AgentController extends ApiController
         $ids = $request->get('ids', '|');
         if ($this->agentRepository->batchDelete($ids)) {
             return $this->responseSuccess();
+        }
+    }
+
+    /**
+     * 分配代理商代理省份
+     *
+     * @param                          $agent_id
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
+     * @throws \Exception
+     */
+    public function assignAgentProvince($agent_id, Request $request)
+    {
+        if ($request->method() == 'GET') {
+            $info = $this->agentRepository->findById($agent_id);
+            $assign_provinces = $this->agentRepository->getAgentProvince($agent_id)->ToArray();
+
+            return view('admin.agent.assign', compact('info', 'assign_provinces'));
+        } else {
+
+            $this->agentRepository->assignAgentProvince($agent_id, $request);
+
+            return redirect()->back()->with("message", "分配成功");
         }
     }
 }

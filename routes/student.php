@@ -20,7 +20,7 @@ Route::namespace('Student')->prefix(STUDENT_PREFIX)->group(function () {
 });
 
 Route::namespace('Student')->prefix(STUDENT_PREFIX)->middleware('StudentAuth:student')->group(function () {
-    /*  学生后台首页 */
+    /* 学生后台首页 */
     Route::get('', 'DashboardController@index');
     Route::get('dashboard', 'DashboardController@index')->name('student.dashboard');
     Route::post('logout', 'LoginController@logout')->name('student.logout');

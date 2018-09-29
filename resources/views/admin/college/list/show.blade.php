@@ -4,41 +4,21 @@
 		<div class="layui-row layui-col-space15">
 			<div class="layui-col-md6">
 				<div class="layui-card">
-					<div class="layui-card-header">@lang('admin/college.data_info')</div>
-					<div class="layui-card-body layui-text">
+					<div class="layui-card-header">学校名称</div>
+					<div class="layui-card-body">
 						<table class="layui-table">
-							<colgroup>
-								<col width="100">
-								<col>
-							</colgroup>
 							<tbody>
 							<tr>
-								<td>@lang('admin/college.curent_province')</td>
-								<td>
-									{{ $province_data['info']['province_name'] }}
-								</td>
+								<td>大学名称</td>
+								<td>北京大学</td>
 							</tr>
 							<tr>
-								<td>@lang('admin/college.trend')</td>
-								<td>
-									TODO
-								</td>
+								<td>大学英文名称</td>
+								<td>Peking University</td>
 							</tr>
 							<tr>
-								<td>@lang('admin/college.year_interval')</td>
-								<td>
-									@lang('admin/college.year_interval_start')
-									{{ $province_data['year_interval'] }}
-									@lang('admin/college.year_interval_end')
-								</td>
-							</tr>
-							<tr>
-								<td>@lang('admin/college.data_action')</td>
-								<td style="padding-bottom: 0;">
-									<div class="layui-btn-container">
-										<a href="{{ route('admin.province.score.index') }}" class="layui-btn layui-btn-normal">@lang('admin/college.go_back')</a>
-									</div>
-								</td>
+								<td>曾用名</td>
+								<td>曾用名</td>
 							</tr>
 							</tbody>
 						</table>
@@ -47,71 +27,133 @@
 			</div>
 			<div class="layui-col-md6">
 				<div class="layui-card">
-					<div class="layui-card-header">待办事项</div>
+					<div class="layui-card-header">联系方式</div>
 					<div class="layui-card-body">
-						<div class="layui-carousel layadmin-carousel layadmin-backlog">
-							<div>
-								<ul class="layui-row layui-col-space10">
-									<li class="layui-col-xs6">
-										<a lay-href="app/content/comment.html" class="layadmin-backlog-body">
-											<h3>待审评论</h3>
-											<p><cite>66</cite></p>
-										</a>
-									</li>
-									<li class="layui-col-xs6">
-										<a lay-href="app/forum/list.html" class="layadmin-backlog-body">
-											<h3>待审帖子</h3>
-											<p><cite>12</cite></p>
-										</a>
-									</li>
-									<li class="layui-col-xs6">
-										<a lay-href="template/goodslist.html" class="layadmin-backlog-body">
-											<h3>待审商品</h3>
-											<p><cite>99</cite></p>
-										</a>
-									</li>
-									<li class="layui-col-xs6">
-										<a href="javascript:;" onclick="layer.tips('不跳转', this, {tips: 3});" class="layadmin-backlog-body">
-											<h3>待发货</h3>
-											<p><cite>20</cite></p>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
+						<table class="layui-table">
+							<tbody>
+							<tr>
+								<td>联系电话</td>
+								<td>010-62751407</td>
+							</tr>
+							<tr>
+								<td>联系邮箱</td>
+								<td>bdzsb@pku.edu.cn</td>
+							</tr>
+							<tr>
+								<td>联系地址</td>
+								<td>北京市海淀区颐和园路5号</td>
+							</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
-
-			<div class="layui-col-md12">
+			<div class="layui-col-md8">
 				<div class="layui-card">
-					<div class="layui-card-header">@lang('admin/college.province_control_score_bar_math')</div>
+					<div class="layui-card-header">基本信息</div>
 					<div class="layui-card-body">
-						<div id="BarMath"></div>
+						<table class="layui-table">
+							<tbody>
+							<tr>
+								<td>院校排名</td>
+								<td>1</td>
+								<td>建校时间</td>
+								<td>2018年8月8日</td>
+							</tr>
+							<tr>
+								<td>院校类型</td>
+								<td>工科类</td>
+								<td>院校国家标码ID</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>院校属性</td>
+								<td>211/985/一流大学</td>
+								<td>学校官网</td>
+								<td><a href="http://www.pku.edu.cn">http://www.pku.edu.cn</a></td>
+							</tr>
+							<tr>
+								<td>院校类别</td>
+								<td>公办大学</td>
+								<td>研究生点</td>
+								<td>50个</td>
+							</tr>
+							<tr>
+								<td>隶属部门</td>
+								<td>教育部</td>
+								<td>博士点</td>
+								<td>50个</td>
+							</tr>
+							<tr>
+								<td>院校层次</td>
+								<td>本科</td>
+								<td>全景</td>
+								<td><a href="#">全景</a></td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-md4">
+				<div class="layui-card">
+					<div class="layui-card-header">点击数及指数</div>
+					<div class="layui-card-body">
+						<table class="layui-table">
+							<tbody>
+							<tr>
+								<td>总点击数</td>
+								<td>2656</td>
+							</tr>
+							<tr>
+								<td>月点击数</td>
+								<td>265</td>
+							</tr>
+							<tr>
+								<td>周点击数</td>
+								<td>565</td>
+							</tr>
+							<tr>
+								<td>学习指数</td>
+								<td>2656</td>
+							</tr>
+							<tr>
+								<td>生活指数</td>
+								<td>265</td>
+							</tr>
+							<tr>
+								<td>工作指数</td>
+								<td>565</td>
+							</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
 			<div class="layui-col-md12">
 				<div class="layui-card">
-					<div class="layui-card-header">@lang('admin/college.province_control_score_bar_art')</div>
+					<div class="layui-card-header">收费标准</div>
 					<div class="layui-card-body">
-						<div id="BarArt"></div>
+						<p>一、生命科学学院、信息科学技术学院、元培计划实验班 5300元/学年</p>
+						<p>二、医学部所有本科医学专业 6000元/学年</p>
+						<p>三、其他院系 5000元/学年</p>
 					</div>
 				</div>
 			</div>
 			<div class="layui-col-md12">
 				<div class="layui-card">
-					<div class="layui-card-header">@lang('admin/college.province_control_score_line_math')</div>
+					<div class="layui-card-header">就业前景</div>
 					<div class="layui-card-body">
-						<div id="LineMath"></div>
+						<p>每年１０月份开始，企事业单位新一轮的人才争夺大战就在北大展开。北大本科毕业生的就业领域主要集中在国家机关、高等院校、新闻出版、金融机构、国有企业、三资企业等，近几年去著名跨国公司以及高新技术企业的毕业生比例明显增加。</p>
 					</div>
 				</div>
 			</div>
 			<div class="layui-col-md12">
 				<div class="layui-card">
-					<div class="layui-card-header">@lang('admin/college.province_control_score_line_art')</div>
+					<div class="layui-card-header">院校简介</div>
 					<div class="layui-card-body">
-						<div id="LineArt"></div>
+						<p>北京大学创办于1898年，初名京师大学堂，是中国第一所国立综合性大学，也是当时中国最高教育行政机关。辛亥革命后，于1912年改为现名。</p>
+						<p>作为新文化运动的中心和“五四”运动的策源地，作为中国最早传播马克思主义和民主科学思想的发祥地，作为中国共产党最早的活动基地，北京大学为民族的振兴和解放、国家的建设和发展、社会的文明和进步做出了不可替代的贡献，在中国走向现代化的进程中起到了重要的先锋作用。爱国、进步、民主、科学的传统精神和勤奋、严谨、求实、创新的学风在这里生生不息、代代相传。</p>
 					</div>
 				</div>
 			</div>
@@ -120,155 +162,6 @@
 @endsection()
 @section('js')
 	<!-- 引入在线资源 -->
-	<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.2.8/dist/g2.min.js"></script>
-	<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.9.6/dist/data-set.min.js"></script>
-	<script>
-        let math =
-				{!! $math !!}
-        var art = {!! $art !!}
-
-        // 显示文本
-        var Shape = G2.Shape;
-        Shape.registerShape('interval', 'textInterval', {
-            drawShape: function drawShape(cfg, group) {
-                var points = this.parsePoints(cfg.points); // 将0-1空间的坐标转换为画布坐标
-                var value = cfg.origin._origin.score;
-                group.addShape('text', {
-                    attrs: {
-                        text: value,
-                        textAlign: 'center',
-                        x: points[1].x + cfg.size / 2,
-                        y: points[1].y,
-                        fontFamily: 'PingFang SC',
-                        fontSize: 12,
-                        fill: '#BBB'
-                    }
-                });
-                var polygon = group.addShape('polygon', {
-                    attrs: {
-                        points: points.map(function (point) {
-                            return [point.x, point.y];
-                        }),
-                        fill: cfg.color
-                    }
-                });
-                return polygon;
-            }
-        });
-
-        //理科省控线柱状图
-        const chart_bar_math = new G2.Chart({
-            container: 'BarMath',
-            forceFit: true,
-            height: 450,
-            data: math,
-            padding: [20, 20, 100, 50]
-        });
-        chart_bar_math.scale('score', {
-            type: 'linear',
-            min: 0,
-            max: 800
-        });
-        chart_bar_math.axis('year', {
-            label: {
-                formatter: val => {
-                    return val + '年';
-                }
-            }
-        });
-        chart_bar_math.interval().shape('textInterval').position('year*score').color('batch').adjust([{
-            type: 'dodge',
-            marginRatio: 1 / 32
-        }]).size(10);
-        chart_bar_math.render();
-
-        //文科省控线柱状图
-        const chart_bar_art = new G2.Chart({
-            container: 'BarArt',
-            data: art,
-            forceFit: true,
-            height: 450,
-            padding: [20, 20, 100, 50]
-        });
-        chart_bar_art.scale('score', {
-            type: 'linear',
-            min: 0,
-            max: 800
-        });
-        chart_bar_art.axis('year', {
-            label: {
-                formatter: val => {
-                    return val + '年';
-                }
-            }
-        });
-        chart_bar_art.interval().shape('textInterval').position('year*score')
-            .color('batch').adjust([{
-            type: 'dodge',
-            marginRatio: 1 / 32
-        }]).size(10);
-        chart_bar_art.render();
-
-        //理科省控线柱状图
-        const chart_line_math = new G2.Chart({
-            container: 'LineMath',
-            data: math,
-            forceFit: true,
-            height: 450,
-            padding: [20, 20, 100, 50]
-        });
-        chart_line_math.scale('score', {
-            type: 'linear',
-            min: 0,
-            max: 800
-        });
-        chart_line_math.axis('year', {
-            label: {
-                formatter: val => {
-                    return val + '年';
-                }
-            }
-        });
-        chart_line_math.line().position('year*score').color('batch');
-        chart_line_math.point().position('year*score').color('batch').size(4).shape('circle').style({
-            stroke: '#fff',
-            lineWidth: 1
-        });
-        chart_line_math.render();
-
-        //文科省控线柱状图
-        const chart_line_art = new G2.Chart({
-            container: 'LineArt',
-            data: art,
-            forceFit: true,
-            height: 450,
-            padding: [20, 20, 100, 50]
-        });
-        chart_line_art.scale('score', {
-            type: 'linear',
-            min: 0,
-            max: 800
-        });
-        chart_line_art.axis('year', {
-            label: {
-                formatter: val => {
-                    return val + '年';
-                }
-            }
-        });
-        chart_line_art.tooltip({
-            crosshairs: {
-                type: 'line'
-            }
-        });
-
-        chart_line_art.line().position('year*score').color('batch');
-        chart_line_art.point().position('year*score').color('batch').size(4).shape('circle').style({
-            stroke: '#fff',
-            lineWidth: 1
-        });
-        chart_line_art.render();
-	</script>
 	<script>
         layui.config({
             base: '/theme/' //静态资源所在路径

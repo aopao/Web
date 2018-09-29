@@ -29,4 +29,14 @@ class Admin extends Authenticatable
         'verify_token',
         'remember_token',
     ];
+
+    /**
+     * 密码加密
+     *
+     * @param $password
+     */
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
+    }
 }

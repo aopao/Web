@@ -7,6 +7,7 @@ return [
     */
 
     /*  表单公用部分 */
+    'show' => '查看',
     'search' => '搜索',
     'edit' => '编辑',
     'del' => '删除',
@@ -20,4 +21,5 @@ return [
     'level_path' => '层级目录',
     'button_add' => '添加',
     'button_edit' => '修改',
+    'button_assign' => '分配',
 ];

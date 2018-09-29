@@ -1,0 +1,54 @@
+        @font-face {
+            font-family: 'shishangzhongheiregular';
+            src: url('../font/shishangzhonghei-webfont.eot');
+            src: url('../font/shishangzhonghei-webfont.eot?#iefix') format('embedded-opentype'), url('../font/shishangzhonghei-webfont.woff2') format('woff2'), url('../font/shishangzhonghei-webfont.woff') format('woff'), url('../font/shishangzhonghei-webfont.ttf') format('truetype'), url('../font/shishangzhonghei-webfont.svg#shishangzhongheiregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        span.num1 {
+            font-family: 'shishangzhongheiregular';
+            font-size: 50px;
+            color: #b2b2b2;
+        }
+        span.num {
+            font-family: '微软雅黑';
+            font-size: 14px;
+            color: #b2b2b2;
+        }
+        span.template_span {
+            display: block;
+            margin: auto;
+        }
+        div.bgf div.mainbox_w {
+            display: none;
+        }
+        span.template_span {
+            height: auto;
+        }
+        .progress_t {
+            text-align: center;
+        }
+        .test_user a {
+            color: #2e3b4e;
+        }
+        .test_user a:hover {
+            color: #f7931e;
+        }
+        div.template_box {
+            text-align: left;
+        }
+        div.numbox {
+            position: absolute;
+            top: -31px;
+            right: 520px;
+        }
+        .mainbox_w.ptbn {
+            width: 500px;
+        }
+        span.template_span {
+            margin-left: 0;
+            padding: 10px;
+        }
+        span.template_span p {
+            line-height: 22px;
+        }

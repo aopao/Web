@@ -25,7 +25,10 @@ include_once __DIR__.'/admin.php';
 #加载代理商管理模块路由
 include_once __DIR__.'/agent.php';
 
-#加载学生会员中心理模块路由
+#加载学生会员中心管理模块路由
 include_once __DIR__.'/student.php';
+
+#加载测评管理模块路由
+include_once __DIR__.'/assessment.php';
 
 

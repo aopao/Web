@@ -26,7 +26,9 @@
 						</div>
 						<table class="layui-hide" id="AgentList" lay-filter="AgentList"></table>
 						<script type="text/html" id="AgentListOperate">
-							<button class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit">@lang('comment/form.edit')</button>
+							<button class="layui-btn layui-btn-normal layui-btn-xs" lay-event="show">@lang('comment/form.show')</button>
+							<button class="layui-btn layui-btn-warm layui-btn-xs" lay-event="edit">@lang('comment/form.edit')</button>
+							<button class="layui-btn layui-btn-normal layui-btn-xs" lay-event="assign">@lang('admin/agent.assign_agent_province')</button>
 							<button class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">@lang('comment/form.del')</button>
 							<button class="layui-btn layui-btn-blue layui-btn-xs" lay-event="change">@lang('admin/agent.agent_change_mobile')</button>
 						</script>
@@ -36,14 +38,6 @@
 							@{{#  } else { }}
 							<span class="layui-badge layui-bg-red">禁封</span>
 							@{{#  } }}
-						</script>
-						<script type="text/html" id="AvatarTpl">
-							@{{# if (d.avatar){ }}
-							<img style="display: inline-block; height: 50px" src="@{{d.avatar}}">
-							@{{# }else{ }}
-							<img style="display: inline-block; height: 50px"
-								 src="/errorimg/error.jpg">
-							@{{# } }}
 						</script>
 					</div>
 				</div>
@@ -81,8 +75,8 @@
                         , {field: 'nickname', align: "center", title: '@lang('admin/agent.nickname')'}
                         , {field: 'student_num', align: "center", title: '@lang('admin/agent.student_num')', templet: '<div>后期添加</div>'}
                         , {field: 'status', align: "center", title: '@lang('admin/agent.status')', templet: '#statusTpl'}
-                        , {field: 'created_at', align: "center", width: 200, title: '@lang('comment/table.created_at')', sort: true}
-                        , {align: 'center', width: 200, title: '@lang('comment/table.action')', fixed: 'right', toolbar: '#AgentListOperate'}
+                        , {field: 'created_at', align: "center",  title: '@lang('comment/table.created_at')', sort: true}
+                        , {align: 'center',width: '25%', title: '@lang('comment/table.action')', fixed: 'right', toolbar: '#AgentListOperate'}
                     ]]
                 });
             }
@@ -158,6 +152,14 @@
                         , content: AgentIndexUrl + '/' + data.id + '/edit'
                         , shadeClose: true
                         , area: admin.screen() < 2 ? ['100%', '80%'] : ['50%', '500px']
+                        , maxmin: true
+                    });
+                } else if (layEvent === 'assign') {
+                    layer.open({
+                        type: 2
+                        , content: AgentIndexUrl + '/' + data.id + '/assign'
+                        , shadeClose: true
+                        , area: admin.screen() < 2 ? ['100%', '80%'] : ['80%', '500px']
                         , maxmin: true
                     });
                 } else if (layEvent === 'del') { //删除

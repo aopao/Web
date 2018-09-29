@@ -61,12 +61,24 @@ Route::namespace('Admin')->prefix(ADMIN_PREFIX)->middleware('AdminAuth:admin')->
     Route::delete('agent/delete', 'AgentController@deleteByIds')->name('admin.agent.delete');
     Route::get('agent/page', 'AgentController@getListByPageId')->name('admin.agent.page');
     Route::match(['GET', 'PUT'], 'agent/{agent_id}/change', 'AgentController@changeMobile')->name('admin.agent.change');
+    Route::match(['GET', 'PUT'], 'agent/{agent_id}/assign', 'AgentController@assignAgentProvince')->name('admin.agent.assign');
     Route::resource('agent', 'AgentController', ['as' => 'admin']);
+
+    /* 学生列表管理路由 */
+    Route::delete('student/delete', 'StudentController@deleteByIds')->name('admin.student.delete');
+    Route::get('student/page', 'StudentController@getListByPageId')->name('admin.student.page');
+    Route::match(['GET', 'PUT'], 'student/{student_id}/change', 'StudentController@changeMobile')->name('admin.student.change');
+    Route::match(['GET', 'PUT'], 'student/{student_id}/more', 'StudentController@inputMore')->name('admin.student.assign');
+    Route::resource('student', 'StudentController', ['as' => 'admin']);
 
     /* 地域管理路由 -> 省份管理界面 */
     Route::delete('province/delete', 'ProvinceController@deleteByIds')->name('admin.province.delete');
     Route::get('province/page', 'ProvinceController@getListByPageId')->name('admin.province.page');
     Route::resource('province', 'ProvinceController', ['as' => 'admin']);
+
+    /* 序列号管理路由 */
+    Route::get('serial/page', 'SerialNumberController@getListByPageId')->name('admin.serial.page');
+    Route::resource('serial', 'SerialNumberController', ['as' => 'admin']);
 
     /* 地域管理路由 -> 城市管理界面 */
     Route::delete('city/delete', 'CityController@deleteByIds')->name('admin.city.delete');

@@ -9,6 +9,7 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\Agent;
+use App\Models\AgentProvince;
 
 class AgentRepository extends Repository
 {
@@ -95,8 +96,45 @@ class AgentRepository extends Repository
         } else {
             $data['password'] = bcrypt($data['password']);
         }
+        if (isset($data['mobile'])) {
+            if ($this->model->where('mobile', $data['mobile'])->exists()) {
+                return 400;
+            }
+        }
 
         return $this->model->where('id', $id)->update($data);
+    }
+
+    /**
+     * 根据代理商 ID 分配省份
+     *
+     * @param $agent_id
+     * @param $request
+     * @return bool
+     * @throws \Exception
+     */
+    public function assignAgentProvince($agent_id = 0, $request)
+    {
+        $data = [];
+        $data['agent_id'] = $agent_id;
+        $provinces = $request->get('provinces');
+        AgentProvince::where('agent_id', $agent_id)->delete();
+        foreach ($provinces as $value) {
+            $data['province_id'] = $value;
+            AgentProvince::Create($data);
+        }
+
+        return true;
+    }
+
+    /**
+     * 根据代理商 ID 获取代理省份
+     * @param int $agent_id
+     * @return \Illuminate\Support\Collection
+     */
+    public function getAgentProvince($agent_id = 0)
+    {
+        return AgentProvince::where('agent_id', $agent_id)->pluck('province_id');
     }
 
     /**

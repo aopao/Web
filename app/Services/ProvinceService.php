@@ -29,7 +29,7 @@ class ProvinceService
     }
 
     /**
-     * 获取所有省份
+     * 获取所有省份Options
      *
      * @param $province_id
      * @return mixed
@@ -45,5 +45,24 @@ class ProvinceService
         }
 
         return $option;
+    }
+
+    /**
+     * 获取所有省份Checkbox
+     *
+     * @param null $province_ids
+     * @return mixed
+     */
+    public function getAllProvincesCheckbox($province_ids = null)
+    {
+        $provinces = $this->provinceRepository->getAllProvinces();
+        $checkbox = null;
+        $checked = null;
+        foreach ($provinces as $key => $value) {
+            $checked = $province_ids != null && in_array($value['id'], $province_ids) ? 'checked' : '';
+            $checkbox .= "<input ".$checked." type=\"checkbox\" value=\"".$value['id']."\" name=\"provinces[]\" title=\"".$value['province_name']."\">";
+        }
+
+        return $checkbox;
     }
 }

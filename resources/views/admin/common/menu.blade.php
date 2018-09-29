@@ -68,14 +68,15 @@
 					</dd>
 				</dl>
 			</li>
-			<li data-name="agent" class="layui-nav-item">
-				<a href="javascript:void(0);" lay-tips="代理管理" lay-direction="4">
-					<i class="layui-icon layui-icon-user"></i>
-					<cite>代理管理</cite>
+
+			<li data-name="serial_number" class="layui-nav-item">
+				<a href="javascript:void(0);" lay-tips="序列号管理" lay-direction="4">
+					<i class="layui-icon layui-icon-diamond"></i>
+					<cite>序列号库</cite>
 				</a>
 				<dl class="layui-nav-child">
 					<dd>
-						<a lay-href="{{ route('admin.agent.index') }}">代理商列表</a>
+						<a lay-href="{{ route('admin.serial.index') }}">序列号列表</a>
 					</dd>
 				</dl>
 			</li>
@@ -86,7 +87,7 @@
 				</a>
 				<dl class="layui-nav-child">
 					<dd>
-						<a lay-href="{{ route('admin.province.index') }}">学生列表</a>
+						<a lay-href="{{ route('admin.student.index') }}">学生列表</a>
 					</dd>
 				</dl>
 			</li>

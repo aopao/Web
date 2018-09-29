@@ -10,7 +10,6 @@ return [
     'mobile' => '手机号',
     'password' => '密码',
     'nickname' => '昵称',
-    'avatar' => '头像',
     'email' => '邮箱',
     'qq' => ' QQ',
     'status' => '状态',
@@ -25,4 +24,5 @@ return [
     'agent_edit' => '修改代理商信息',
     'input_mobile' => '请输入手机号',
     'agent_change_mobile' => '更换手机号',
+    'assign_agent_province' => '代理区域',
 ];

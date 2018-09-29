@@ -18,6 +18,7 @@ class CreateStudentsTable extends Migration
             $table->string('mobile', 11)->index()->unique()->comment('也可用手机号登录,可不用');
             $table->string('password');
             $table->string('nickname', 100)->nullable();
+            $table->integer('agent_id')->default(0)->comment('所属代理商');
             $table->boolean('status')->default(1)->comment('账户状态0:禁封,1:正常');
             $table->string('verify_token', 128)->nullable()->comment('邮箱验证Token');
             $table->integer('plan_number')->default(0)->comment('学生总计数数');

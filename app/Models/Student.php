@@ -24,4 +24,14 @@ class Student extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    /**
+     * 密码加密
+     *
+     * @param $password
+     */
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
+    }
 }

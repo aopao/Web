@@ -34,6 +34,13 @@ class CollegeController extends ApiController
         return view('admin.college.list.index');
     }
 
+    public function show($id)
+    {
+        $info = $this->collegeRepository->findById($id);
+        return view('admin.college.list.show');
+
+    }
+
     /**
      * 获取大学分页列表,返回给前端
      *

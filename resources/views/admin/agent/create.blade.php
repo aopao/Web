@@ -28,13 +28,13 @@
 							<div class="layui-form-item">
 								<label class="layui-form-label">@lang('admin/agent.email')</label>
 								<div class="layui-input-block">
-									<input autocomplete="off" class="layui-input" name="email" value="" lay-verify="email" placeholder="@lang('admin/agent.email')" type="text"/>
+									<input autocomplete="off" class="layui-input" name="email" value="" placeholder="@lang('admin/agent.email')" type="text"/>
 								</div>
 							</div>
 							<div class="layui-form-item">
 								<label class="layui-form-label">@lang('admin/agent.qq')</label>
 								<div class="layui-input-block">
-									<input autocomplete="off" class="layui-input" name="qq" value="" lay-verify="number" placeholder="@lang('admin/agent.qq')" type="text"/>
+									<input autocomplete="off" class="layui-input" name="qq" value="" placeholder="@lang('admin/agent.qq')" type="text"/>
 								</div>
 							</div>
 							<div class="layui-form-item" style="text-align: center">

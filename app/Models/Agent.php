@@ -31,4 +31,5 @@ class Agent extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($password);
     }
+
 }

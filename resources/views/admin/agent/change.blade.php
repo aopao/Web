@@ -33,12 +33,17 @@
             index: 'lib/index' //主入口模块
         }).use(['index', 'form'], function () {
             let index = parent.layer.getFrameIndex(window.name); //获取窗口索引
-			@if(Session::has('message'))
-            layer.msg('{{Session::get("message")}}', {offset: '100px', icon: 1, time: 1000});
+			@if(Session::has('data.message'))
+
+			@if(Session::get('data.status_code') == 200)
+            layer.msg('{{Session::get("data.message")}}', {offset: '100px', icon: 1, time: 2000});
             setTimeout(function () {
                 parent.window.location.reload();
                 parent.layer.close(index);
             }, 500);
+			@else
+            layer.msg('{{Session::get("data.message")}}', {offset: '100px', icon: 5, time: 1000});
+			@endif
 			@endif
         });
 	</script>
