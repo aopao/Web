@@ -1,60 +1,157 @@
 @include('assessment.comment.header')
 
-<div class="mainbox_w" data-type="r1">
-	<a name="result"></a>
-	<h2 class="i_h">您的测评结果</h2>
-	<div class="deep_info">您的MBTI类型是：ENFJ</div>
-	<div class="deep_info" style="margin: 0 auto; width: 930px;">
-		<table style="margin: 0 auto 0 auto; border-spacing: 2px 25px">
+<div id="report">
+	<h2 align="center" style="font-family:'微软雅黑'">专业选择测试报告</h2>
+	<p align="center">原著：[美]Myers-Briggs / 编译：黑马高考</p><br>
+	<hr>
+	<div class="r">
+		<table>
 			<tbody>
 			<tr>
-				<td style="width: 100px; text-align: center;">外向（E）</td>
-				<td style="width: 250px; border: 1px solid #6CF; padding: 2px;"><span style="width: 234px;"></span><span style="width: 16px; height: 0; background-color: #6CF; border: 15px solid #6CF; border-left-width: 0; border-right-width: 0; padding: 0;"></span></td>
-				<td style="width:250px; border: 1px solid #FC6; padding: 2px;"><span style="width: 0px; height: 0; background-color: #FC6; border: 15px solid #FC6; border-left-width: 0; border-right-width: 0; padding: 0;"></span><span style="width: 250px;"></span></td>
-				<td style="width: 100px; text-align: center;">（I）内向</td>
-			</tr>
-			<tr>
-				<td style="width: 100px; text-align: center;">实感（S）</td>
-				<td style="width: 250px; border: 1px solid #6CF; padding: 2px;"><span style="width: 250px;"></span><span style="width: 0px; height: 0; background-color: #6CF; border: 15px solid #6CF; border-left-width: 0; border-right-width: 0; padding: 0;"></span></td>
-				<td style="width:250px; border: 1px solid #FC6; padding: 2px;"><span style="width: 44px; height: 0; background-color: #FC6; border: 15px solid #FC6; border-left-width: 0; border-right-width: 0; padding: 0;"></span><span style="width: 206px;"></span></td>
-				<td style="width: 100px; text-align: center;">（N）直觉</td>
-			</tr>
-			<tr>
-				<td style="width: 100px; text-align: center;">思考（T）</td>
-				<td style="width: 250px; border: 1px solid #6CF; padding: 2px;"><span style="width: 250px;"></span><span style="width: 0px; height: 0; background-color: #6CF; border: 15px solid #6CF; border-left-width: 0; border-right-width: 0; padding: 0;"></span></td>
-				<td style="width:250px; border: 1px solid #FC6; padding: 2px;"><span style="width: 55px; height: 0; background-color: #FC6; border: 15px solid #FC6; border-left-width: 0; border-right-width: 0; padding: 0;"></span><span style="width: 195px;"></span></td>
-				<td style="width: 100px; text-align: center;">（F）情感</td>
-			</tr>
-			<tr>
-				<td style="width: 100px; text-align: center;">判断（J）</td>
-				<td style="width: 250px; border: 1px solid #6CF; padding: 2px;"><span style="width: 250px;"></span><span style="width: 0px; height: 0; background-color: #6CF; border: 15px solid #6CF; border-left-width: 0; border-right-width: 0; padding: 0;"></span></td>
-				<td style="width:250px; border: 1px solid #FC6; padding: 2px;"><span style="width: 0px; height: 0; background-color: #FC6; border: 15px solid #FC6; border-left-width: 0; border-right-width: 0; padding: 0;"></span><span style="width: 250px;"></span></td>
-				<td style="width: 100px; text-align: center;">（P）知觉</td>
+				<td>测试者:</td>
+				<td width="130">{{ $info['serial_number_record']['username'] }}</td>
+				<td>完成问卷时间:</td>
+				<td width="120">{{ $info['serial_number_record']['created_at']  }}</td>
 			</tr>
 			</tbody>
 		</table>
 	</div>
-	<h2 class="i_h i_c"><em></em>性格特点</h2>
-	<div class="deep_info" style="margin: 0 auto; width: 930px;">
-		<p>敏感、负责任。真正地关心他人的所想所愿。处理事情时尽量适当考虑别人的感情、需要、动机和忧虑，做到与他人高度协调。能提出建议或轻松而机智地领导小组讨论。依赖个人的价值观做决策，对外界运用自己的情感做出判断，焕发出热情和活力。寻求并且能够发现他人的最大优点，重视和睦与合作。对人的赞同能使你感到愉悦，并且你会报之努力和奉献；对于批评和紧张特别敏感。</p>
-		<p>喜欢帮助他人、给人以方便，鼓励他人进步向上，并使人们能发挥其潜力。能很快理解他人情感的需要、动机和所忧虑的事情，因此能做到与他人高度协调。注意力放在帮助他人，鼓励他人进步向上。你是催化剂，能引发出他人的最佳状态。既可以做有号召力的领袖，也可以做忠实的追随者。</p>
-		<p>性格关键词：热心、支持他人、忠诚、可信赖</p>
+	<div class="clear">
 	</div>
-	<h2 class="i_h i_c"><em></em>给他人印象</h2>
-	<div class="deep_info" style="margin: 0 auto; width: 930px;">
-		<p>人们觉得你精力旺盛，热情洋溢又善解人意。你真诚的关怀往往使得最孤独的人都被打动，并受到影响。倾听他人的意见，帮助他人，自己有时也有可以清 晰地表达个人的价值观。你从众人那里获得活力，善于社交，可是你也极其需要真诚的亲密关系，非常热情、迫切地建立并保持这样的关系。</p>
-		<p>喜欢生活井井有条，尽量消除不清晰的关系和交际形式。如果众人的需求与日程安排或规章发生冲突，还是把众人放在首位。</p>
-		<p>他人眼中的你：好交际，气宇不凡，友善，亲切、善表达</p>
-	</div>
-	<h2 class="i_h i_c"><em></em>发展建议</h2>
-	<div class="deep_info" style="margin: 0 auto; width: 930px;">
-		<p>需要注意充分发展对外界深刻的洞察力和情感。 如果没有发现自己的深刻洞察力，可能由于没有获取足够的信息，也没有考虑自己个人价值以外的因素就急于做决策，而看不到其它机会。</p>
-		<p>如果没有发展自己的情感，做的决策可能自相矛盾，而且表达得杂乱无章。那么，可能太容易接受别人的判断。</p>
-		<p>如果找不到机会运用自己的才能并使自己的贡献得到赏识，会觉得沮丧，还可能变得焦虑，失去自信，为了求得和睦，变得执着而凌驾于他人之上，无论对真实的还是虚幻的批评都变得过于敏感</p>
-		<p>很容易倾向于忽视逻辑思考和现实，很可能导致作决策时，很少用逻辑，而主要依据个人的价值观，发觉难于接受你关心的问题和难于与众人取得一致看法，忽视实现自己理想所需要的现实的细节问题</p>
-		<p>发展建议：可能忽视逻辑思考和现实，需要注意发展洞察能力和情感。</p>
-	</div>
+
+	<div style="page-break-before:always;"></div>
+
+	<h3 class="character_title" align="center">{{ $info['mbti_category']['mbti_name'] }}</h3>
+	<div class="pctitle">一、你的MBTI图形</div>
+
+	<table id="chart" width="774" border="0" style="margin: 0 auto;">
+		<tbody>
+		<tr>
+			<td width="103"></td>
+			<td width="542">
+				<div align="center">MBTI倾向示意图(类型：ESTP&nbsp;总倾向：24.3)</div>
+			</td>
+			<td width="115"></td>
+		</tr>
+		<tr>
+			<td>外向（E）</td>
+			<td>
+				<div class="graph2" id="one">
+					{{ $info['e'] }}% <strong class="bar" style="width: {{ $info['e'] }}%;"><span></span></strong>
+				</div>
+				<div class="graph" id="two">
+					<strong class="bar" style="width: {{ $info['i'] }};"><span></span></strong> {{ $info['i'] }}
+				</div>
+				<br><br></td>
+			<td>（I）内向</td>
+		</tr>
+		<tr>
+			<td>实感（S）</td>
+			<td>
+				<div class="graph2" id="one">
+					{{ $info['s'] }}% <strong class="bar" style="width: {{ $info['s'] }}%;"><span></span></strong>
+				</div>
+				<div class="graph" id="two">
+					<strong class="bar" style="width: {{ $info['n'] }};"><span></span></strong> {{ $info['n'] }}
+				</div>
+				<br><br></td>
+			<td>（N）直觉</td>
+		</tr>
+		<tr>
+			<td>思考（T）</td>
+			<td>
+				<div class="graph2" id="one">
+					{{ $info['t'] }}% <strong class="bar" style="width: {{ $info['t'] }}%;"><span></span></strong>
+				</div>
+				<div class="graph" id="two">
+					<strong class="bar" style="width: {{ $info['f'] }};"><span></span></strong> {{ $info['f'] }}
+				</div>
+				<br><br></td>
+			<td>（F）情感</td>
+		</tr>
+		<tr>
+			<td>判断（J）</td>
+			<td>
+				<div class="graph2" id="one">
+					{{ $info['j'] }}% <strong class="bar" style="width: {{ $info['j'] }}%;"><span></span></strong>
+				</div>
+				<div class="graph" id="two">
+					<strong class="bar" style="width: {{ $info['p'] }};"><span></span></strong> {{ $info['p'] }}
+				</div>
+				<br><br></td>
+			<td>（P）知觉</td>
+		</tr>
+		<tr>
+			<td height="34"></td>
+			<td style="background:url(http://www.apesk.com/lee/images/dibiao1.jpg) no-repeat"></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+	<br>
+	<p></p>
+	<li style="font-size:16px;">倾向示意图表示四个维度分别的倾向程度。从中间往两侧看，绿色指示条对应下面坐标的哪个区间。</li>
+	<li style="font-size:16px;">本报告地址不会长期有效，请复制报告内容到本地或自己的博客。</li>
+	<p></p>
+	<br>
+
+	<!--图end-->
+	<div style="page-break-before:always;"></div>
+
+	<br>
+	<br>
+	<!--这里是优势劣势开始-->
+	<p>
+	</p>
+	<div class="pctitle">二、优势与劣势</div>
+	<p></p>
+	<table align="center" width="100%" cellpadding="20">
+		<tbody>
+		<tr>
+			<td class="style123">
+				{!! $info['mbti_category']['advantage_and_disadvantage'] !!}
+				<div style="page-break-before:always;"></div>
+
+				<div class="pctitle">三、气质类型</div>
+				{!! $info['mbti_category']['temperament_type'] !!}
+
+				<div style="page-break-before:always;"></div>
+				<div class="pctitle">四、基本描述</div>
+				<table align="center" width="100%" cellpadding="20">
+					<tbody>
+					<tr>
+						<td class="style123">
+
+							<table id="leader" style="FLOAT: left; MARGIN: 0px 25px 10px 0px" width="200" bgcolor="#dddddd" cellpadding="0" cellspacing="5">
+								<tbody>
+								<tr>
+									<td>
+										<img align="center" width="200" alt="" style="border: 1px solid #333333;" src="./img/INTJ.jpg">
+									</td>
+								</tr>
+								<tr>
+									<td style="FONT-SIZE: 9pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial,宋体; font-weight: none; color: #2F4F4F">
+										<br> INTJ (Introverted Intuition with Thinking)代表人物：<br><br> 扎克伯格 facebook创始人<br><br> 语录：I'm going to change the world<br><br> 朋友雪儿桑德伯格对其的评价：他害羞而内向，常常让不熟悉他的人感觉有点冷冰冰的。
+									</td>
+								</tr>
+								</tbody>
+							</table>
+							{!! $info['mbti_category']['brief_description'] !!}
+							<div style="page-break-before:always;"></div>
+							<div class="pctitle">五、后记</div>
+							{!! $info['mbti_category']['afterword'] !!}
+						</td>
+					</tr>
+					</tbody>
+				</table>
+
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
 </div>
 </div>
 </body>
+
 </html>

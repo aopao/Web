@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
         $this->call(AgentTableSeeder::class);
         $this->call(StudentTableSeeder::class);
         $this->call(MbtiPrimaryIusseTableSeeder::class);
+        $this->call(MbtiSeniorIusseTableSeeder::class);
+        $this->call(MbtiCategoryTableSeeder::class);
         $this->call(CollegelevelTableSeeder::class);
         $this->call(CollegeCategoryTableSeeder::class);
         $this->call(ProvinceControlScoreTableSeeder::class);

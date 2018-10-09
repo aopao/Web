@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSerialNumberLogsTable extends Migration
+class CreateSerialNumberRecordsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -20,9 +20,7 @@ class CreateSerialNumberLogsTable extends Migration
             $table->string('mobile')->default(0)->index()->comment('测试手机号');
             $table->string('username')->default(0)->comment('测试手机号');
             $table->string('assessment_type')->default(0)->comment('测试类型');
-            $table->string('apesk_id')->default(0)->comment('报告ID');
-            $table->integer('agent_id')->default(0)->index()->comment('哪个代理商使用');
-            $table->integer('student_id')->default(0)->index()->comment('哪个学生使用');
+            $table->string('report_id')->default(0)->comment('报告ID');
             $table->text('answers')->comment('作答记录');
             $table->timestamps();
         });
@@ -35,6 +33,6 @@ class CreateSerialNumberLogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('serial_number_logs');
+        Schema::dropIfExists('serial_number_records');
     }
 }

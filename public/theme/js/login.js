@@ -26,11 +26,11 @@ layui.config({
                     data: obj.field,
                     done: function (res) {
                         if (res.status_code === 200) {
-                            layer.msg('登录成功', {offset: '15px', icon: 1, time: 1000}, function () {
+                            layer.msg('登录成功', {offset: '50px', icon: 1, time: 1000}, function () {
                                 location.href = res.data.redirect;
                             });
                         } else {
-                            layer.msg('登录失败!', {icon: 2, offset: '15px', time: 1000});
+                            layer.msg('登录失败!', {icon: 2, offset: '50px', time: 1000});
                         }
                     }
                 });

@@ -76,6 +76,11 @@ Route::namespace('Admin')->prefix(ADMIN_PREFIX)->middleware('AdminAuth:admin')->
     Route::get('province/page', 'ProvinceController@getListByPageId')->name('admin.province.page');
     Route::resource('province', 'ProvinceController', ['as' => 'admin']);
 
+    /* 序列号使用记录管理路由 */
+    Route::get('serial/record/page', 'SerialNumberRecordController@getListByPageId')->name('admin.serial.record.page');
+    Route::get('serial/record/export', 'SerialNumberRecordController@export')->name('admin.serial.record.export');
+    Route::resource('serial/record', 'SerialNumberRecordController', ['as' => 'admin.serial']);
+
     /* 序列号管理路由 */
     Route::get('serial/page', 'SerialNumberController@getListByPageId')->name('admin.serial.page');
     Route::get('serial/export', 'SerialNumberController@export')->name('admin.serial.export');

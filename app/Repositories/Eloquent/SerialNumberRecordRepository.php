@@ -8,8 +8,8 @@
 
 namespace App\Repositories\Eloquent;
 
+use App\Models\Agent;
 use App\Models\SerialNumberRecord;
-use Illuminate\Http\Request;
 
 class SerialNumberRecordRepository extends Repository
 {
@@ -35,6 +35,17 @@ class SerialNumberRecordRepository extends Repository
     }
 
     /**
+     * 根据 ID 查询序列号记录是否存在
+     *
+     * @param $serial_number_id
+     * @return mixed
+     */
+    public function findBySerialNumberId($serial_number_id)
+    {
+        return $this->model->where('serial_number_id', $serial_number_id)->first();
+    }
+
+    /**
      * 获取所有序列号使用记录信息
      *
      * @return mixed
@@ -45,25 +56,43 @@ class SerialNumberRecordRepository extends Repository
     }
 
     /**
+     * 根据序列号 ID 查询关于此序列号的所有信息
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function getAllById($id)
+    {
+        $info = $this->model->where('id', $id)->with('student', 'serialNumberInfo')->first();
+        if (isset($info['student']['agent_id']) && is_array($info['student'])) {
+            $info['agent'] = Agent::where('id', $info['student']['agent_id'])->first();
+        }
+
+        return $info;
+    }
+
+    /**
      * 获取所有序列号使用记录信息总数
      *
      * @param \Illuminate\Http\Request $request
      * @return mixed
      */
-    public function getAllCount(Request $request)
+    public function getAllCount($request)
     {
-        $mobile = $request->get('admin');
-        $range_date = $request->get('range_date');
+        $number = $request->get('number');
+        $mobile = $request->get('mobile');
+        $assessment_type = $request->get('assessment_type');
 
-        if ($mobile || $range_date) {
-            $sql = $this->model->where('admin_mobile', 'like', '%'.$mobile.'%');
-            if ($range_date) {
-                $date_array = explode('~', $range_date);
-                if (count($date_array) == 2) {
-                    $start_date = trim($date_array[0]);
-                    $end_date = trim($date_array[1]);
-                    $sql->whereBetween('created_at', [$start_date, $end_date]);
-                }
+        $sql = $this->model;
+        if ($number || $assessment_type || $mobile) {
+            if ($number) {
+                $sql = $sql->where('serial_number', $number);
+            }
+            if ($mobile) {
+                $sql = $sql->where('mobile', 'like', '%'.$mobile.'%');
+            }
+            if ($assessment_type) {
+                $sql = $sql->where('assessment_type', $assessment_type);
             }
 
             return $sql->count();
@@ -78,27 +107,28 @@ class SerialNumberRecordRepository extends Repository
      * @param $request
      * @return mixed
      */
-    public
-    function getAllByPage(
-        $request
-    ) {
-
+    public function getAllByPage($request)
+    {
         $page = $request->get('page') - 1;
         $limit = $request->get('limit');
         $offset = $page * $limit;
-        $mobile = $request->get('admin');
-        $range_date = $request->get('range_date');
 
-        $sql = $this->model->skip($offset)->limit($limit);
-        if ($mobile || $range_date) {
-            $sql = $sql->where('admin_mobile', 'like', '%'.$mobile.'%');
-            if ($range_date) {
-                $date_array = explode('~', $range_date);
-                if (count($date_array) == 2) {
-                    $start_date = trim($date_array[0]);
-                    $end_date = trim($date_array[1]);
-                    $sql->whereBetween('created_at', [$start_date, $end_date]);
-                }
+        $number = $request->get('number');
+        $mobile = $request->get('mobile');
+        $assessment_type = $request->get('assessment_type');
+
+        $sql = $this->model->skip($offset)->limit($limit)
+            ->orderBy('created_at', 'desc');
+
+        if ($number || $assessment_type || $mobile) {
+            if ($number) {
+                $sql = $sql->where('serial_number', $number);
+            }
+            if ($mobile) {
+                $sql = $sql->where('mobile', 'like', '%'.$mobile.'%');
+            }
+            if ($assessment_type) {
+                $sql = $sql->where('assessment_type', $assessment_type);
             }
 
             return $sql->get();

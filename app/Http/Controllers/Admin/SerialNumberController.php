@@ -32,7 +32,7 @@ class SerialNumberController extends ApiController
      */
     public function index()
     {
-        return view('admin.serial.index');
+        return view('admin.serial.list.index');
     }
 
     /**
@@ -57,7 +57,7 @@ class SerialNumberController extends ApiController
      */
     public function create()
     {
-        return view('admin.serial.create');
+        return view('admin.serial.list.create');
     }
 
     /**

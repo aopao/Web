@@ -78,6 +78,9 @@
 						<a lay-href="{{ route('admin.serial.index') }}">序列号列表</a>
 					</dd>
 					<dd>
+						<a lay-href="{{ route('admin.serial.record.index') }}">序列号记录</a>
+					</dd>
+					<dd>
 						<a lay-href="{{ route('admin.serial.export') }}">序列号导出</a>
 					</dd>
 				</dl>

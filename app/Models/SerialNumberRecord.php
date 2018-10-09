@@ -9,11 +9,30 @@ class SerialNumberRecord extends Model
     protected $fillable = [
         'serial_number_id',
         'serial_number',
+        'assessment_type',
         'apesk_id',
         'username',
         'mobile',
-        'agent_id',
-        'student_id',
         'answers',
     ];
+
+    /**
+     * 关联序列号模型
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function serialNumberInfo()
+    {
+        return $this->belongsTo('App\Models\SerialNumber', 'serial_number_id');
+    }
+
+    /**
+     * 关联学生模型
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function student()
+    {
+        return $this->belongsTo('App\Models\Student', 'mobile', 'mobile');
+    }
 }

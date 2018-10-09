@@ -28,7 +28,7 @@ Class  MockDataService
     }
 
     /**
-     * 生成 APi接口中所需的模拟数据
+     * 生成 初级APi接口中所需的模拟数据
      *
      * @return array
      */
@@ -47,6 +47,30 @@ Class  MockDataService
             'code' => '',
             'tishu' => 93,
             'sex' => 'female',
+        ];
+    }
+
+    /**
+     * 生成 高级APi接口中所需的模拟数据
+     *
+     * @return array
+     */
+    public static function mockSeniorApiData()
+    {
+        $randChineseNameService = new RandChineseNameService();
+        $randEmailService = new RandEmailService();
+
+        return [
+            'shijiancha' => date('Y-m-d H:i:s', strtotime("-15 minute")),
+            'test_name' => $randChineseNameService->getName(2),
+            'test_email' => $randEmailService->get_email(),
+            'feishi' => ceil(rand(10, 25)),
+            'hr_id' => $randEmailService->get_email(),
+            'host' => '',
+            'code' => '',
+            'zhifuemail' => '',
+            'bzy_id' => '',
+            'id' => '',
         ];
     }
 }

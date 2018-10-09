@@ -1,29 +1,29 @@
 <?php
 /**
- * MbtiPrimaryIssue 模型数据处理层
+ * MbtiPrimaryReportRepository 模型数据处理层
  * User: jason
- * Date: 2018/9/28
+ * Date: 2018/10/8
  * Time: 上午10:36
  */
 
 namespace App\Repositories\Eloquent;
 
-use App\Models\MbtiPrimaryIssue;
+use App\Models\MbtiPrimaryReport;
 
-class MbtiPramaryIssueRepository extends Repository
+class MbtiPrimaryReportRepository extends Repository
 {
     /**
-     * 实例化 MbtiPrimaryIssue 模型对象
+     * 实例化 MbtiPrimaryReportRepository 模型对象
      *
      * @return string
      */
     public function model()
     {
-        return MbtiPrimaryIssue::class;
+        return MbtiPrimaryReport::class;
     }
 
     /**
-     * 根据 ID 查询问题
+     * 根据 ID 查询报告
      *
      * @param $id
      * @return mixed
@@ -34,7 +34,7 @@ class MbtiPramaryIssueRepository extends Repository
     }
 
     /**
-     * 获取所有问题总数
+     * 获取所有报告总数
      *
      * @return mixed
      */
@@ -44,18 +44,18 @@ class MbtiPramaryIssueRepository extends Repository
     }
 
     /**
-     * 获取所有问题
+     * 根据序列号来获取此序列号所有关联信息
      *
+     * @param $serial_number
      * @return mixed
      */
-    public function getAllMbtiPrimaryIssues()
+    public function getAllInfoBySerialNumber($serial_number)
     {
-        return $this->model->limit(3)->get();
-        //return $this->model->get();
+        return $this->model->with('serialNumberRecord', 'MbtiCategory')->first();
     }
 
     /**
-     * 问题分页
+     * 报告分页
      *
      * @param $data
      * @return mixed
@@ -71,7 +71,7 @@ class MbtiPramaryIssueRepository extends Repository
     }
 
     /**
-     * 根据 ID 更新问题数据
+     * 根据 ID 更新报告数据
      *
      * @param $data
      * @return mixed

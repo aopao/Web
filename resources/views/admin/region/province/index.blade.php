@@ -15,7 +15,7 @@
 							</button>
 						</div>
 						<table class="layui-hide" id="ProvinceList" lay-filter="ProvinceList"></table>
-						<script type="text/html" id="categorListOperate">
+						<script type="text/html" id="provinceListOperate">
 							<button class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit">@lang('comment/form.edit')</button>
 							<button class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">@lang('comment/form.del')</button>
 						</script>
@@ -50,7 +50,7 @@
                     {type: 'checkbox', fixed: 'left'}
                     , {field: 'id', title: 'ID', width: 80, sort: true, fixed: 'left'}
                     , {field: 'province_name', align: "center", event: 'viewCities', style: 'color: #1E9FFF;', title: '@lang('comment/region.province_name')'}
-                    , {align: 'center', width: 200, title: '@lang('comment/table.action')', fixed: 'right', toolbar: '#categorListOperate'}
+                    , {align: 'center', width: 200, title: '@lang('comment/table.action')', fixed: 'right', toolbar: '#provinceListOperate'}
                 ]]
             });
 

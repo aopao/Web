@@ -680,12 +680,12 @@ Class RandChineseNameService
 
     private function getXing()
     {
-        return $this->arrXing [mt_rand(0, $this->numbXing)];
+        return $this->arrXing [mt_rand(0, $this->numbXing - 1)];
     }
 
     private function getMing()
     {
-        return $this->arrMing [mt_rand(0, $this->numbMing)];
+        return $this->arrMing [mt_rand(0, $this->numbMing - 1)];
     }
 
     public function getName($type = 0)

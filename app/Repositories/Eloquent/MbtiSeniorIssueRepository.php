@@ -1,16 +1,16 @@
 <?php
 /**
- * MbtiPrimaryIssue 模型数据处理层
+ * MbtiSeniorIssue 模型数据处理层
  * User: jason
- * Date: 2018/9/28
+ * Date: 2018/9/29
  * Time: 上午10:36
  */
 
 namespace App\Repositories\Eloquent;
 
-use App\Models\MbtiPrimaryIssue;
+use App\Models\MbtiSeniorIssue;
 
-class MbtiPramaryIssueRepository extends Repository
+class MbtiSeniorIssueRepository extends Repository
 {
     /**
      * 实例化 MbtiPrimaryIssue 模型对象
@@ -19,7 +19,7 @@ class MbtiPramaryIssueRepository extends Repository
      */
     public function model()
     {
-        return MbtiPrimaryIssue::class;
+        return MbtiSeniorIssue::class;
     }
 
     /**
@@ -48,10 +48,9 @@ class MbtiPramaryIssueRepository extends Repository
      *
      * @return mixed
      */
-    public function getAllMbtiPrimaryIssues()
+    public function getAllMbtiSeniorIssues()
     {
-        return $this->model->limit(3)->get();
-        //return $this->model->get();
+        return $this->model->get();
     }
 
     /**

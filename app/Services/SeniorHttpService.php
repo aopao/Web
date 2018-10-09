@@ -10,7 +10,7 @@ namespace App\Services;
 
 use GuzzleHttp\Client;
 
-class  PrimaryHttpService
+class  SeniorHttpService
 {
     private $client;
 
@@ -36,7 +36,7 @@ class  PrimaryHttpService
      */
     public function post($data)
     {
-        $response = $this->client->post(config('assessment.apesk_primary_api'),
+        $response = $this->client->post(config('assessment.apesk_senior_api'),
             [
                 'form_params' => $data,
                 'headers' => [

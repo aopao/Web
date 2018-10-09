@@ -18,7 +18,7 @@
 										<input type="text" name="range-date" class="layui-input" id="range-date" placeholder=" ~ " autocomplete="off">
 									</div>
 								</div>
-								<button class="layui-btn layuiadmin-btn-list" id="search" data-type="Search">
+								<button class="layui-btn layui-btn-normal layuiadmin-btn-list" id="search" data-type="Search">
 									<i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
 								</button>
 							</div>

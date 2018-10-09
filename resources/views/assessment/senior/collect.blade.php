@@ -1,7 +1,7 @@
 @include('assessment.comment.header')
 <div class="bgf">
 	<div class="tem_div test_input">
-		<form action="{{ route('assessment.primary.issue') }}" class="form_info layui-form" method="post">
+		<form action="{{ route('assessment.senior.issue') }}" class="form_info layui-form" method="post">
 			<input type="hidden" name="serial_number_id" value="{{ $data['id'] }}">
 			<input type="hidden" name="serial_number" value="{{ $data['number'] }}">
 			{{ csrf_field() }}
@@ -37,7 +37,6 @@
             }
         })
     });
-    $.ajax('http://192.168.2.95:8000/b/')
 </script>
 <script src="{{ asset("theme/layui/layui.js") }}"></script>
 <script>

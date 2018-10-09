@@ -7,6 +7,7 @@ return [
     */
 
     /*  表格公用部分 */
-    'created_at' => '添加时间',
+    'created_at' => '创建时间',
     'action' => '操作',
+    'shortcuts' => '快捷操作',
 ];

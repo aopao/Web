@@ -22,4 +22,5 @@ return [
     'button_add' => '添加',
     'button_edit' => '修改',
     'button_assign' => '分配',
+    'not_allow_flush' => '请不要刷新!',
 ];

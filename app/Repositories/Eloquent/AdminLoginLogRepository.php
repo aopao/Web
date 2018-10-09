@@ -78,10 +78,8 @@ class AdminLoginLogRepository extends Repository
      * @param $request
      * @return mixed
      */
-    public
-    function getAllByPage(
-        $request
-    ) {
+    public function getAllByPage($request)
+    {
 
         $page = $request->get('page') - 1;
         $limit = $request->get('limit');

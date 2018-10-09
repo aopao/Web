@@ -20,8 +20,8 @@ class CreateStudentDetailsTable extends Migration
             $table->integer('school_id')->nullable()->comment('高中学校');
             $table->integer('exam_address_province_id')->nullable()->comment('高考考试省份');
             $table->string('id_card')->nullable()->comment('身份证');
-            $table->string('contact', 100)->nullable()->comment('联系人名称');
-            $table->string('mobile', 11)->nullable()->comment('联系人手机');
+            $table->string('contact_name', 100)->nullable()->comment('联系人名称');
+            $table->string('contact_mobile', 11)->nullable()->comment('联系人手机');
             $table->integer('province_id')->default(0)->index()->comment('户籍省份');
             $table->integer('city_id')->nullable()->comment('户籍市区');
             $table->integer('area_id')->nullable()->comment('户籍地域');

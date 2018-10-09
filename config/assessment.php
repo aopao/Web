@@ -12,7 +12,11 @@ return [
     | Assessment Module Config Config
     |--------------------------------------------------------------------------
     */
+    'api_mock' => env('API_MOCK', "true"),
+    'api_mock_id' => env('API_MOCK_ID', "95556"),
     'assessment_prefix' => env('ASSESSMENT_PREFIX', "assessment"),
-    'primary_referer_api' => env('PRIMARY_REFERER_API', "http://www.apesk.com"),
-    'apesk_api' => env('APESK_API', "http://cp.17985.cn/mensa/common_submit_hr/submit_mbti_conn_mm.asp"),
+    'referer_api' => env('PRIMARY_REFERER_API', "http://www.apesk.com"),
+    'apesk_primary_api' => env('APESK_PRIMARY_API', "http://www.apesk.com.gqxxg.com/assessment/primary/report"),
+    'apesk_senior_api' => env('APESK_SENIOR_API', "http://www.apesk.com.gqxxg.com/assessment/senior/report"),
+    'reprot_parse_time' => env('REPORT_PARSE_TIME', 9),
 ];
