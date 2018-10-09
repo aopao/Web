@@ -23,6 +23,11 @@ Route::namespace('Assessment')->prefix(ASSESSMENT_PREFIX)->group(function () {
     Route::post('/senior/issue', 'SeniorController@issue')->name('assessment.senior.issue');
     Route::post('/senior/collect', 'SeniorController@collect')->name('assessment.senior.collect');
     Route::post('/senior/report', 'SeniorController@report')->name('assessment.senior.report');
+
+    /* 初级评测 */
+    Route::get('/', 'MbtiOurController@index');
+    Route::get('/mb/', 'MbtiOurController@index')->name('assessment.mb');
+    Route::post('/mb', 'MbtiOurController@index');
 });
 
 Route::namespace('Assessment')->prefix(ASSESSMENT_PREFIX)->middleware('StudentAuth:student')->group(function () {
