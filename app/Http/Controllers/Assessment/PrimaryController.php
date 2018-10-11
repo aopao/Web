@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers\Assessment;
 
-use App\Repositories\Eloquent\MbtiPrimaryReportRepository;
+use Cache;
 use Illuminate\Http\Request;
-use App\Services\MockDataService;
-use App\Services\ParseHtmlService;
-use App\Services\PrimaryHttpService;
-use App\Services\ArrayTranformsService;
+use App\Services\MbtiPrimaryLogicService;
 use App\Http\Requests\SerialNumberPrimaryRequest;
 use App\Repositories\Eloquent\SerialNumberRepository;
+use App\Repositories\Eloquent\MbtiCategoryRepository;
 use App\Repositories\Eloquent\MbtiPramaryIssueRepository;
+use App\Repositories\Eloquent\MbtiPrimaryReportRepository;
 use App\Repositories\Eloquent\SerialNumberRecordRepository;
 
 class PrimaryController extends BaseController
@@ -26,6 +25,36 @@ class PrimaryController extends BaseController
     }
 
     /**
+     * 根据序列号查看报告
+     *
+     * @param                                                        $serial_number
+     * @param \App\Repositories\Eloquent\SerialNumberRepository      $serialNumberRepository
+     * @param \App\Repositories\Eloquent\MbtiPrimaryReportRepository $mbtiPrimaryReportRepository
+     * @param \App\Services\MbtiPrimaryLogicService                  $mbtiPrimaryLogicService
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function show($serial_number, SerialNumberRepository $serialNumberRepository, MbtiPrimaryReportRepository $mbtiPrimaryReportRepository, MbtiPrimaryLogicService $mbtiPrimaryLogicService)
+    {
+        /* 判断序列号是否存在 */
+        $serial_number_info = $serialNumberRepository->findBySerialNumber($serial_number);
+        if (! $serial_number_info) {
+            abort(404);
+        }
+        /* 加入缓存中,减轻数据库压力 */
+        if (Cache::has($serial_number)) {
+            $report = Cache::get($serial_number);
+        } else {
+            /* 组织展现的数据 */
+            $report = $mbtiPrimaryReportRepository->getAllInfoBySerialNumber($serial_number)->ToArray();
+            /* 对数据进行二次处理 */
+            $mbtiPrimaryLogicService->handleReportData($report);
+            Cache::forever($serial_number, $report);
+        }
+
+        return view('assessment.primary.show', compact('report'));
+    }
+
+    /**
      * 进入测试后填写用户信息界面
      *
      * @param \App\Http\Requests\SerialNumberPrimaryRequest          $serialNumberPrimaryRequest
@@ -35,18 +64,16 @@ class PrimaryController extends BaseController
     public function collect(SerialNumberPrimaryRequest $serialNumberPrimaryRequest, MbtiPrimaryReportRepository $mbtiPrimaryReportRepository)
     {
         $number = $serialNumberPrimaryRequest->get('number');
-        $data = $this->serialNumberRepository->findByNumber($number)->ToArray();
+        $data = $this->serialNumberRepository->findBySerialNumber($number)->ToArray();
         if (isset($data) && $data['is_invalid'] == 0) {
             return view('assessment.primary.collect', compact('data'));
         } else {
-            $info = $mbtiPrimaryReportRepository->getAllInfoBySerialNumber($number)->ToArray();
-
-            return view('assessment.primary.show', compact('info'));
+            return redirect(route('assessment.primary.show', ['serial_number' => $data['number']]));
         }
     }
 
     /**
-     * 用户测试答题界面
+     * 测评答题界面
      *
      * @param \App\Http\Requests\SerialNumberPrimaryRequest         $serialNumberPrimaryRequest
      * @param \App\Repositories\Eloquent\MbtiPramaryIssueRepository $mbtiPrimaryIssueRepository
@@ -55,62 +82,52 @@ class PrimaryController extends BaseController
     public function issue(SerialNumberPrimaryRequest $serialNumberPrimaryRequest, MbtiPramaryIssueRepository $mbtiPrimaryIssueRepository)
     {
         $data = $serialNumberPrimaryRequest->all();
-        $issues = $mbtiPrimaryIssueRepository->getAllMbtiPrimaryIssues()->ToArray();
+        $issues = $mbtiPrimaryIssueRepository->getAllMbtiPrimaryIssues();
 
         return view('assessment.primary.issue', compact('data', 'issues'));
     }
 
     /**
-     * 用户查看报告界面
+     * 用户提交数据处理生成测评报告
      *
      * @param \Illuminate\Http\Request                                $request
-     * @param \App\Services\ArrayTranformsService                     $arrayTranformsService
-     * @param \App\Services\PrimaryHttpService                        $primaryHttpService
+     * @param \App\Repositories\Eloquent\MbtiCategoryRepository       $mbtiCategoryRepository
+     * @param \App\Repositories\Eloquent\MbtiPrimaryReportRepository  $mbtiPrimaryReportRepository
      * @param \App\Repositories\Eloquent\SerialNumberRepository       $serialNumberRepository
      * @param \App\Repositories\Eloquent\SerialNumberRecordRepository $serialNumberRecordRepository
+     * @param \App\Services\MbtiPrimaryLogicService                   $mbtiPrimaryLogicService
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function report(Request $request, ArrayTranformsService $arrayTranformsService, PrimaryHttpService $primaryHttpService, SerialNumberRepository $serialNumberRepository, SerialNumberRecordRepository $serialNumberRecordRepository)
-    {
+    public function report(
+        Request $request,
+        MbtiCategoryRepository $mbtiCategoryRepository,
+        SerialNumberRepository $serialNumberRepository,
+        MbtiPrimaryLogicService $mbtiPrimaryLogicService,
+        MbtiPrimaryReportRepository $mbtiPrimaryReportRepository,
+        SerialNumberRecordRepository $serialNumberRecordRepository
+    ) {
         $data = $request->all();
 
         /*判断是否是刷新*/
-        $private_data = $serialNumberRecordRepository->findBySerialNumberId($data['serial_number_id']);
-        if ($private_data) {
+        $db_report = $mbtiPrimaryReportRepository->findBySerialNumber($data['serial_number']);
+        if ($db_report) {
             $msg = trans('comment/form.not_allow_flush');
 
-            return view('assessment.primary.report', compact('private_data', 'msg'));
+            return view('assessment.primary.report', compact('db_report', 'msg'));
         }
 
-        /* 本站所需数据  $private_data */
-        $private_data = MockDataService::PrimarySplitData($data);
+        /* 初级测评数据逻辑处理 */
+        $response = $mbtiPrimaryLogicService->handleData($data, $mbtiCategoryRepository);
 
-        /* 以下数据为系统模拟生成,为接口准备 */
-        $mock_data = MockDataService::mockPrimaryApiData();
-        $data = array_merge($mock_data, $data);
-
-        /* 本站所需数据补充 */
-        $private_data['assessment_type'] = 'mbti_primary';
-        $private_data['answers'] = json_encode($data, JSON_UNESCAPED_UNICODE);
-
-        /* 为防止才储发现,测试阶段为本地测试 */
-        if (config('assessment.api_mock')) {
-            /* 如果是本地模拟数据则填写默认值 */
-            $private_data['report_id'] = config('assessment.api_mock_id');
-        } else {
-            /* 发送数据到远程接口并返回 html 代码 */
-            $data = $arrayTranformsService->arrayCharsetIconv($data);
-            $response = $primaryHttpService->post($data);
-
-            /* 解析返回的代码并做处理获取 ID */
-            $private_data['report_id'] = ParseHtmlService::getReportId($response);
-        }
-
-        if ($serialNumberRecordRepository->store($private_data)) {
+        /* 入库操作 */
+        if ($serialNumberRecordRepository->store($response['serial_number_record_data'])) {
             /* 更新序列号为已使用 */
-            $serialNumberRepository->updateInvalid($private_data['serial_number_id']);
+            $serialNumberRepository->updateInvalid($response['serial_number_record_data']['serial_number_id']);
 
-            return view('assessment.primary.report', compact('private_data'));
+            /* 生成报告 */
+            $db_report = $mbtiPrimaryReportRepository->create($response['report']);
+
+            return view('assessment.primary.report', compact('db_report'));
         } else {
             abort(500);
         }

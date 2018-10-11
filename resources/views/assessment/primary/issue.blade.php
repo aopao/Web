@@ -14,8 +14,8 @@
 					{{ $issue['issue'] }}
 				</h3>
 				<div class="template_box Wspan">
-					<span class="template_span" data-val="0"><p>{{ $issue['answer1'] }}</p></span>
-					<span class="template_span" data-val="1"><p>{{ $issue['answer2'] }}</p></span>
+					<span class="template_span" data-val="A"><p>{{ $issue['answer1'] }}</p></span>
+					<span class="template_span" data-val="B"><p>{{ $issue['answer2'] }}</p></span>
 					<input type="hidden" name="answer{{ $issue['id'] }}"></div>
 			</div>
 		@endforeach

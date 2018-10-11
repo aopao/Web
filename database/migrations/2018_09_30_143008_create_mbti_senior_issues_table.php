@@ -16,7 +16,8 @@ class CreateMbtiSeniorIssuesTable extends Migration
         Schema::create('mbti_senior_issues', function (Blueprint $table) {
             $table->increments('id');
             $table->string('issue')->comment('问题');
-            $table->string('part')->comment('第几部分');
+            $table->string('iusse_category')->comment('测评分类');
+            $table->string('dimension_category')->comment('维度值: MBTI测评统一为:M');
             $table->string('answer1_tip')->comment('答题1');
             $table->string('answer1_value')->comment('答题1值');
             $table->string('answer2_tip')->nullable()->comment('答题2');

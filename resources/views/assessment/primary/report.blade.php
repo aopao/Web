@@ -33,8 +33,8 @@
 	<div class="tem_div tem_div1">
 		<h2 class="i_h">测评项目：@lang('assessment/primary.primary_name')</h2>
 		<p class="i_num">测评题数：93道题</p>
-		<p class="i_date">测评日期：{{ substr($private_data['created_at'],0,10) }}</p>
-		<a target="_blank" href="http://apesk.com/mensa/common_report_getid//mbti1_report_hr_zy.asp?id={{ $private_data['report_id'] }}" class="start_a">生成报告</a>
+		<p class="i_date">测评日期：{{ date('Y年m月d日',time()) }}</p>
+		<a target="_blank" href="{{ route('assessment.primary.show',['serial_number'=>$db_report['serial_number']]) }}" class="start_a">查看报告</a>
 	</div>
 </div>
 
@@ -55,12 +55,6 @@
 	@else
     setTimeout("show_index()", {{ config('assessment.reprot_parse_time')*1000 }});
     $('#time_delay').text("{{ config('assessment.reprot_parse_time') }}");
-    url = "http://192.168.2.68:8000/api/primary/get/content/?report_id={{ $private_data['report_id'] }}&mobile={{ $private_data['mobile'] }}&serial_number={{ $private_data['serial_number'] }}"
-    $.ajax({
-        url: url, success: function (data) {
-            console.log(data);
-        }
-    });
     resetCode()
 
     //倒计时

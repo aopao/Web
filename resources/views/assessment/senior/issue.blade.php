@@ -14,13 +14,20 @@
 					{{ $issue['issue'] }}
 				</h3>
 				<div class="template_box Wspan">
-					<span class="template_span" data-val="{{ $issue['answer1_value'] }}"><p>{{ $issue['answer1_tip'] }}</p></span>
-					<span class="template_span" data-val="{{ $issue['answer2_value'] }}"><p>{{ $issue['answer2_tip'] }}</p></span>
-					@if ($key>=120)
-<span class="template_span" data-val="{{ $issue['answer3_value'] }}"><p>{{ $issue['answer3_tip'] }}</p></span>
-					<span class="template_span" data-val="{{ $issue['answer4_value'] }}"><p>{{ $issue['answer4_tip'] }}</p></span>
+					@if ($issue['iusse_category'] == 'mbti')
+						<span class="template_span" data-val="{{ $issue['answer1_value'] }}"><p>{{ $issue['answer1_tip'] }}</p></span>
+						<span class="template_span" data-val="{{ $issue['answer2_value'] }}"><p>{{ $issue['answer2_tip'] }}</p></span>
+					@elseif ($issue['iusse_category'] == 'hobby' || $issue['iusse_category'] == 'like' || $issue['iusse_category'] == 'good')
+						<span class="template_span" data-val="{{ $issue['dimension_category'] }}"><p>{{ $issue['answer1_tip'] }}</p></span>
+						<span class="template_span" data-val=""><p>{{ $issue['answer2_tip'] }}</p></span>
 					@endif
-					<input type="hidden" name="answer{{ $issue['part'] }}">
+					@if ($issue['iusse_category'] == 'ability' || $issue['iusse_category'] == 'skill')
+						<span class="template_span" data-val="{{ $issue['answer1_value'] }}"><p>{{ $issue['answer1_tip'] }}</p></span>
+						<span class="template_span" data-val="{{ $issue['answer2_value'] }}"><p>{{ $issue['answer2_tip'] }}</p></span>
+						<span class="template_span" data-val="{{ $issue['answer3_value'] }}"><p>{{ $issue['answer3_tip'] }}</p></span>
+						<span class="template_span" data-val="{{ $issue['answer4_value'] }}"><p>{{ $issue['answer4_tip'] }}</p></span>
+					@endif
+					<input type="hidden" name="{{$issue['iusse_category']}}_{{ $issue['dimension_category'] }}_{{ $issue['id'] }}">
 				</div>
 			</div>
 		@endforeach

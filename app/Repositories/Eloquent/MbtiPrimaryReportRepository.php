@@ -34,6 +34,17 @@ class MbtiPrimaryReportRepository extends Repository
     }
 
     /**
+     * 根据 serial_number 查询报告
+     *
+     * @param $serial_number
+     * @return mixed
+     */
+    public function findBySerialNumber($serial_number)
+    {
+        return $this->model->where('serial_number', $serial_number)->first();
+    }
+
+    /**
      * 获取所有报告总数
      *
      * @return mixed
@@ -51,7 +62,7 @@ class MbtiPrimaryReportRepository extends Repository
      */
     public function getAllInfoBySerialNumber($serial_number)
     {
-        return $this->model->with('serialNumberRecord', 'MbtiCategory')->first();
+        return $this->model->with('serialNumberRecord', 'MbtiCategory')->where('serial_number', $serial_number)->first();
     }
 
     /**
@@ -71,7 +82,18 @@ class MbtiPrimaryReportRepository extends Repository
     }
 
     /**
-     * 根据 ID 更新报告数据
+     * 插入数据
+     *
+     * @param $data
+     * @return mixed
+     */
+    public function create($data)
+    {
+        return $this->model->create($data);
+    }
+
+    /**
+     * 批量插入数据
      *
      * @param $data
      * @return mixed

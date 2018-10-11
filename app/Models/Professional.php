@@ -7,13 +7,15 @@ class Professional extends Model
     protected $table = 'professionals';
 
     protected $fillable = [
-        'professional_name',
-        'professional_code',
+        'name',
+        'code',
         'parent_id',
         'top_parent_id',
-        'professional_level',
+        'level',
         'ranking',
         'ranking_type',
+        'created_at',
+        'updated_at',
     ];
 
     protected $hidden = [];

@@ -2,11 +2,24 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 class MbtiPrimaryReport extends Model
 {
     protected $table = 'mbti_primary_reports';
+
+    protected $fillable = [
+        'mobile',
+        'serial_number',
+        'mbti_name',
+        'mbti_category_id',
+        'e',
+        'i',
+        's',
+        'n',
+        't',
+        'f',
+        'j',
+        'p',
+    ];
 
     /**
      * 关联序列号使用记录模型

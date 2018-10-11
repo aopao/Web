@@ -20,7 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CollegelevelTableSeeder::class);
         $this->call(CollegeCategoryTableSeeder::class);
         $this->call(ProvinceControlScoreTableSeeder::class);
-        $this->call(ProfessionalCategoryTableSeeder::class);
         $this->call(ProfessionalTableSeeder::class);
         $this->call(ProfessionalDetailTableSeeder::class);
         $this->call(CollegeTableSeeder::class);

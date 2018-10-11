@@ -14,6 +14,7 @@ Route::namespace('Assessment')->prefix(ASSESSMENT_PREFIX)->group(function () {
     /* 初级评测 */
     Route::get('/', 'PrimaryController@index');
     Route::get('/primary/', 'PrimaryController@index')->name('assessment.primary');
+    Route::get('/primary/{serial_number}', 'PrimaryController@show')->name('assessment.primary.show');
     Route::post('/primary/issue', 'PrimaryController@issue')->name('assessment.primary.issue');
     Route::post('/primary/collect', 'PrimaryController@collect')->name('assessment.primary.collect');
     Route::post('/primary/report', 'PrimaryController@report')->name('assessment.primary.report');
@@ -25,9 +26,11 @@ Route::namespace('Assessment')->prefix(ASSESSMENT_PREFIX)->group(function () {
     Route::post('/senior/report', 'SeniorController@report')->name('assessment.senior.report');
 
     /* 初级评测 */
-    Route::get('/', 'MbtiOurController@index');
     Route::get('/mb/', 'MbtiOurController@index')->name('assessment.mb');
     Route::post('/mb', 'MbtiOurController@index');
+    Route::get('/sb/', 'MbtiOurController@senior')->name('assessment.sb');
+    Route::post('/sb', 'MbtiOurController@senior');
+    Route::get('/zy/', 'MbtiOurController@zy')->name('assessment.zy');
 });
 
 Route::namespace('Assessment')->prefix(ASSESSMENT_PREFIX)->middleware('StudentAuth:student')->group(function () {

@@ -39,7 +39,7 @@ class SerialNumberRepository extends Repository
      * @param $number
      * @return mixed
      */
-    public function findByNumber($number)
+    public function findBySerialNumber($number)
     {
         return $this->model->where('number', $number)->first();
     }

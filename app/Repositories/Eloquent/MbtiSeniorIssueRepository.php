@@ -51,6 +51,7 @@ class MbtiSeniorIssueRepository extends Repository
     public function getAllMbtiSeniorIssues()
     {
         return $this->model->get();
+        //return $this->model->limit(5)->get();
     }
 
     /**

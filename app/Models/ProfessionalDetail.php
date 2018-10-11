@@ -13,9 +13,13 @@ class ProfessionalDetail extends Model
         'job_direction',
         'graduation_student_num',
         'work_rate',
-        'subject_rate',
-        'gender_rate',
+        'subject_art_rate',
+        'subject_math_rate',
+        'gender_male_rate',
+        'gender_female_rate',
         'description',
+        'created_at',
+        'updated_at',
     ];
 
     protected $hidden = [];

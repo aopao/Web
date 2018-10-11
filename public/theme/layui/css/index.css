@@ -1,9 +1,19 @@
-@charset "utf-8";
-
-/* CSS Document */
+.pull-left { float: left; }
+.pull-right { float: right; }
+.clearfix::after{content:"";display:block;height:0;clear:both;visibility:hidden;line-height:0;}
+.clearfix{*zoom:1;}
 
 /*职业测评-答题*/
 
+.tips{
+    width: 395px; 
+    font-size: 17px; 
+    margin: 60px auto 0 auto; 
+    color: #4296cf;
+}
+.tips span{
+    color: red;
+}
 .test_index {
     height: 136px;
     width: 100%;
@@ -94,16 +104,16 @@
 .start_a {
     font-weight: bold;
     font-size: 16px;
-    line-height: 52px;
+    line-height: 46px;
     color: #f7931e;
     border: 2px solid #f7931e;
-    margin: 60px auto 0 auto;
+    margin: 30px auto 0 auto;
     font-family: '微软雅黑';
-    width: 220px;
-    height: 52px;
+    width: 197px;
+    height: 46px;
     display: block;
     text-align: center;
-    background: #ffffff;
+        background: #ffffff;
     cursor: pointer;
 }
 
@@ -640,7 +650,8 @@
 .recomend_test {
     text-align: center;
     padding-top: 35px;
-    font-size: 16px;;
+    font-size: 16px;
+    ;
     color: #2e3b4e;
     font-family: '微软雅黑';
 }
@@ -788,12 +799,10 @@
     text-align: center;
     width: 91px;
 }
-
 .recom_satisfied a:hover {
     color: #fff;
     background: #f7931e;
 }
-
 .textareadiv textarea {
     width: 100%;
     margin-top: 15px;
@@ -801,19 +810,16 @@
     height: 491px;
     border: 1px solid #e6e6e6;
 }
-
 .recom_confir {
     float: right;
     width: 366px;
     padding-top: 20px;
 }
-
 .relevant_box {
     padding-bottom: 20px;
     margin-top: 20px;
     margin-left: 100px;
 }
-
 .relevant_list {
     margin-top: 20px;
     margin-left: 100px;
@@ -821,7 +827,6 @@
     width: 305px;
     text-align: center;
 }
-
 .relevant_title {
     display: block;
     text-align: left;
@@ -829,7 +834,6 @@
     color: #2e3b4e;
     font-size: 16px;
 }
-
 .code_div {
     background: #fff;
     position: absolute;
@@ -838,7 +842,6 @@
     border: 1px solid #aaaaaa;
     text-align: center;
 }
-
 .code_div_info {
     border-top: 1px dashed #cccccc;
     margin-top: 10px;
@@ -849,18 +852,15 @@
     text-align: left;
     padding-left: 15px;
 }
-
 .code_div_info img {
     vertical-align: middle;
 }
-
 .code_logo {
     float: right;
     display: block;
     margin-right: 15px;
     cursor: pointer;
 }
-
 .deep_info {
     font-size: 18px;
     color: #2e3b4e;
@@ -869,16 +869,14 @@
     line-height: 35px;
     font-family: '微软雅黑';
 }
-
 .deep_info p {
     text-indent: 32px;
 }
 
 /*生成报告*/
 
-.i_num,
-.i_date {
-    width: 350px;
+.i_num, .i_date {
+    max-width: 310px;
     margin: 10px auto;
     font-size: 24px;
     color: #2e3b4e;
@@ -890,27 +888,24 @@
     margin: 60px 0 30px 0;
 }
 
+
 /*输入手机姓名*/
 
 .form_info .i_h {
     margin: 30px 0 10px 0;
     font-size: 28px;
 }
-
 .form_info input {
     padding-left: 10px;
     box-sizing: border-box;
 }
-
 .w395 {
     width: 395px;
     font-size: 18px;
 }
-
 div.mainbox {
     background-color: #fff;
 }
-
 .tem_div input[type="submit"] {
     font-weight: bold;
     font-size: 16px;
@@ -926,7 +921,6 @@ div.mainbox {
     background: #ffffff;
     cursor: pointer;
 }
-
 .tem_div input[type="submit"]:hover {
     background: #f7931e;
     color: #fff;
@@ -938,7 +932,7 @@ div.mainbox {
     width: 100%;
     height: 100%;
     -webkit-perspective: 600;
-    perspective: 600;
+    perspective: 100;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1024,38 +1018,34 @@ div.mainbox {
     margin-top: 100px;
 }
 
+/*404页面*/
+
 .auto {
     width: 1000px;
     margin: 140px auto;
 }
-
 .container {
     background: url(../img/404-bg.png) no-repeat 560px top;
 }
-
 .settings {
     padding-left: 200px;
     padding-bottom: 50px;
 }
-
 .settings .icon {
     display: block;
     width: 242px;
     height: 106px;
     background: url(../img/404.png) no-repeat 0 0;
 }
-
 .settings h4 {
     margin: 30px 0 15px 0;
     font-size: 18px;
     color: #2cb7fd;
 }
-
 .settings p {
     font-size: 14px;
     color: #999;
 }
-
 .settings > div {
     margin-top: 40px;
     font-size: 0;
@@ -1074,4 +1064,157 @@ div.mainbox {
     margin-right: 20px;
     color: #fff;
     background-color: #2cb7fd;
+}
+
+/*查看报告页面*/
+
+.report_title{
+    padding: 8px;
+    background-color: #4296cf;
+    color: #FFFFFF;
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: 1mm;
+    margin: 60px 0;
+    font-weight: normal;
+}
+.report_box{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.report_box p{
+    font-size: 16px;
+    text-indent: 32px;
+    line-height: 32px;
+}
+.chart_box>p{
+    font-size: 14px;
+    line-height: 26px;
+}
+.chart_box table{
+    width: 774px;
+    margin: 0 auto 40px auto;
+}
+.layui-progress-big, .layui-progress-big .layui-progress-bar {
+    height: 33px;
+    line-height: 33px;
+}
+.layui-progress {
+    position: relative;
+    height: 36px;
+    margin: 8px 2px;
+    padding: 2px;
+    float: left;
+    line-height: 36px;
+    width: 250px;
+    background: #ededed;
+}
+.layui-progress-bar {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 0;
+    max-width: 100%;
+    height: 6px;
+    text-align: right;
+    background-color: #4296cf;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+.layui-progress-big .layui-progress-text {
+    position: static;
+    padding: 0 10px;
+    color: #fff;
+}
+.layui-progress-text {
+    position: relative;
+    top: -20px;
+    line-height: 18px;
+    font-size: 13px;
+    color: #666;
+}
+.layui-progress1 .layui-progress-bar{
+    right: 0!important;
+    left: auto;
+}
+.level span{
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    border-bottom: 1px solid #4296cf;
+}
+.level span+span{
+    border-left: 1px solid #4296cf;
+}
+.w50{
+    width: 50px;
+}
+.w82{
+    width: 82px;
+}
+.describe_box_left{
+    width: 200px;
+    padding: 6px 4px;
+    border: 1px solid #4296cf;
+    margin-right: 30px;
+}
+.describe_box_left img{
+    display: block;
+    margin: 0 auto;
+}
+.describe_box_left>p, .describe_box1>p{
+    text-indent: 0!important;
+    line-height: 28px;
+}
+.describe_box1{
+    margin-top: 30px;
+}
+.describe_box_right{
+    width: 920px;
+}
+.post{
+    margin-bottom: 160px;
+}
+.cover{
+    text-align: center;
+    margin: 140px 0;
+}
+.cover h1{
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+.conner{
+    text-align: right;
+    border-top: 1px solid #666666;
+    margin: 60px 0 80px 0;
+    padding-top: 10px;
+}
+.conner span{
+    padding-left: 40px;
+}
+.cover h2{
+    font-size: 26px;
+    font-weight: normal;
+}
+.post_box p{
+    text-indent: 0;
+}
+.describe_box_left>p{
+    line-height: 22px;
+    font-size: 14px;
+}
+.describe_box_left>p:nth-of-type(1){
+    margin: 10px 0;
+}
+.describe_box_left>p:nth-of-type(2){
+    margin-bottom: 10px;
+}
+
+
+
+@media (max-width:767px) {
+  .report_box p{
+    line-height: 36px;
+  }
 }

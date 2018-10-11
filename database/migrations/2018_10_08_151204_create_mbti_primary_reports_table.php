@@ -16,11 +16,9 @@ class CreateMbtiPrimaryReportsTable extends Migration
         Schema::create('mbti_primary_reports', function (Blueprint $table) {
             $table->increments('id');
             $table->string('mobile')->comment('用户手机号');
-            $table->string('report_id')->comment('报告ID');
             $table->string('serial_number')->comment('序列号');
             $table->string('mbti_name')->comment('测评类型名称');
             $table->string('mbti_category_id')->comment('mbti类型id');
-            $table->string('index')->default('0')->comment('倾向度');
             $table->string('e')->default('0')->comment('外向');
             $table->string('i')->default('0')->comment('内向');
             $table->string('s')->default('0')->comment('实感');

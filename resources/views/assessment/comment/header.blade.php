@@ -10,7 +10,6 @@
 	<link href="{{ asset("theme/layui/css/index.css") }}" rel="stylesheet" type="text/css"/>
 	<link href="{{ asset("theme/layui/css/mobile.css") }}" rel="stylesheet" media="only screen and (max-width:1131px)" type="text/css"/>
 	<link href="{{ asset("theme/layui/css/end.css") }}" rel="stylesheet" type="text/css"/>
-	<link href="{{ asset("theme/layui/css/report.css") }}" rel="stylesheet" type="text/css"/>
 
 	<script type="text/javascript" src="{{ asset("theme/layui/js/jquery.min.js") }}"></script>
 </head>

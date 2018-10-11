@@ -1,29 +1,29 @@
 <?php
 /**
- * MbtiPrimaryIssue 模型数据处理层
+ * MbtiCategoryRepository 模型数据处理层
  * User: jason
- * Date: 2018/9/28
+ * Date: 2018/10/9
  * Time: 上午10:36
  */
 
 namespace App\Repositories\Eloquent;
 
-use App\Models\MbtiPrimaryIssue;
+use App\Models\MbtiCategory;
 
-class MbtiPramaryIssueRepository extends Repository
+class MbtiCategoryRepository extends Repository
 {
     /**
-     * 实例化 MbtiPrimaryIssue 模型对象
+     * 实例化 MbtiCategoryRepository 模型对象
      *
      * @return string
      */
     public function model()
     {
-        return MbtiPrimaryIssue::class;
+        return MbtiCategory::class;
     }
 
     /**
-     * 根据 ID 查询问题
+     * 根据 ID 查询MBTI类型
      *
      * @param $id
      * @return mixed
@@ -34,7 +34,7 @@ class MbtiPramaryIssueRepository extends Repository
     }
 
     /**
-     * 获取所有问题总数
+     * 获取所有MBTI类型总数
      *
      * @return mixed
      */
@@ -44,18 +44,18 @@ class MbtiPramaryIssueRepository extends Repository
     }
 
     /**
-     * 获取所有问题
+     * 根据MBTI短代码获取此类型的信息
      *
+     * @param $mbti_short_code
      * @return mixed
      */
-    public function getAllMbtiPrimaryIssues()
+    public function findByMbtiShortCode($mbti_short_code)
     {
-        //return $this->model->limit(3)->get();
-        return $this->model->get();
+        return $this->model->where('mbti_short_code', $mbti_short_code)->select('id')->first();
     }
 
     /**
-     * 问题分页
+     * MBTI类型分页
      *
      * @param $data
      * @return mixed
@@ -71,7 +71,7 @@ class MbtiPramaryIssueRepository extends Repository
     }
 
     /**
-     * 根据 ID 更新问题数据
+     * 根据 ID 更新MBTI类型数据
      *
      * @param $data
      * @return mixed

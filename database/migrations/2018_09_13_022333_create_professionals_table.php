@@ -15,15 +15,16 @@ class CreateProfessionalsTable extends Migration
     {
         Schema::create('professionals', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('professional_name', 50)->comment('分类名称');
-            $table->string('professional_code', 20)->comment('专业分类ID');
+            $table->string('name', 50)->comment('分类名称');
+            $table->string('code', 20)->comment('专业分类ID');
             $table->integer('parent_id')->default(0)->comment('上级分类 ID');
             $table->integer('top_parent_id')->default(0)->comment('根分类 ID');
-            $table->integer('professional_level')->default(0)->comment('专业层次0:专科|1:本科');
+            $table->integer('level')->default(0)->comment('专业层次0:专科|1:本科');
             $table->integer('ranking')->default(0)->comment('排名');
             $table->integer('ranking_type')->default(0)->comment('同专业内排名');
             $table->timestamps();
         });
+
     }
 
     /**
