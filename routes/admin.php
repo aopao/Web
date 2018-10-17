@@ -34,23 +34,18 @@ Route::namespace('Admin')->prefix(ADMIN_PREFIX)->middleware('AdminAuth:admin')->
     Route::resource('college/category', 'CollegeCategoryController', ['as' => 'admin.college']);
 
     /* 大学层次管理路由 */
-    Route::get('college/level/page', 'CollegeLevelController@getListByPageId')->name('admin.college.level.page');
-    Route::resource('college/level', 'CollegeLevelController', ['as' => 'admin.college']);
+    Route::get('college/diplomas/page', 'CollegeDiplomasController@getListByPageId')->name('admin.college.diplomas.page');
+    Route::resource('college/diplomas', 'CollegeDiplomasController', ['as' => 'admin.college']);
 
     /* 大学管理路由 */
     Route::delete('college/delete', 'CollegeController@deleteByIds')->name('admin.college.delete');
     Route::get('college/page', 'CollegeController@getListByPageId')->name('admin.college.page');
     Route::resource('college', 'CollegeController', ['as' => 'admin']);
 
-    /* 专业大分类管理路由 */
-    Route::delete('professional/category/delete', 'ProfessionalCategoryController@deleteByIds')->name('admin.professional.category.delete');
-    Route::get('professional/category/page', 'ProfessionalCategoryController@getListByPageId')->name('admin.professional.category.page');
-    Route::resource('professional/category', 'ProfessionalCategoryController', ['as' => 'admin.professional']);
-
     /* 专业列表管理路由 */
-    Route::delete('professional/delete', 'ProfessionalController@deleteByIds')->name('admin.professional.delete');
-    Route::get('professional/page', 'ProfessionalController@getListByPageId')->name('admin.professional.page');
-    Route::resource('professional', 'ProfessionalController', ['as' => 'admin']);
+    Route::delete('major/delete', 'MajorController@deleteByIds')->name('admin.major.delete');
+    Route::get('major/page', 'MajorController@getListByPageId')->name('admin.major.page');
+    Route::resource('major', 'MajorController', ['as' => 'admin']);
 
     /* 省控线管理路由 */
     Route::delete('province/score/delete', 'ProvinceControlScoreController@deleteByIds')->name('admin.province.score.delete');

@@ -87,11 +87,11 @@ return [
     'college_category_edit' => '修改院校分类',
 
     /* 院校层次语言包 */
-    'level_name' => '层次名称',
-    'level_description' => '层次简介',
-    'college_level_list' => '院校层次列表',
-    'college_level_add' => '添加院校层次',
-    'college_level_edit' => '修改院校层次',
+    'diplomas_name' => '文凭名称',
+    'diplomas_description' => '文凭简介',
+    'college_diplomas_list' => '院校文凭列表',
+    'college_diplomas_add' => '添加院校文凭',
+    'college_diplomas_edit' => '修改院校文凭',
 
     /* 省控线语言包 */
     'province_control_score_list' => '省控线列表',

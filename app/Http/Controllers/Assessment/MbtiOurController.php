@@ -2,11 +2,20 @@
 
 namespace App\Http\Controllers\Assessment;
 
+use App\Models\City;
+use App\Models\College;
+use App\Models\HollandDimension;
+use App\Models\HollandProfessional;
+use App\Models\HollandProfessionalCode;
 use App\Models\NewProfessional;
 use App\Models\NewProfessionalDetail;
 use App\Models\Professional;
+use App\Models\ProfessionalBachelorRealtionJunior;
 use App\Models\ProfessionalCategory;
 use App\Models\ProfessionalDetail;
+use App\Models\ProfessionalOld;
+use App\Models\ProfessionalRelationSubject;
+use App\Models\Province;
 use App\Services\JsonToArrayService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -190,7 +199,7 @@ class MbtiOurController extends Controller
                         $data['description'] = $v['desc']['basic'];
                     }
 
-                    NewProfessionalDetail::create($data);
+                    //NewProfessionalDetail::create($data);
 
                     //NewProfessional::create($data);
                 }
@@ -218,5 +227,169 @@ class MbtiOurController extends Controller
         //        NewProfessionalDetail::create($data);
         //    }
         //}
+    }
+
+    public function holland()
+    {
+        $all_data = [];
+        $h = new HollandProfessional();
+        $hollande_professional_codes = HollandProfessionalCode::all();
+        foreach ($hollande_professional_codes as $key => $value) {
+            $professional_array = explode('、', $value['professional']);
+            foreach ($professional_array as $k => $v) {
+                $data = [
+                    'name' => $value['name'],
+                    'professional_id' => 0,
+                    'top_professional_id' => 0,
+                ];
+                $info = Professional::where('name', $v)->first();
+                if ($info) {
+                    $data = [
+                        'name' => $value['name'],
+                        'professional_id' => $info['id'],
+                        'top_professional_id' => $info['top_parent_id'],
+                    ];
+                    //$h->addAll($data);
+                }
+                echo $key."关联完毕!<br/>";
+            }
+            //break;
+        }
+    }
+
+    public function holland_single()
+    {
+        $info = HollandDimension::all();
+        $h = new HollandProfessional();
+        foreach ($info as $key => $value) {
+            $professional_array = explode('、', $value['professional']);
+            foreach ($professional_array as $k => $v) {
+                $info = Professional::where('name', $v)->first();
+                if ($info) {
+                    $data = [
+                        'name' => $value['code'],
+                        'professional_id' => 0,
+                        'top_professional_id' => 0,
+                    ];
+                    print_r($info);
+                    $exists = HollandProfessional::where('name', $value['code'])->where('professional_id', $info['id'])->first();
+                    if (! $exists) {
+                        $data['professional_id'] = $info['id'];
+                        $data['top_professional_id'] = $info['top_parent_id'];
+                        //$h->addAll($data);
+                    }
+                }
+                echo $key."关联完毕!<br/>";
+            }
+            //break;
+        }
+    }
+
+    public function btz()
+    {
+        $data = [];
+        $info = ProfessionalOld::all()->toArray();
+        foreach ($info as $key => $value) {
+            $data[$key]['bachelor_professional_id'] = $value['benke_profession_id'];
+            $data[$key]['junior_professional_id'] = $value['zhuanke_profession_id'];
+        }
+        $p = new ProfessionalBachelorRealtionJunior();
+        //$p->addAll($data);
+    }
+
+    public function sp()
+    {
+        $subject = [
+            '1' => ['中国语言文学类', '人文科学试验班类', '新闻传播学类', '文科试验班类', '艺术学理论类', '音乐与舞蹈学类', '戏剧与影视学类', '美术学类', '设计学类'],
+            '2' => ['经济学类', '财政学类', '金融学类', '经济与贸易类', '教育学类', '职业技术教育类', '数学类', '心理学类', '统计学类', '理科试验班类', '计算机类', '测绘类', '林学类'],
+            '3' => ['经济学类', '财政学类', '金融学类', '经济与贸易类', '外国语言文学类', '艺术学理论类', '音乐与舞蹈学类', '戏剧与影视学类', '美术学类', '设计学类'],
+            '4' => [
+                '物理学类',
+                '天文学',
+                '大气科学类',
+                '地球物理学类',
+                '理科试验班类',
+                '力学类',
+                '机械类',
+                '仪器类',
+                '能源动力类',
+                '电气类',
+                '电子信息类',
+                '自动化类',
+                '计算机类',
+                '土木类',
+                '水利类',
+                '测绘类',
+                '地质类',
+                '矿业类',
+                '交通运输类',
+                '海洋工程类',
+                '航空航天类',
+                '兵器类',
+                '核工程类',
+                '农业工程类',
+                '林业工程类',
+                '环境科学与工程类',
+                '建筑类',
+                '水产类',
+            ],
+            '5' => ['化学类', '材料类', '化工与制药类', '纺织类', '轻工类', '食品科学与工程类', '安全科学与工程类', '植物生产类', '自然保护与环境生态类', '动物生产类', '动物医学类', '草学类', '基础医学类', '临床医学类', '口腔医学类', '公共卫生与预防医学类', '中医学类', '中西医结合类', '药学类', '中药学类', '法医学类', '医学技术类', '医学试验班类'],
+            '6' => ['教育学类', '职业技术教育类', '生物科学类', '心理学类', '生物医学工程类', '食品科学与工程类', '安全科学与工程类', '生物工程类', '植物生产类', '自然保护与环境生态类', '动物生产类', '动物医学类', '草学类', '基础医学类', '临床医学类', '口腔医学类', '公共卫生与预防医学类', '中医学类', '中西医结合类', '中药学类', '法医学类', '医学技术类', '医学试验班类'],
+            '7' => ['历史学类'],
+            '8' => ['哲学类', '法学类', '政治学类', '社会学类', '民族学类', '马克思主义理论类', '公安学类', '法学试验班类'],
+            '9' => ['地理科学类', '海洋科学类', '地质学类'],
+        ];
+
+        $arr = [];
+        foreach ($subject as $key => $value) {
+            foreach ($value as $k => $v) {
+                $data = [];
+                $info = Professional::where('name', $v)->first()->toArray();
+                $data['subject'] = $key;
+                $data['professional_id'] = $info['id'];
+                $data['level'] = 1;
+                $arr[] = $data;
+            }
+        }
+        $p = new ProfessionalRelationSubject();
+        $p->addAll($arr);
+    }
+
+    public function pp()
+    {
+        $subject = [
+            '2' => ['农业类', '林业类', '畜牧业类', '渔业类', '汽车制造类', '房地产类', '城乡规划与管理类'],
+            '3' => ['农业类', '林业类', '畜牧业类', '渔业类', '房地产类'],
+            '4' => ['资源勘查类', '地质类', '气象类', '石油与天然气类', '煤炭类', '金属与非金属矿类', '安全类', '安全类', '电力技术类', '热能与发电工程类', '新能源发电工程类', '汽车制造类', '航空装备类', '船舶与海洋工程装备类', '铁道装备类', '自动化类', '机电设备类', '机械设计制造类', '水土保持与水环境类', '水利水电设备类', '水利工程与管理类', '水文水资源类', '城乡规划与管理类'],
+            '5' => ['黑色金属材料类', '有色金属材料类', '有色金属材料类', '建筑材料类', '食品药品管理类', '药品制造类', '食品工业类', '纺织服装类', '印刷类', '包装类', '轻化工类', '化工技术类'],
+            '6' => ['食品药品管理类', '药品制造类', '食品工业类', '纺织服装类', '印刷类', '包装类', '轻化工类', '生物技术类', '水土保持与水环境类'],
+            '9' => ['测绘地理信息类', '环境保护类', '水土保持与水环境类', '城乡规划与管理类'],
+        ];
+        $arr = [];
+        foreach ($subject as $key => $value) {
+            foreach ($value as $k => $v) {
+                $data = [];
+                $info = Professional::where('name', $v)->first()->toArray();
+                $data['subject'] = $key;
+                $data['professional_id'] = $info['id'];
+                $data['level'] = 0;
+                $arr[] = $data;
+            }
+        }
+        $p = new ProfessionalRelationSubject();
+        $p->addAll($arr);
+    }
+
+    public function cpp()
+    {
+        $college = new College();
+        $colleges = $college->select('id', 'name', 'city_id')->skip(2000)->limit(1000)->get();
+        foreach ($colleges as $key => $value) {
+            echo $value['id']."<br>";
+            if (isset($value['city_id']) && $value['city_id'] != '') {
+                $city = City::where('city_name', $value['city_id'])->first();
+                $college->where('id', $value['id'])->update(['city_id' => $city['id']]);
+            }
+        }
     }
 }

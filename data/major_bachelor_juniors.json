@@ -1,0 +1,722 @@
+[
+  {
+    "id": "1",
+    "bachelor_major_id": "399",
+    "junior_major_id": "948"
+  },
+  {
+    "id": "2",
+    "bachelor_major_id": "400",
+    "junior_major_id": "1079"
+  },
+  {
+    "id": "3",
+    "bachelor_major_id": "401",
+    "junior_major_id": "1077"
+  },
+  {
+    "id": "4",
+    "bachelor_major_id": "398",
+    "junior_major_id": "942"
+  },
+  {
+    "id": "5",
+    "bachelor_major_id": "317",
+    "junior_major_id": "886"
+  },
+  {
+    "id": "6",
+    "bachelor_major_id": "422",
+    "junior_major_id": "707"
+  },
+  {
+    "id": "7",
+    "bachelor_major_id": "344",
+    "junior_major_id": "1400"
+  },
+  {
+    "id": "8",
+    "bachelor_major_id": "345",
+    "junior_major_id": "1119"
+  },
+  {
+    "id": "9",
+    "bachelor_major_id": "342",
+    "junior_major_id": "1120"
+  },
+  {
+    "id": "10",
+    "bachelor_major_id": "346",
+    "junior_major_id": "680"
+  },
+  {
+    "id": "11",
+    "bachelor_major_id": "347",
+    "junior_major_id": "1118"
+  },
+  {
+    "id": "12",
+    "bachelor_major_id": "343",
+    "junior_major_id": "1121"
+  },
+  {
+    "id": "13",
+    "bachelor_major_id": "441",
+    "junior_major_id": "844"
+  },
+  {
+    "id": "14",
+    "bachelor_major_id": "442",
+    "junior_major_id": "753"
+  },
+  {
+    "id": "15",
+    "bachelor_major_id": "443",
+    "junior_major_id": "849"
+  },
+  {
+    "id": "16",
+    "bachelor_major_id": "365",
+    "junior_major_id": "964"
+  },
+  {
+    "id": "17",
+    "bachelor_major_id": "366",
+    "junior_major_id": "1017"
+  },
+  {
+    "id": "18",
+    "bachelor_major_id": "413",
+    "junior_major_id": "794"
+  },
+  {
+    "id": "19",
+    "bachelor_major_id": "412",
+    "junior_major_id": "809"
+  },
+  {
+    "id": "20",
+    "bachelor_major_id": "445",
+    "junior_major_id": "972"
+  },
+  {
+    "id": "21",
+    "bachelor_major_id": "384",
+    "junior_major_id": "982"
+  },
+  {
+    "id": "22",
+    "bachelor_major_id": "386",
+    "junior_major_id": "1299"
+  },
+  {
+    "id": "23",
+    "bachelor_major_id": "385",
+    "junior_major_id": "988"
+  },
+  {
+    "id": "24",
+    "bachelor_major_id": "375",
+    "junior_major_id": "759"
+  },
+  {
+    "id": "25",
+    "bachelor_major_id": "377",
+    "junior_major_id": "756"
+  },
+  {
+    "id": "26",
+    "bachelor_major_id": "376",
+    "junior_major_id": "765"
+  },
+  {
+    "id": "27",
+    "bachelor_major_id": "374",
+    "junior_major_id": "764"
+  },
+  {
+    "id": "28",
+    "bachelor_major_id": "425",
+    "junior_major_id": "891"
+  },
+  {
+    "id": "29",
+    "bachelor_major_id": "426",
+    "junior_major_id": "779"
+  },
+  {
+    "id": "30",
+    "bachelor_major_id": "424",
+    "junior_major_id": "780"
+  },
+  {
+    "id": "31",
+    "bachelor_major_id": "427",
+    "junior_major_id": "785"
+  },
+  {
+    "id": "32",
+    "bachelor_major_id": "419",
+    "junior_major_id": "820"
+  },
+  {
+    "id": "33",
+    "bachelor_major_id": "507",
+    "junior_major_id": "1019"
+  },
+  {
+    "id": "34",
+    "bachelor_major_id": "505",
+    "junior_major_id": "1014"
+  },
+  {
+    "id": "35",
+    "bachelor_major_id": "506",
+    "junior_major_id": "1014"
+  },
+  {
+    "id": "36",
+    "bachelor_major_id": "492",
+    "junior_major_id": "1159"
+  },
+  {
+    "id": "37",
+    "bachelor_major_id": "493",
+    "junior_major_id": "1166"
+  },
+  {
+    "id": "38",
+    "bachelor_major_id": "512",
+    "junior_major_id": "1143"
+  },
+  {
+    "id": "39",
+    "bachelor_major_id": "513",
+    "junior_major_id": "1013"
+  },
+  {
+    "id": "40",
+    "bachelor_major_id": "491",
+    "junior_major_id": "1131"
+  },
+  {
+    "id": "41",
+    "bachelor_major_id": "523",
+    "junior_major_id": "1362"
+  },
+  {
+    "id": "42",
+    "bachelor_major_id": "520",
+    "junior_major_id": "1148"
+  },
+  {
+    "id": "43",
+    "bachelor_major_id": "521",
+    "junior_major_id": "1169"
+  },
+  {
+    "id": "44",
+    "bachelor_major_id": "522",
+    "junior_major_id": "1153"
+  },
+  {
+    "id": "45",
+    "bachelor_major_id": "524",
+    "junior_major_id": "1151"
+  },
+  {
+    "id": "46",
+    "bachelor_major_id": "519",
+    "junior_major_id": "1147"
+  },
+  {
+    "id": "47",
+    "bachelor_major_id": "525",
+    "junior_major_id": "1152"
+  },
+  {
+    "id": "48",
+    "bachelor_major_id": "485",
+    "junior_major_id": "1130"
+  },
+  {
+    "id": "49",
+    "bachelor_major_id": "497",
+    "junior_major_id": "1133"
+  },
+  {
+    "id": "50",
+    "bachelor_major_id": "284",
+    "junior_major_id": "1335"
+  },
+  {
+    "id": "51",
+    "bachelor_major_id": "285",
+    "junior_major_id": "1168"
+  },
+  {
+    "id": "52",
+    "bachelor_major_id": "172",
+    "junior_major_id": "1318"
+  },
+  {
+    "id": "53",
+    "bachelor_major_id": "170",
+    "junior_major_id": "1336"
+  },
+  {
+    "id": "54",
+    "bachelor_major_id": "155",
+    "junior_major_id": "1319"
+  },
+  {
+    "id": "55",
+    "bachelor_major_id": "156",
+    "junior_major_id": "1324"
+  },
+  {
+    "id": "56",
+    "bachelor_major_id": "4",
+    "junior_major_id": "1168"
+  },
+  {
+    "id": "57",
+    "bachelor_major_id": "157",
+    "junior_major_id": "1334"
+  },
+  {
+    "id": "58",
+    "bachelor_major_id": "239",
+    "junior_major_id": "1293"
+  },
+  {
+    "id": "59",
+    "bachelor_major_id": "241",
+    "junior_major_id": "1211"
+  },
+  {
+    "id": "60",
+    "bachelor_major_id": "242",
+    "junior_major_id": "1293"
+  },
+  {
+    "id": "61",
+    "bachelor_major_id": "243",
+    "junior_major_id": "1300"
+  },
+  {
+    "id": "62",
+    "bachelor_major_id": "240",
+    "junior_major_id": "1300"
+  },
+  {
+    "id": "63",
+    "bachelor_major_id": "389",
+    "junior_major_id": "1049"
+  },
+  {
+    "id": "64",
+    "bachelor_major_id": "387",
+    "junior_major_id": "1031"
+  },
+  {
+    "id": "65",
+    "bachelor_major_id": "391",
+    "junior_major_id": "1065"
+  },
+  {
+    "id": "66",
+    "bachelor_major_id": "394",
+    "junior_major_id": "1051"
+  },
+  {
+    "id": "67",
+    "bachelor_major_id": "388",
+    "junior_major_id": "1027"
+  },
+  {
+    "id": "68",
+    "bachelor_major_id": "390",
+    "junior_major_id": "938"
+  },
+  {
+    "id": "69",
+    "bachelor_major_id": "320",
+    "junior_major_id": "887"
+  },
+  {
+    "id": "70",
+    "bachelor_major_id": "371",
+    "junior_major_id": "737"
+  },
+  {
+    "id": "71",
+    "bachelor_major_id": "370",
+    "junior_major_id": "730"
+  },
+  {
+    "id": "72",
+    "bachelor_major_id": "372",
+    "junior_major_id": "736"
+  },
+  {
+    "id": "73",
+    "bachelor_major_id": "359",
+    "junior_major_id": "884"
+  },
+  {
+    "id": "74",
+    "bachelor_major_id": "357",
+    "junior_major_id": "803"
+  },
+  {
+    "id": "75",
+    "bachelor_major_id": "252",
+    "junior_major_id": "1319"
+  },
+  {
+    "id": "76",
+    "bachelor_major_id": "277",
+    "junior_major_id": "732"
+  },
+  {
+    "id": "77",
+    "bachelor_major_id": "266",
+    "junior_major_id": "753"
+  },
+  {
+    "id": "78",
+    "bachelor_major_id": "267",
+    "junior_major_id": "743"
+  },
+  {
+    "id": "79",
+    "bachelor_major_id": "286",
+    "junior_major_id": "1193"
+  },
+  {
+    "id": "80",
+    "bachelor_major_id": "287",
+    "junior_major_id": "1193"
+  },
+  {
+    "id": "81",
+    "bachelor_major_id": "255",
+    "junior_major_id": "1321"
+  },
+  {
+    "id": "82",
+    "bachelor_major_id": "257",
+    "junior_major_id": "782"
+  },
+  {
+    "id": "83",
+    "bachelor_major_id": "256",
+    "junior_major_id": "782"
+  },
+  {
+    "id": "84",
+    "bachelor_major_id": "268",
+    "junior_major_id": "773"
+  },
+  {
+    "id": "85",
+    "bachelor_major_id": "269",
+    "junior_major_id": "773"
+  },
+  {
+    "id": "86",
+    "bachelor_major_id": "274",
+    "junior_major_id": "1325"
+  },
+  {
+    "id": "87",
+    "bachelor_major_id": "259",
+    "junior_major_id": "777"
+  },
+  {
+    "id": "88",
+    "bachelor_major_id": "431",
+    "junior_major_id": "1170"
+  },
+  {
+    "id": "89",
+    "bachelor_major_id": "448",
+    "junior_major_id": "1401"
+  },
+  {
+    "id": "90",
+    "bachelor_major_id": "449",
+    "junior_major_id": "789"
+  },
+  {
+    "id": "91",
+    "bachelor_major_id": "340",
+    "junior_major_id": "921"
+  },
+  {
+    "id": "92",
+    "bachelor_major_id": "446",
+    "junior_major_id": "961"
+  },
+  {
+    "id": "93",
+    "bachelor_major_id": "361",
+    "junior_major_id": "743"
+  },
+  {
+    "id": "94",
+    "bachelor_major_id": "362",
+    "junior_major_id": "743"
+  },
+  {
+    "id": "95",
+    "bachelor_major_id": "380",
+    "junior_major_id": "995"
+  },
+  {
+    "id": "96",
+    "bachelor_major_id": "381",
+    "junior_major_id": "1002"
+  },
+  {
+    "id": "97",
+    "bachelor_major_id": "395",
+    "junior_major_id": "932"
+  },
+  {
+    "id": "98",
+    "bachelor_major_id": "437",
+    "junior_major_id": "957"
+  },
+  {
+    "id": "99",
+    "bachelor_major_id": "433",
+    "junior_major_id": "1006"
+  },
+  {
+    "id": "100",
+    "bachelor_major_id": "434",
+    "junior_major_id": "1010"
+  },
+  {
+    "id": "101",
+    "bachelor_major_id": "435",
+    "junior_major_id": "1022"
+  },
+  {
+    "id": "102",
+    "bachelor_major_id": "260",
+    "junior_major_id": "968"
+  },
+  {
+    "id": "103",
+    "bachelor_major_id": "280",
+    "junior_major_id": "1323"
+  },
+  {
+    "id": "104",
+    "bachelor_major_id": "281",
+    "junior_major_id": "815"
+  },
+  {
+    "id": "105",
+    "bachelor_major_id": "302",
+    "junior_major_id": "902"
+  },
+  {
+    "id": "106",
+    "bachelor_major_id": "326",
+    "junior_major_id": "1123"
+  },
+  {
+    "id": "107",
+    "bachelor_major_id": "329",
+    "junior_major_id": "1030"
+  },
+  {
+    "id": "108",
+    "bachelor_major_id": "324",
+    "junior_major_id": "804"
+  },
+  {
+    "id": "109",
+    "bachelor_major_id": "327",
+    "junior_major_id": "1099"
+  },
+  {
+    "id": "110",
+    "bachelor_major_id": "325",
+    "junior_major_id": "1091"
+  },
+  {
+    "id": "111",
+    "bachelor_major_id": "328",
+    "junior_major_id": "1093"
+  },
+  {
+    "id": "112",
+    "bachelor_major_id": "354",
+    "junior_major_id": "858"
+  },
+  {
+    "id": "113",
+    "bachelor_major_id": "351",
+    "junior_major_id": "761"
+  },
+  {
+    "id": "114",
+    "bachelor_major_id": "353",
+    "junior_major_id": "780"
+  },
+  {
+    "id": "115",
+    "bachelor_major_id": "352",
+    "junior_major_id": "915"
+  },
+  {
+    "id": "116",
+    "bachelor_major_id": "408",
+    "junior_major_id": "972"
+  },
+  {
+    "id": "117",
+    "bachelor_major_id": "358",
+    "junior_major_id": "876"
+  },
+  {
+    "id": "118",
+    "bachelor_major_id": "303",
+    "junior_major_id": "838"
+  },
+  {
+    "id": "119",
+    "bachelor_major_id": "308",
+    "junior_major_id": "835"
+  },
+  {
+    "id": "120",
+    "bachelor_major_id": "310",
+    "junior_major_id": "837"
+  },
+  {
+    "id": "121",
+    "bachelor_major_id": "307",
+    "junior_major_id": "971"
+  },
+  {
+    "id": "122",
+    "bachelor_major_id": "297",
+    "junior_major_id": "1048"
+  },
+  {
+    "id": "123",
+    "bachelor_major_id": "293",
+    "junior_major_id": "914"
+  },
+  {
+    "id": "124",
+    "bachelor_major_id": "292",
+    "junior_major_id": "896"
+  },
+  {
+    "id": "125",
+    "bachelor_major_id": "291",
+    "junior_major_id": "894"
+  },
+  {
+    "id": "126",
+    "bachelor_major_id": "295",
+    "junior_major_id": "924"
+  },
+  {
+    "id": "127",
+    "bachelor_major_id": "290",
+    "junior_major_id": "762"
+  },
+  {
+    "id": "128",
+    "bachelor_major_id": "294",
+    "junior_major_id": "953"
+  },
+  {
+    "id": "129",
+    "bachelor_major_id": "296",
+    "junior_major_id": "1025"
+  },
+  {
+    "id": "130",
+    "bachelor_major_id": "304",
+    "junior_major_id": "828"
+  },
+  {
+    "id": "131",
+    "bachelor_major_id": "417",
+    "junior_major_id": "805"
+  },
+  {
+    "id": "132",
+    "bachelor_major_id": "418",
+    "junior_major_id": "805"
+  },
+  {
+    "id": "133",
+    "bachelor_major_id": "416",
+    "junior_major_id": "719"
+  },
+  {
+    "id": "134",
+    "bachelor_major_id": "420",
+    "junior_major_id": "879"
+  },
+  {
+    "id": "135",
+    "bachelor_major_id": "309",
+    "junior_major_id": "830"
+  },
+  {
+    "id": "136",
+    "bachelor_major_id": "306",
+    "junior_major_id": "825"
+  },
+  {
+    "id": "137",
+    "bachelor_major_id": "111",
+    "junior_major_id": "1179"
+  },
+  {
+    "id": "138",
+    "bachelor_major_id": "112",
+    "junior_major_id": "1177"
+  },
+  {
+    "id": "139",
+    "bachelor_major_id": "115",
+    "junior_major_id": "1184"
+  },
+  {
+    "id": "140",
+    "bachelor_major_id": "116",
+    "junior_major_id": "1185"
+  },
+  {
+    "id": "141",
+    "bachelor_major_id": "113",
+    "junior_major_id": "1181"
+  },
+  {
+    "id": "142",
+    "bachelor_major_id": "120",
+    "junior_major_id": "1196"
+  },
+  {
+    "id": "143",
+    "bachelor_major_id": "140",
+    "junior_major_id": "1385"
+  },
+  {
+    "id": "144",
+    "bachelor_major_id": "3",
+    "junior_major_id": "1396"
+  }
+]

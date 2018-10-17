@@ -41,14 +41,18 @@ class PrimaryController extends BaseController
             abort(404);
         }
         /* 加入缓存中,减轻数据库压力 */
-        if (Cache::has($serial_number)) {
-            $report = Cache::get($serial_number);
+        if (Cache::has(config('assessment.cookie_primary_report_prefix').$serial_number)) {
+            $report = Cache::get(config('assessment.cookie_primary_report_prefix').$serial_number);
         } else {
             /* 组织展现的数据 */
-            $report = $mbtiPrimaryReportRepository->getAllInfoBySerialNumber($serial_number)->ToArray();
-            /* 对数据进行二次处理 */
-            $mbtiPrimaryLogicService->handleReportData($report);
-            Cache::forever($serial_number, $report);
+            $report = $mbtiPrimaryReportRepository->getAllInfoBySerialNumber($serial_number);
+            if ($report) {
+                /* 对数据进行二次处理 */
+                $mbtiPrimaryLogicService->handleReportData($report);
+                Cache::forever(config('assessment.cookie_primary_report_prefix').$serial_number, $report);
+            } else {
+                abort(404);
+            }
         }
 
         return view('assessment.primary.show', compact('report'));

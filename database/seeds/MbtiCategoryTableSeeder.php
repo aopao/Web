@@ -15,7 +15,7 @@ class MbtiCategoryTableSeeder extends Seeder
     public function run()
     {
         $mbti_category = new MbtiCategory();
-        $category = JsonToArrayService::getJson('mbti_category.json');
+        $category = JsonToArrayService::getJson('mbti_categories.json');
         $mbti_category->addAll($category);
     }
 }

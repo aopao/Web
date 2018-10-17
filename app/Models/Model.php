@@ -21,7 +21,12 @@ class Model extends EloquentModel
      */
     public function addAll(Array $data)
     {
-        $rs = DB::table($this->getTable())->insert($data);
+        $new_data = [];
+        foreach ($data as $key => $value) {
+            $value['created_at'] = date('Y-m-d H:i:s', time());
+            $new_data[] = $value;
+        }
+        $rs = DB::table($this->getTable())->insert($new_data);
 
         return $rs;
     }

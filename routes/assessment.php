@@ -11,7 +11,8 @@ define('ASSESSMENT_PREFIX', config('assessment.assessment_prefix'));
 
 /* 序列号测评处理路由 */
 Route::namespace('Assessment')->prefix(ASSESSMENT_PREFIX)->group(function () {
-    /* 初级评测 */
+
+    /* MBTI 初级评测[93道题] */
     Route::get('/', 'PrimaryController@index');
     Route::get('/primary/', 'PrimaryController@index')->name('assessment.primary');
     Route::get('/primary/{serial_number}', 'PrimaryController@show')->name('assessment.primary.show');
@@ -19,8 +20,9 @@ Route::namespace('Assessment')->prefix(ASSESSMENT_PREFIX)->group(function () {
     Route::post('/primary/collect', 'PrimaryController@collect')->name('assessment.primary.collect');
     Route::post('/primary/report', 'PrimaryController@report')->name('assessment.primary.report');
 
-    /* 高级评测 */
+    /* 高级评测[霍兰德+MBTI] */
     Route::get('/senior/', 'SeniorController@index')->name('assessment.senior');
+    Route::get('/senior/{serial_number}', 'SeniorController@show')->name('assessment.senior.show');
     Route::post('/senior/issue', 'SeniorController@issue')->name('assessment.senior.issue');
     Route::post('/senior/collect', 'SeniorController@collect')->name('assessment.senior.collect');
     Route::post('/senior/report', 'SeniorController@report')->name('assessment.senior.report');
@@ -31,6 +33,12 @@ Route::namespace('Assessment')->prefix(ASSESSMENT_PREFIX)->group(function () {
     Route::get('/sb/', 'MbtiOurController@senior')->name('assessment.sb');
     Route::post('/sb', 'MbtiOurController@senior');
     Route::get('/zy/', 'MbtiOurController@zy')->name('assessment.zy');
+    Route::get('/sho/', 'MbtiOurController@holland_single')->name('assessment.sho');
+    Route::get('/ho/', 'MbtiOurController@holland')->name('assessment.ho');
+    Route::get('/btz/', 'MbtiOurController@btz')->name('assessment.bzk');
+    Route::get('/sp/', 'MbtiOurController@sp')->name('assessment.sp');
+    Route::get('/pp/', 'MbtiOurController@pp')->name('assessment.pp');
+    Route::get('/cpp/', 'MbtiOurController@cpp')->name('assessment.cpp');
 });
 
 Route::namespace('Assessment')->prefix(ASSESSMENT_PREFIX)->middleware('StudentAuth:student')->group(function () {

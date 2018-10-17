@@ -15,7 +15,7 @@ class ProvinceControlScoreTableSeeder extends Seeder
     public function run()
     {
         $provinceControlScore = new ProvinceControlScore();
-        $province_control_score = JsonToArrayService::getJson('province_control_score.json');
+        $province_control_score = JsonToArrayService::getJson('province_control_scores.json');
         $provinceControlScore->addAll($province_control_score);
     }
 }

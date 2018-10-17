@@ -15,7 +15,7 @@ class CollegeTableSeeder extends Seeder
     {
         $college_model = new College();
         $college = JsonToArrayService::getJson('colleges.json');
-        foreach ($college["RECORDS"] as $value) {
+        foreach ($college as $value) {
             $college_model->insert($value);
         }
     }

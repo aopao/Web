@@ -1,0 +1,892 @@
+[
+  {
+    "major_id": "28",
+    "subject": "1",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "13",
+    "subject": "1",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "30",
+    "subject": "1",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "31",
+    "subject": "1",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "96",
+    "subject": "1",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "97",
+    "subject": "1",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "98",
+    "subject": "1",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "99",
+    "subject": "1",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "100",
+    "subject": "1",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "14",
+    "subject": "2",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "15",
+    "subject": "2",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "16",
+    "subject": "2",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "17",
+    "subject": "2",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "25",
+    "subject": "2",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "27",
+    "subject": "2",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "33",
+    "subject": "2",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "43",
+    "subject": "2",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "44",
+    "subject": "2",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "45",
+    "subject": "2",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "54",
+    "subject": "2",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "57",
+    "subject": "2",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "82",
+    "subject": "2",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "14",
+    "subject": "3",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "15",
+    "subject": "3",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "16",
+    "subject": "3",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "17",
+    "subject": "3",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "29",
+    "subject": "3",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "96",
+    "subject": "3",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "97",
+    "subject": "3",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "98",
+    "subject": "3",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "99",
+    "subject": "3",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "100",
+    "subject": "3",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "34",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "263",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "38",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "40",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "45",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "46",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "47",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "48",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "50",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "51",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "52",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "53",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "54",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "55",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "56",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "57",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "59",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "60",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "63",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "64",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "65",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "66",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "67",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "68",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "69",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "70",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "73",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "83",
+    "subject": "4",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "35",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "49",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "58",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "61",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "62",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "72",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "74",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "78",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "79",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "80",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "81",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "84",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "85",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "86",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "87",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "88",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "89",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "90",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "91",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "92",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "93",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "94",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "95",
+    "subject": "5",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "25",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "27",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "42",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "43",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "71",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "72",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "74",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "75",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "78",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "79",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "80",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "81",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "84",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "85",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "86",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "87",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "88",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "89",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "90",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "92",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "93",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "94",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "95",
+    "subject": "6",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "32",
+    "subject": "7",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "12",
+    "subject": "8",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "18",
+    "subject": "8",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "19",
+    "subject": "8",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "20",
+    "subject": "8",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "21",
+    "subject": "8",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "22",
+    "subject": "8",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "23",
+    "subject": "8",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "24",
+    "subject": "8",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "37",
+    "subject": "9",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "39",
+    "subject": "9",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "41",
+    "subject": "9",
+    "diplomas": "1"
+  },
+  {
+    "major_id": "579",
+    "subject": "2",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "580",
+    "subject": "2",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "581",
+    "subject": "2",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "582",
+    "subject": "2",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "616",
+    "subject": "2",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "605",
+    "subject": "2",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "600",
+    "subject": "2",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "579",
+    "subject": "3",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "580",
+    "subject": "3",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "581",
+    "subject": "3",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "582",
+    "subject": "3",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "605",
+    "subject": "3",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "583",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "59",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "589",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "586",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "587",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "588",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "591",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "591",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "592",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "593",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "594",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "616",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "615",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "614",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "613",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "53",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "611",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "610",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "609",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "608",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "607",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "606",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "600",
+    "subject": "4",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "595",
+    "subject": "5",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "596",
+    "subject": "5",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "596",
+    "subject": "5",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "598",
+    "subject": "5",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "625",
+    "subject": "5",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "624",
+    "subject": "5",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "623",
+    "subject": "5",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "622",
+    "subject": "5",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "621",
+    "subject": "5",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "620",
+    "subject": "5",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "619",
+    "subject": "5",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "618",
+    "subject": "5",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "625",
+    "subject": "6",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "624",
+    "subject": "6",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "623",
+    "subject": "6",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "622",
+    "subject": "6",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "621",
+    "subject": "6",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "620",
+    "subject": "6",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "619",
+    "subject": "6",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "617",
+    "subject": "6",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "609",
+    "subject": "6",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "585",
+    "subject": "9",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "590",
+    "subject": "9",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "609",
+    "subject": "9",
+    "diplomas": "0"
+  },
+  {
+    "major_id": "600",
+    "subject": "9",
+    "diplomas": "0"
+  }
+]

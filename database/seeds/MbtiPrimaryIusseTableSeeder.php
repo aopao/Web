@@ -15,7 +15,7 @@ class MbtiPrimaryIusseTableSeeder extends Seeder
     public function run()
     {
         $mbti_primary_issue = new MbtiPrimaryIssue();
-        $issue = JsonToArrayService::getJson('mbti_primary_issue.json');
+        $issue = JsonToArrayService::getJson('mbti_primary_issues.json');
         $mbti_primary_issue->addAll($issue);
     }
 }

@@ -15,7 +15,7 @@ class CollegeDetailsTableSeeder extends Seeder
     {
         $college_details = new CollegeDetail();
         $collegeDetails = JsonToArrayService::getJson('college_details.json');
-        foreach ($collegeDetails["RECORDS"] as $value) {
+        foreach ($collegeDetails as $value) {
             $college_details->insert($value);
         }
     }

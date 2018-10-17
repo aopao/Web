@@ -1,6 +1,6 @@
 @include('assessment.comment.header')
 <div class="loading_box">
-	<div class="tem_div loading">高级版正在生成报告中，请稍后 ...</div>
+	<div class="tem_div loading">正在生成报告中，请稍后 ...</div>
 	<div class="scene">
 		<svg version="1.1" id="dc-spinner" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width:
 		"38" height: "38" viewBox="0 0 38 38" preserveAspectRatio="xMinYMin meet">
@@ -31,9 +31,9 @@
 </div>
 <div class="bgf">
 	<div class="tem_div tem_div1">
-		<h2 class="i_h">测评项目：@lang('assessment/senior.primary_name')</h2>
+		<h2 class="i_h">测评项目：@lang('assessment/primary.primary_name')</h2>
 		<p class="i_date">测评日期：{{ date('Y年m月d日',time()) }}</p>
-		<a target="_blank" href="http://apesk.com/mensa/common_report_getid//mbti1_report_hr_zy.asp?id={{ $private_data['report_id'] }}" class="start_a">生成报告</a>
+		<a target="_blank" href="{{ route('assessment.senior.show',['serial_number'=>$db_report['serial_number']]) }}" class="start_a">查看报告</a>
 	</div>
 </div>
 
@@ -54,12 +54,6 @@
 	@else
     setTimeout("show_index()", {{ config('assessment.reprot_parse_time')*1000 }});
     $('#time_delay').text("{{ config('assessment.reprot_parse_time') }}");
-    url = "http://192.168.2.68:8000/api/senior/get/content/?report_id={{ $private_data['report_id'] }}&mobile={{ $private_data['mobile'] }}&serial_number={{ $private_data['serial_number'] }}"
-    $.ajax({
-        url: url, success: function (data) {
-            console.log(data);
-        }
-    });
     resetCode()
 
     //倒计时
@@ -85,6 +79,5 @@
         $('.tem_div1').fadeIn(1000);
     }
 	@endif
-
 </script>
 </html>

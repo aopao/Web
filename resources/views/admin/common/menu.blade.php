@@ -30,7 +30,7 @@
 						<a lay-href="{{ route('admin.college.create') }}">添加院校</a>
 					</dd>
 					<dd>
-						<a lay-href="{{ route('admin.college.level.index') }}">层次列表</a>
+						<a lay-href="{{ route('admin.college.diplomas.index') }}">文凭列表</a>
 					</dd>
 					<dd>
 						<a lay-href="{{ route('admin.college.category.index') }}">类型列表</a>
@@ -47,10 +47,7 @@
 				</a>
 				<dl class="layui-nav-child">
 					<dd>
-						<a lay-href="{{ route('admin.professional.category.index') }}">专业分类列表</a>
-					</dd>
-					<dd>
-						<a lay-href="{{ route('admin.professional.index') }}">专业详细列表</a>
+						<a lay-href="{{ route('admin.major.index') }}">详细列表</a>
 					</dd>
 				</dl>
 			</li>
@@ -180,7 +177,7 @@
 						<a lay-href="{{ route('admin.city.index') }}">城市列表</a>
 					</dd>
 					<dd>
-						<a lay-href="{{ route('admin.college.level.index') }}">地区列表</a>
+						<a lay-href="{{ route('admin.college.diplomas.index') }}">地区列表</a>
 					</dd>
 				</dl>
 			</li>
@@ -228,7 +225,7 @@
 						<a lay-href="{{ route('admin.college.create') }}">邮箱设置</a>
 					</dd>
 					<dd>
-						<a lay-href="{{ route('admin.college.level.index') }}">短信设置</a>
+						<a lay-href="{{ route('admin.college.diplomas.index') }}">短信设置</a>
 					</dd>
 				</dl>
 			</li>

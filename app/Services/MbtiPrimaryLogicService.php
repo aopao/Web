@@ -39,6 +39,7 @@ class MbtiPrimaryLogicService
         return compact('report', 'serial_number_record_data');
     }
 
+
     /**
      * 根据传入的数组数据分析结果数值
      *

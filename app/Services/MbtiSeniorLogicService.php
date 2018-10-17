@@ -8,9 +8,18 @@
 
 namespace App\Services;
 
+use App\Models\Major;
+use App\Models\HollandMajor;
+use App\Repositories\Eloquent\HollandProfessionalRepository;
+use App\Repositories\Eloquent\MajorRepository;
+
 class MbtiSeniorLogicService
 {
     private $e, $i, $s, $n, $t, $f, $j, $p;
+
+    private $hollandProfessionCode;
+
+    private $hollandProfession;
 
     /**
      * 初始化各维度的初始值
@@ -21,340 +30,117 @@ class MbtiSeniorLogicService
         $this->e = $this->i = $this->s = $this->n = $this->t = $this->f = $this->j = $this->p = 0;
     }
 
+    /**
+     * 提交数据生成报告控制器中总调用方法
+     *
+     * @param $data
+     * @param $mbtiCategoryRepository
+     * @return mixed
+     */
     public function handleData($data, $mbtiCategoryRepository)
     {
-        $response = [];
-        //$temp_data = $this->splitResult($data);
-        //模拟数据
-        $temp_data = [
-            'mbti' => [
-                'choice' => [
-                    0 => 'N',
-                    1 => 'N',
-                    2 => 'N',
-                    3 => 'N',
-                    4 => 'N',
-                    5 => 'S',
-                    6 => 'N',
-                    7 => 'S',
-                    8 => 'S',
-                    9 => 'S',
-                    10 => 'N',
-                    11 => 'S',
-                    12 => 'N',
-                    13 => 'S',
-                    14 => 'S',
-                    15 => 'E',
-                    16 => 'E',
-                    17 => 'I',
-                    18 => 'E',
-                    19 => 'E',
-                    20 => 'I',
-                    21 => 'I',
-                    22 => 'I',
-                    23 => 'I',
-                    24 => 'E',
-                    25 => 'I',
-                    26 => 'E',
-                    27 => 'I',
-                    28 => 'I',
-                    29 => 'I',
-                    30 => 'T',
-                    31 => 'F',
-                    32 => 'F',
-                    33 => 'F',
-                    34 => 'T',
-                    35 => 'T',
-                    36 => 'T',
-                    37 => 'T',
-                    38 => 'T',
-                    39 => 'T',
-                    40 => 'T',
-                    41 => 'T',
-                    42 => 'T',
-                    43 => 'T',
-                    44 => 'F',
-                    45 => 'J',
-                    46 => 'J',
-                    47 => 'P',
-                    48 => 'J',
-                    49 => 'J',
-                    50 => 'J',
-                    51 => 'J',
-                    52 => 'P',
-                    53 => 'P',
-                    54 => 'P',
-                    55 => 'J',
-                    56 => 'J',
-                    57 => 'J',
-                    58 => 'J',
-                    59 => 'J',
-                    60 => 'N',
-                    61 => 'N',
-                    62 => 'N',
-                    63 => 'N',
-                    64 => 'N',
-                    65 => 'S',
-                    66 => 'N',
-                    67 => 'S',
-                    68 => 'S',
-                    69 => 'S',
-                    70 => 'N',
-                    71 => 'S',
-                    72 => 'N',
-                    73 => 'S',
-                    74 => 'S',
-                    75 => 'E',
-                    76 => 'E',
-                    77 => 'I',
-                    78 => 'E',
-                    79 => 'E',
-                    80 => 'I',
-                    81 => 'I',
-                    82 => 'I',
-                    83 => 'I',
-                    84 => 'E',
-                    85 => 'I',
-                    86 => 'E',
-                    87 => 'I',
-                    88 => 'I',
-                    89 => 'I',
-                    90 => 'T',
-                    91 => 'F',
-                    92 => 'F',
-                    93 => 'F',
-                    94 => 'T',
-                    95 => 'T',
-                    96 => 'T',
-                    97 => 'T',
-                    98 => 'T',
-                    99 => 'T',
-                    100 => 'T',
-                    101 => 'T',
-                    102 => 'T',
-                    103 => 'T',
-                    104 => 'F',
-                    105 => 'J',
-                    106 => 'J',
-                    107 => 'P',
-                    108 => 'J',
-                    109 => 'J',
-                    110 => 'J',
-                    111 => 'J',
-                    112 => 'P',
-                    113 => 'P',
-                    114 => 'P',
-                    115 => 'J',
-                    116 => 'J',
-                    117 => 'J',
-                    118 => 'J',
-                    119 => 'J',
-                ],
-            ],
-            'holland' => [
-                'hobby' => [
-                    'choice' => [
-                        0 => 'R',
-                        1 => '',
-                        2 => '',
-                        3 => '',
-                        4 => 'R',
-                        5 => 'R',
-                        6 => '',
-                        7 => '',
-                        8 => 'R',
-                        9 => 'R',
-                        10 => 'I',
-                        11 => 'I',
-                        12 => '',
-                        13 => '',
-                        14 => 'I',
-                        15 => 'I',
-                        16 => '',
-                        17 => 'I',
-                        18 => 'I',
-                        19 => 'I',
-                        20 => 'A',
-                        21 => '',
-                        22 => '',
-                        23 => 'A',
-                        24 => 'A',
-                        25 => 'A',
-                        26 => '',
-                        27 => 'A',
-                        28 => 'A',
-                        29 => 'A',
-                        30 => 'S',
-                        31 => 'S',
-                        32 => 'S',
-                        33 => 'S',
-                        34 => 'S',
-                        35 => '',
-                        36 => 'S',
-                        37 => 'S',
-                        38 => 'S',
-                        39 => 'S',
-                        40 => 'E',
-                        41 => 'E',
-                        42 => 'E',
-                        43 => '',
-                        44 => '',
-                        45 => 'E',
-                        46 => '',
-                        47 => 'E',
-                        48 => 'E',
-                        49 => '',
-                        50 => 'C',
-                        51 => '',
-                        52 => 'C',
-                        53 => '',
-                        54 => '',
-                        55 => 'C',
-                        56 => 'C',
-                        57 => 'C',
-                        58 => 'C',
-                        59 => 'C',
-                    ],
-                ],
-                'good' => [
-                    'choice' => [
-                        0 => 'R',
-                        1 => 'R',
-                        2 => 'R',
-                        3 => 'R',
-                        4 => 'R',
-                        5 => 'R',
-                        6 => 'R',
-                        7 => 'R',
-                        8 => 'R',
-                        9 => 'R',
-                        10 => 'I',
-                        11 => 'I',
-                        12 => 'I',
-                        13 => 'I',
-                        14 => 'I',
-                        15 => 'I',
-                        16 => 'I',
-                        17 => 'I',
-                        18 => 'I',
-                        19 => 'I',
-                        20 => 'A',
-                        21 => 'A',
-                        22 => 'A',
-                        23 => 'A',
-                        24 => 'A',
-                        25 => 'A',
-                        26 => 'A',
-                        27 => 'A',
-                        28 => 'A',
-                        29 => 'A',
-                        30 => 'S',
-                        31 => 'S',
-                        32 => 'S',
-                        33 => 'S',
-                        34 => 'S',
-                        35 => 'S',
-                        36 => 'S',
-                        37 => 'S',
-                        38 => 'S',
-                        39 => 'S',
-                        40 => 'E',
-                        41 => 'E',
-                        42 => 'E',
-                        43 => 'E',
-                        44 => 'E',
-                        45 => 'E',
-                        46 => 'E',
-                        47 => 'E',
-                        48 => 'E',
-                        49 => 'E',
-                        50 => 'C',
-                        51 => 'C',
-                        52 => 'C',
-                        53 => 'C',
-                        54 => 'C',
-                        55 => 'C',
-                        56 => 'C',
-                        57 => 'C',
-                        58 => 'C',
-                        59 => 'C',
-                    ],
-                ],
-                'like' => [
-                    'choice' => [
-                        0 => '',
-                        1 => '',
-                        2 => 'R',
-                        3 => '',
-                        4 => 'R',
-                        5 => '',
-                        6 => 'R',
-                        7 => '',
-                        8 => 'R',
-                        9 => 'R',
-                        10 => 'I',
-                        11 => 'I',
-                        12 => 'I',
-                        13 => 'I',
-                        14 => 'I',
-                        15 => 'I',
-                        16 => 'I',
-                        17 => 'I',
-                        18 => 'I',
-                        19 => 'I',
-                        20 => 'A',
-                        21 => 'A',
-                        22 => 'A',
-                        23 => 'A',
-                        24 => 'A',
-                        25 => 'A',
-                        26 => 'A',
-                        27 => 'A',
-                        28 => 'A',
-                        29 => 'A',
-                        30 => 'S',
-                        31 => 'S',
-                        32 => 'S',
-                        33 => 'S',
-                        34 => 'S',
-                        35 => 'S',
-                        36 => 'S',
-                        37 => 'S',
-                        38 => 'S',
-                        39 => 'S',
-                        40 => 'E',
-                        41 => 'E',
-                        42 => 'E',
-                        43 => 'E',
-                        44 => 'E',
-                        45 => 'E',
-                        46 => 'E',
-                        47 => 'E',
-                        48 => 'E',
-                        49 => 'E',
-                        50 => 'C',
-                        51 => 'C',
-                        52 => 'C',
-                        53 => 'C',
-                        54 => 'C',
-                        55 => 'C',
-                        56 => 'C',
-                        57 => 'C',
-                        58 => 'C',
-                        59 => 'C',
-                    ],
-                ],
-                'ability' => ['choice' => ['R' => 1, 'I' => 3, 'A' => 0, 'S' => 4, 'E' => 1, 'C' => 1,],],
-                'skill' => ['choice' => ['R' => 0, 'I' => 4, 'A' => 4, 'S' => 1, 'E' => 1, 'C' => 3,],],
-            ],
-        ];
+        /* 序列号使用记录所需数据 */
+        $response['serial_number_record_data'] = MockDataService::PrimarySplitData($data);
 
-        $response['parse_data'] = $this->parseSplitResult($temp_data);
+        /* 对接收的数据进行清洗 */
+        $response['parse_data'] = $this->splitResult($data);
+
+        /* 数据二次进行分析计算出各个维度的总值 */
+        $this->parseSplitResult($response['parse_data']);
 
         /* 计算维度数值 */
         $this->parseDimensionDegreeResult($response['parse_data']);
 
+        /* MBTI报告所需数据 */
+        $mbti_info = $mbtiCategoryRepository->findByMbtiShortCode($response['parse_data']['mbti']['name']);
+        $response['parse_data']['mbti']['mbti_category_id'] = isset($mbti_info['id']) ? $mbti_info['id'] : 0;
+
+        /* 生成霍兰德职业代码 */
+        $this->getHuollandProfessionalCode($response['parse_data']['holland']);
+
+        /* 分析学科爱好 */
+        $this->parseSubjectScale($data, $response['parse_data']['holland']);
+
+        /* 作答选择以及分析结果 */
+        $response['answers'] = json_encode($response, JSON_UNESCAPED_UNICODE);
+
         return $response;
+    }
+
+    /**
+     * 报告查看页面总调用方法
+     *
+     * @param $data
+     * @param $HollandProfessionalRepository
+     */
+    public function handleReportData(&$data, $HollandProfessionalRepository)
+    {
+        $data['answer'] = json_decode($data['answer']);
+        $data['professions'] = $HollandProfessionalRepository->findByName($data['holland_name']);
+        $data['professional_category'] = $this->sortProfessional($data['subject_scale'], $data['professions']);
+        $data['professional_subject'] = $this->hollandProfession;
+    }
+
+    /**
+     * 对专业根据科目喜好进行排序
+     *
+     * @param $subject_scale
+     * @param $profession
+     * @return array
+     */
+    private function sortProfessional($subject_scale, $profession)
+    {
+        $professional_category = [];
+        $professional_category_id = [];
+        foreach ($subject_scale as $key => $value) {
+            $this->hollandProfession[$key] = [];
+        }
+        //每个学科默认推荐4个.不够的后边补充
+        //总共展示20个专业,每个专业显示4个.
+        foreach ($profession as $key => $value) {
+
+            if ($value['subject'] == 1 && count($this->hollandProfession['chinese']) < 4) {
+                $this->hollandProfession['chinese'][] = $value;
+            }
+            if ($value['subject'] == 2 && count($this->hollandProfession['math']) < 4) {
+                $this->hollandProfession['math'][] = $value;
+            }
+            if ($value['subject'] == 3 && count($this->hollandProfession['english']) < 4) {
+                $this->hollandProfession['english'][] = $value;
+            }
+            if ($value['subject'] == 4 && count($this->hollandProfession['physics']) < 4) {
+                $this->hollandProfession['physics'][] = $value;
+            }
+            if ($value['subject'] == 5 && count($this->hollandProfession['chemistry']) < 4) {
+                $this->hollandProfession['chemistry'][] = $value;
+            }
+            if ($value['subject'] == 6 && count($this->hollandProfession['biology']) < 4) {
+                $this->hollandProfession['biology'][] = $value;
+            }
+            if ($value['subject'] == 7 && count($this->hollandProfession['history']) < 4) {
+                $this->hollandProfession['history'][] = $value;
+            }
+            if ($value['subject'] == 8 && count($this->hollandProfession['politics']) < 4) {
+                $this->hollandProfession['politics'][] = $value;
+            }
+            if ($value['subject'] == 9 && count($this->hollandProfession['geography']) < 4) {
+                $this->hollandProfession['geography'][] = $value;
+            }
+        }
+        $profession = $this->hollandProfession;
+
+        foreach ($profession as $key => $value) {
+            if (is_array($value)) {
+                foreach ($value as $k => $v) {
+                    if (! in_array($v['professionals']['parent_id'], $professional_category_id)) {
+                        $professional_category_id[] = $v['professionals']['parent_id'];
+                        $professional_category[] = Major::where('id', $v['professionals']['parent_id'])->first();
+                    }
+                }
+            }
+        }
+
+        return $professional_category;
     }
 
     /**
@@ -370,19 +156,19 @@ class MbtiSeniorLogicService
             if (stristr($key, 'mbti')) {
                 $response['mbti']['choice'][] = $value;
             } elseif (stristr($key, 'hobby')) {
-                $response['holland']['hobby']['choice'] = $value;
+                $response['holland']['hobby']['choice'][] = $value;
             } elseif (stristr($key, 'good')) {
-                $response['holland']['good']['choice'] = $value;
+                $response['holland']['good']['choice'][] = $value;
             } elseif (stristr($key, 'like')) {
-                $response['holland']['like']['choice'] = $value;
+                $response['holland']['like']['choice'][] = $value;
             } elseif (stristr($key, 'ability')) {
-                $response['holland']['ability']['choice'] = $value;
+                $response['holland']['ability']['choice'][substr($key, 8, 1)] = $value;
             } elseif (stristr($key, 'skill')) {
-                $response['holland']['skill']['choice'] = $value;
+                $response['holland']['skill']['choice'][substr($key, 6, 1)] = $value;
             }
         }
 
-        return $this->parseSplitResult($response);
+        return $response;
     }
 
     /**
@@ -398,6 +184,7 @@ class MbtiSeniorLogicService
                 $data[$key]['result'] = array_count_values($value['choice']);
             } else {
                 foreach ($value as $k => $v) {
+                    $v['choice'] = array_replace($v['choice'], array_fill_keys(array_keys($v['choice'], null), ''));
                     switch ($k) {
                         case 'hobby':
                             $result = array_count_values($v['choice']);
@@ -487,14 +274,120 @@ class MbtiSeniorLogicService
         $holland = $data['holland'];
 
         foreach ($holland as $key => $value) {
-            $scale['R'] += $value['result']['R'];
-            $scale['I'] += $value['result']['I'];
-            $scale['A'] += $value['result']['A'];
-            $scale['S'] += $value['result']['S'];
-            $scale['E'] += $value['result']['E'];
-            $scale['C'] += $value['result']['C'];
+            $scale['R'] += isset($value['result']['R']) ? $value['result']['R'] : 0;
+            $scale['I'] += isset($value['result']['I']) ? $value['result']['I'] : 0;
+            $scale['A'] += isset($value['result']['A']) ? $value['result']['A'] : 0;
+            $scale['S'] += isset($value['result']['S']) ? $value['result']['S'] : 0;
+            $scale['E'] += isset($value['result']['E']) ? $value['result']['E'] : 0;
+            $scale['C'] += isset($value['result']['C']) ? $value['result']['C'] : 0;
         }
         $data['holland']['scale'] = $scale;
+
+        return $data;
+    }
+
+    /**
+     * 按照维度重新进行排序
+     *
+     * @param $data
+     * @return array
+     */
+    private function rewriteScale($data)
+    {
+        return [
+            'R' => $data['R'],
+            'I' => $data['I'],
+            'A' => $data['A'],
+            'S' => $data['S'],
+            'E' => $data['E'],
+            'C' => $data['C'],
+        ];
+    }
+
+    /**
+     * 根绝数值的大小获取霍兰德的最终职业代码
+     *
+     * @param $arr
+     * @return mixed
+     */
+    public function getHollandName($arr)
+    {
+        for ($i = 0; $i < 3; $i++) {
+            $item = array_search(max($arr), $arr);
+            unset($arr[$item]);
+            $this->hollandProfessionCode .= $item;
+        }
+
+        return $this->hollandProfessionCode;
+    }
+
+    /**
+     * 分析出霍兰德职业代码
+     *
+     * @param $data
+     * @return mixed
+     */
+    private function getHuollandProfessionalCode(&$data)
+    {
+        //分析出维度最高的3个数值  数值相同的话权重比例为:R>I>A>S>E>C
+        $scale = $this->rewriteScale($data['scale']);
+        $data['professional_code'] = $this->getHollandName($scale);
+
+        return $data;
+    }
+
+    /**
+     * 分析出各科目的对比比例
+     *
+     * @param $origin_data
+     * @param $data
+     * @return mixed
+     */
+    private function parseSubjectScale($origin_data, &$data)
+    {
+        $chinese = $math = $english = $physics = $chemistry = $biology = $history = $politics = $geography = 0;
+        foreach ($origin_data as $key => $value) {
+
+            if (($key == 'like_C_291' && $value != '') || ($key == 'like_C_293' && $value != '') || ($key == 'like_C_294' && $value != '') || ($key == 'like_C_295' && $value != '') || ($key == 'like_C_296' && $value != '') || ($key == 'like_C_297' && $value != '') || ($key == 'like_C_299' && $value != '')) {
+                $math++;
+            }
+            if (($key == 'hobby_A_148' && $value != '') || ($key == 'hobby_A_149' && $value != '') || ($key == 'hobby_C_171' && $value != '') || ($key == 'good_A_205' && $value != '') || ($key == 'good_C_231' && $value != '') || ($key == 'good_C_233' && $value != '') || ($key == 'like_A_267' && $value != '')) {
+                $chinese++;
+            }
+            if (($key == 'hobby_C_178' && $value != '') || ($key == 'good_I_200' && $value != '') || ($key == 'good_S_211' && $value != '') || ($key == 'good_S_213' && $value != '') || ($key == 'good_E_223' && $value != '') || ($key == 'good_C_232' && $value != '') || ($key == 'good_C_235' && $value != '')) {
+                $english++;
+            }
+            if (($key == 'hobby_R_130' && $value != '') || ($key == 'hobby_I_137' && $value != '') || ($key == 'good_R_182' && $value != '') || ($key == 'good_R_190' && $value != '') || ($key == 'like_R_248' && $value != '') || ($key == 'like_I_251' && $value != '') || ($key == 'ability_R_301' && $value != '')) {
+                $physics++;
+            }
+            if (($key == 'hobby_I_135' && $value != '') || ($key == 'hobby_I_138' && $value != '') || ($key == 'good_I_193' && $value != '') || ($key == 'like_I_256' && $value != '') || ($key == 'like_I_258' && $value != '') || ($key == 'like_R_247' && $value != '') || ($key == 'ability_I_302' && $value != '')) {
+                $chemistry++;
+            }
+            if (($key == 'hobby_I_133' && $value != '') || ($key == 'hobby_I_140' && $value != '') || ($key == 'good_I_192' && $value != '') || ($key == 'good_I_195' && $value != '') || ($key == 'like_R_242' && $value != '') || ($key == 'like_I_252' && $value != '') || ($key == 'like_I_255' && $value != '')) {
+                $biology++;
+            }
+            if (($key == 'hobby_R_122' && $value != '') || ($key == 'good_R_184' && $value != '') || ($key == 'good_R_189' && $value != '') || ($key == 'like_R_249' && $value != '') || ($key == 'like_R_250' && $value != '') || ($key == 'like_S_272' && $value != '') || ($key == 'like_C_298' && $value != '')) {
+                $history++;
+            }
+            if (($key == 'hobby_R_129' && $value != '') || ($key == 'hobby_E_161' && $value != '') || ($key == 'hobby_E_163' && $value != '') || ($key == 'hobby_E_169' && $value != '') || ($key == 'good_E_229' && $value != '') || ($key == 'like_I_252' && $value != '') || ($key == 'skill_I_308' && $value != '')) {
+                $politics++;
+            }
+            if (($key == 'hobby_R_125' && $value != '') || ($key == 'hobby_I_131' && $value != '') || ($key == 'hobby_I_139' && $value != '') || ($key == 'good_R_183' && $value != '') || ($key == 'good_R_188' && $value != '') || ($key == 'good_I_196' && $value != '') || ($key == 'like_I_260' && $value != '')) {
+                $geography++;
+            }
+        }
+        /* 如果某个科目都没有选择,为了显示数据更加合理,默认最低值为10.0 */
+        $data['subject_scale']['chinese'] = ceil($chinese / 7 * 100) > 10 ? ceil($chinese / 7 * 100) : 10.0;
+        $data['subject_scale']['math'] = ceil($math / 7 * 100) > 10 ? ceil($math / 7 * 100) : 10.0;
+        $data['subject_scale']['english'] = ceil($english / 7 * 100) > 10 ? ceil($english / 7 * 100) : 10.0;
+        $data['subject_scale']['physics'] = ceil($physics / 7 * 100) > 10 ? ceil($physics / 7 * 100) : 10.0;
+        $data['subject_scale']['chemistry'] = ceil($chemistry / 7 * 100) > 10 ? ceil($chemistry / 7 * 100) : 10.0;
+        $data['subject_scale']['biology'] = ceil($biology / 7 * 100) > 10 ? ceil($biology / 7 * 100) : 10.0;
+        $data['subject_scale']['history'] = ceil($history / 7 * 100) > 10 ? ceil($history / 7 * 100) : 10.0;
+        $data['subject_scale']['politics'] = ceil($politics / 7 * 100) > 10 ? ceil($politics / 7 * 100) : 10.0;
+        $data['subject_scale']['geography'] = ceil($geography / 7 * 100) > 10 ? ceil($geography / 7 * 100) : 10.0;
+        /* 保留键值进行排序 */
+        arsort($data['subject_scale']);
 
         return $data;
     }

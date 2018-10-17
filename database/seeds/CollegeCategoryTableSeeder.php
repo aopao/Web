@@ -14,7 +14,7 @@ class CollegeCategoryTableSeeder extends Seeder
     public function run()
     {
         $collegeCategory = new CollegeCategory();
-        $college_category = JsonToArrayService::getJson('college_category.json');
+        $college_category = JsonToArrayService::getJson('college_categories.json');
         $collegeCategory->addAll($college_category);
     }
 }
