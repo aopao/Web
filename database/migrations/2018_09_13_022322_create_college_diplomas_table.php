@@ -15,8 +15,8 @@ class CreateCollegeDiplomasTable extends Migration
     {
         Schema::create('college_diplomas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('diplomas_name', 50)->index();
-            $table->string('diplomas_description')->nullable();
+            $table->string('name', 50)->index();
+            $table->string('description')->nullable();
             $table->timestamps();
         });
     }

@@ -2,19 +2,13 @@
 
 namespace App\Http\Controllers\Assessment;
 
+use App\Models\Batch;
 use App\Models\City;
 use App\Models\College;
 use App\Models\HollandDimension;
-use App\Models\HollandProfessional;
 use App\Models\HollandProfessionalCode;
-use App\Models\NewProfessional;
-use App\Models\NewProfessionalDetail;
-use App\Models\Professional;
-use App\Models\ProfessionalBachelorRealtionJunior;
-use App\Models\ProfessionalCategory;
-use App\Models\ProfessionalDetail;
-use App\Models\ProfessionalOld;
-use App\Models\ProfessionalRelationSubject;
+use App\Models\Major;
+use App\Models\MajorSubject;
 use App\Models\Province;
 use App\Services\JsonToArrayService;
 use Illuminate\Http\Request;
@@ -299,7 +293,7 @@ class MbtiOurController extends Controller
 
     public function sp()
     {
-        $subject = [
+        $subject1 = [
             '1' => ['中国语言文学类', '人文科学试验班类', '新闻传播学类', '文科试验班类', '艺术学理论类', '音乐与舞蹈学类', '戏剧与影视学类', '美术学类', '设计学类'],
             '2' => ['经济学类', '财政学类', '金融学类', '经济与贸易类', '教育学类', '职业技术教育类', '数学类', '心理学类', '统计学类', '理科试验班类', '计算机类', '测绘类', '林学类'],
             '3' => ['经济学类', '财政学类', '金融学类', '经济与贸易类', '外国语言文学类', '艺术学理论类', '音乐与舞蹈学类', '戏剧与影视学类', '美术学类', '设计学类'],
@@ -340,25 +334,37 @@ class MbtiOurController extends Controller
             '9' => ['地理科学类', '海洋科学类', '地质学类'],
         ];
 
+        $subject2 = [
+            '1' => ['文学', '艺术学', '文化艺术', '新闻传播'],
+            '2' => ['经济学', '教育学', '理学', '工学', '农林牧渔', '能源动力与材料', '土木建筑', '水利', '装备制造', '电子信息', '财经商贸', '教育与体育', '公共管理与服务'],
+            '3' => ['文学', '艺术学', '经济学', '农林牧渔', '财经商贸', '文化艺术', '新闻传播', '公共管理与服务'],
+            '4' => ['理学', '工学', '能源动力与材料', '土木建筑', '水利', '装备制造', '交通运输'],
+            '5' => ['理学', '农学', '医学', '资源环境与安全', '生物与化工', '轻工纺织', '食品药品与粮食', '医药卫生'],
+            '6' => ['教育学', '农学', '医学', '资源环境与安全', '生物与化工', '轻工纺织', '食品药品与粮食', '医药卫生', '教育与体育'],
+            '7' => ['历史学'],
+            '8' => ['哲学', '法学', '公安与司法'],
+            '9' => ['旅游'],
+        ];
+
         $arr = [];
-        foreach ($subject as $key => $value) {
+        foreach ($subject1 as $key => $value) {
             foreach ($value as $k => $v) {
                 $data = [];
-                $info = Professional::where('name', $v)->first()->toArray();
+                $info = Major::where('name', $v)->first()->toArray();
                 $data['subject'] = $key;
-                $data['professional_id'] = $info['id'];
-                $data['level'] = 1;
+                $data['major_id'] = $info['id'];
+                $data['diplomas'] = $info['diplomas'];
                 $arr[] = $data;
             }
         }
-        $p = new ProfessionalRelationSubject();
+        $p = new MajorSubject();
         $p->addAll($arr);
     }
 
     public function pp()
     {
         $subject = [
-            '2' => ['农业类', '林业类', '畜牧业类', '渔业类', '汽车制造类', '房地产类', '城乡规划与管理类'],
+            '2' => ['农业类', '林业类', '畜牧业类', '渔业类', '汽车制造类', '房地产类', '城乡规划与管理类', '公共管理类'],
             '3' => ['农业类', '林业类', '畜牧业类', '渔业类', '房地产类'],
             '4' => ['资源勘查类', '地质类', '气象类', '石油与天然气类', '煤炭类', '金属与非金属矿类', '安全类', '安全类', '电力技术类', '热能与发电工程类', '新能源发电工程类', '汽车制造类', '航空装备类', '船舶与海洋工程装备类', '铁道装备类', '自动化类', '机电设备类', '机械设计制造类', '水土保持与水环境类', '水利水电设备类', '水利工程与管理类', '水文水资源类', '城乡规划与管理类'],
             '5' => ['黑色金属材料类', '有色金属材料类', '有色金属材料类', '建筑材料类', '食品药品管理类', '药品制造类', '食品工业类', '纺织服装类', '印刷类', '包装类', '轻化工类', '化工技术类'],
@@ -369,14 +375,14 @@ class MbtiOurController extends Controller
         foreach ($subject as $key => $value) {
             foreach ($value as $k => $v) {
                 $data = [];
-                $info = Professional::where('name', $v)->first()->toArray();
+                $info = Major::where('name', $v)->first()->toArray();
                 $data['subject'] = $key;
-                $data['professional_id'] = $info['id'];
-                $data['level'] = 0;
+                $data['major_id'] = $info['id'];
+                $data['diplomas'] = 0;
                 $arr[] = $data;
             }
         }
-        $p = new ProfessionalRelationSubject();
+        $p = new MajorSubject();
         $p->addAll($arr);
     }
 
@@ -391,5 +397,16 @@ class MbtiOurController extends Controller
                 $college->where('id', $value['id'])->update(['city_id' => $city['id']]);
             }
         }
+    }
+
+    public function orm()
+    {
+        //Batch::create([
+        //    "batch_name" => "哈哈",
+        //]);
+        $info = Batch::whereBatchName("哈哈")->first();
+        print ($info->getBatchDescription());
+        print ($info->batch_description);
+        dd($info);
     }
 }

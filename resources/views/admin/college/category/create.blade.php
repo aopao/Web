@@ -10,13 +10,13 @@
 							<div class="layui-form-item">
 								<label class="layui-form-label">@lang('admin/college.category_name')</label>
 								<div class="layui-input-block">
-									<input autocomplete="off" class="layui-input" lay-verify="required" name="category_name" value="" placeholder="@lang('admin/college.category_name')" type="text"/>
+									<input autocomplete="off" class="layui-input" lay-verify="required" name="name" value="" placeholder="@lang('admin/college.category_name')" type="text"/>
 								</div>
 							</div>
 							<div class="layui-form-item">
 								<label class="layui-form-label">@lang('admin/college.category_description')</label>
 								<div class="layui-input-block">
-									<input autocomplete="off" class="layui-input" name="category_description" value="" placeholder="@lang('admin/college.category_description')" type="text"/>
+									<input autocomplete="off" class="layui-input" name="description" value="" placeholder="@lang('admin/college.category_description')" type="text"/>
 								</div>
 							</div>
 							<div class="layui-form-item" style="text-align: center">

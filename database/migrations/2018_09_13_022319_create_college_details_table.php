@@ -26,15 +26,8 @@ class CreateCollegeDetailsTable extends Migration
             $table->text('description')->nullable()->comment('简介');
             $table->text('charge_standard')->nullable()->comment('收费标准');
             $table->text('job_prospect')->nullable()->comment('就业前景');
-            $table->string('zid', 255)->nullable()->comment('云志愿页面id');
-            $table->string('employment_report', 255)->nullable()->comment('就业报告');
-            $table->text('majors')->nullable()->comment('专业');
             $table->string('male_rate', 20)->nullable()->comment('男生比例');
             $table->string('female_rate', 20)->nullable()->comment('女生比例');
-            $table->text('univPics')->nullable()->comment('学校景观');
-            $table->text('keyMajorVOList')->nullable()->comment('重点专业');
-            $table->text('evaluates')->nullable()->comment('大学评价');
-            $table->text('catalog')->nullable()->comment('招生章程');
 
             $table->timestamps();
         });

@@ -14,6 +14,10 @@ return [
     */
 
     'assessment_prefix' => env('ASSESSMENT_PREFIX', "assessment"),
+    'assessment_mbti_prefix' => env('MBTI_PREFIX', "mbti"),
+    'assessment_holland_prefix' => env('HOLLAND_PREFIX', "holland"),
+    'assessment_major_choice_prefix' => env('HOLLAND_PREFIX', "major/choice"),
+
     'cookie_primary_report_prefix' => env('COOKIE_PRIMARY_REPORT_PREFIX', "primary_report"),
     'cookie_senior_report_prefix' => env('COOKIE_SENIOR_REPORT_PREFIX', "senior_report"),
     'reprot_parse_time' => env('REPORT_PARSE_TIME', 9),

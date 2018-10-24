@@ -20,7 +20,6 @@ class CreateSerialNumberRecordsTable extends Migration
             $table->string('mobile')->default(0)->index()->comment('测试手机号');
             $table->string('username')->default(0)->comment('测试手机号');
             $table->string('assessment_type')->default(0)->comment('测试类型');
-            $table->string('report_id')->default(0)->comment('报告ID');
             $table->text('answers')->comment('作答记录');
             $table->timestamps();
         });

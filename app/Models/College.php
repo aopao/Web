@@ -29,7 +29,7 @@ class College extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function CollegeDetail()
+    public function collegeDetail()
     {
         return $this->hasOne('App\Models\CollegeDetail');
     }
@@ -39,7 +39,7 @@ class College extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function CollegeBatch()
+    public function collegeBatch()
     {
         return $this->hasMany('App\Models\CollegeBatch');
     }
@@ -49,9 +49,9 @@ class College extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function CollegeCategory()
+    public function collegeCategory()
     {
-        return $this->belongsTo('App\Models\CollegeCategory');
+        return $this->belongsTo('App\Models\CollegeCategory', 'category_id');
     }
 
     /**
@@ -59,9 +59,9 @@ class College extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function CollegeLevel()
+    public function collegeDiplomas()
     {
-        return $this->belongsTo('App\Models\CollegeLevel');
+        return $this->belongsTo('App\Models\CollegeDiplomas', 'diplomas_id');
     }
 
     /**

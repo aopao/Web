@@ -30,13 +30,13 @@
 												</a>
 											</li>
 											<li class="layui-col-xs3">
-												<a lay-href="{{ route('admin.college.level.index') }}">
+												<a lay-href="{{ route('admin.college.diplomas.index') }}">
 													<i class="layui-icon layui-icon-chat"></i>
 													<cite>@lang('admin/dashboard.college_level_list')</cite>
 												</a>
 											</li>
 											<li class="layui-col-xs3">
-												<a lay-href="{{ route('admin.professional.index') }}">
+												<a lay-href="{{ route('admin.major.index') }}">
 													<i class="layui-icon layui-icon-read"></i>
 													<cite>@lang('admin/dashboard.professional_list')</cite>
 												</a>

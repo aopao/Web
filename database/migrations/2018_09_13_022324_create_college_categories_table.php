@@ -15,8 +15,8 @@ class CreateCollegeCategoriesTable extends Migration
     {
         Schema::create('college_categories', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('category_name', 50)->index();
-            $table->string('category_description')->nullable();
+            $table->string('name', 50)->index();
+            $table->string('description')->nullable();
             $table->timestamps();
         });
     }

@@ -11,66 +11,19 @@ namespace App\Services;
 Class  MockDataService
 {
     /**
-     * 将本站需要的数据剥离出来
+     * 将需要的数据剥离出来
      *
      * @param $data
      * @return array
      */
-    public static function PrimarySplitData(&$data)
+    public static function parseData($data)
     {
-        $private_data['serial_number_id'] = array_pull($data, 'serial_number_id');
-        $private_data['serial_number'] = array_pull($data, 'serial_number');
-        $private_data['mobile'] = array_pull($data, 'mobile');
-        $private_data['username'] = array_pull($data, 'username');
-        $private_data['_token'] = array_pull($data, '_token');
+        $serial_data['serial_number_id'] = array_pull($data, 'serial_number_id');
+        $serial_data['serial_number'] = array_pull($data, 'serial_number');
+        $serial_data['mobile'] = array_pull($data, 'mobile');
+        $serial_data['username'] = array_pull($data, 'username');
+        $serial_data['_token'] = array_pull($data, '_token');
 
-        return $private_data;
-    }
-
-    /**
-     * 生成 初级APi接口中所需的模拟数据
-     *
-     * @return array
-     */
-    public static function mockPrimaryApiData()
-    {
-        $randChineseNameService = new RandChineseNameService();
-        $randEmailService = new RandEmailService();
-
-        return [
-            'test_name' => $randChineseNameService->getName(2),
-            'test_email' => $randEmailService->get_email(),
-            'feishi' => ceil(rand(10, 25)),
-            'hr_email' => $randEmailService->get_email(),
-            'host' => '',
-            'zyfou' => 'yes',
-            'code' => '',
-            'tishu' => 93,
-            'sex' => 'female',
-        ];
-    }
-
-    /**
-     * 生成 高级APi接口中所需的模拟数据
-     *
-     * @return array
-     */
-    public static function mockSeniorApiData()
-    {
-        $randChineseNameService = new RandChineseNameService();
-        $randEmailService = new RandEmailService();
-
-        return [
-            'shijiancha' => date('Y-m-d H:i:s', strtotime("-15 minute")),
-            'test_name' => $randChineseNameService->getName(2),
-            'test_email' => $randEmailService->get_email(),
-            'feishi' => ceil(rand(10, 25)),
-            'hr_id' => $randEmailService->get_email(),
-            'host' => '',
-            'code' => '',
-            'zhifuemail' => '',
-            'bzy_id' => '',
-            'id' => '',
-        ];
+        return $serial_data;
     }
 }

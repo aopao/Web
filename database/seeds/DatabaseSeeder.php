@@ -14,7 +14,6 @@ class DatabaseSeeder extends Seeder
         $this->call(AdminTableSeeder::class);
         $this->call(AgentTableSeeder::class);
         $this->call(StudentTableSeeder::class);
-        $this->call(MbtiPrimaryIusseTableSeeder::class);
         $this->call(MbtiSeniorIusseTableSeeder::class);
         $this->call(MbtiCategoryTableSeeder::class);
         $this->call(HollandMajorTableSeeder::class);
@@ -29,5 +28,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CollegeCategoryTableSeeder::class);
         $this->call(CollegeTableSeeder::class);
         $this->call(CollegeDetailsTableSeeder::class);
+        $this->call(CollegeAlumnisTableSeeder::class);
+        $this->call(CollegeSceneryTableSeeder::class);
     }
 }

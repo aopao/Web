@@ -6,7 +6,7 @@ class CollegeCategory extends Model
 {
     protected $table = 'college_categories';
 
-    protected $fillable = ['category_name', 'category_description'];
+    protected $fillable = ['name', 'description'];
 
-    protected $hidden = ['category_description'];
+    protected $hidden = ['description'];
 }

@@ -24,7 +24,7 @@ class CollegeCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'category_name' => 'required',
+            'name' => 'required',
         ];
     }
 
@@ -36,7 +36,7 @@ class CollegeCategoryRequest extends FormRequest
     public function messages()
     {
         return [
-            'category_name.required' => '大学类型名称必填',
+            'name.required' => '大学类型名称必填',
         ];
     }
 }

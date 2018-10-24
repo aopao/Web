@@ -42,7 +42,7 @@ return [
     'college_name' => '名称',
     'college_english_name' => '英文名称',
     'college_rank' => '排行',
-    'college_level_id' => '层次',
+    'college_diplomas_id' => '层次',
     'college_category_id' => '类型',
     'college_attribute' => '属性',
     'is_belong_to_edu' => '是否是教育部直属',

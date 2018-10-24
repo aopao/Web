@@ -997,18 +997,15 @@ div.mainbox {
         transform: rotateY(360deg);
     }
 }
-
 @keyframes arrow-spin {
     50% {
         -webkit-transform: rotateY(360deg);
         transform: rotateY(360deg);
     }
 }
-
 .tem_div1 {
     display: none;
 }
-
 .loading {
     color: #2e3b4e;
     text-align: center;
@@ -1050,7 +1047,6 @@ div.mainbox {
     margin-top: 40px;
     font-size: 0;
 }
-
 .settings > div a {
     display: inline-block;
     padding: 10px 40px;
@@ -1059,7 +1055,6 @@ div.mainbox {
     color: #2cb7fd;
     text-decoration: none;
 }
-
 .settings > div a:first-child {
     margin-right: 20px;
     color: #fff;
@@ -1152,6 +1147,9 @@ div.mainbox {
 .w82{
     width: 82px;
 }
+.advantage_wrap, .introduce_wrap{
+    margin: 30px 0;
+}
 .describe_box_left{
     width: 200px;
     padding: 6px 4px;
@@ -1197,7 +1195,7 @@ div.mainbox {
     font-size: 26px;
     font-weight: normal;
 }
-.post_box p{
+.afterword p{
     text-indent: 0;
 }
 .describe_box_left>p{
@@ -1210,11 +1208,55 @@ div.mainbox {
 .describe_box_left>p:nth-of-type(2){
     margin-bottom: 10px;
 }
-
-
-
 @media (max-width:767px) {
-  .report_box p{
-    line-height: 36px;
-  }
+    /*collect*/
+    .w395{
+        width: 90%;
+    }
+    /*issue*/
+    div.numbox{
+        left: 0;
+        right: 0;
+        top: -20px;
+    }
+    .progress_t{
+        padding-left: 60px;
+    }
+    span.num1{
+        font-size: 30px;
+    }
+    span.num{
+        font-size: 20px;
+    }
+    .mainbox_w.ptbn{
+        width: 90%;
+    }
+    .template_box.Wspan .template_span{
+        width: 100%;
+    }
+    /*report*/
+    .chart_box table td:first-child{
+        vertical-align: top;
+        width: 15%;
+    }
+    .chart_box table td:last-child{
+        vertical-align: bottom;
+        width: 15%;
+    }
+    .w82 {
+        width: 16%;
+    }
+    .w50 {
+        width: 8%;
+    }
+    .report_box p{
+        line-height: 28px;
+        padding: 0 8px;
+    }
+    .chart_box table, .describe_box_right{
+        width: 100%;
+    }
+    .describe_box_left{
+        margin-right: 16px;
+    }
 }

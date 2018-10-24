@@ -1,41 +1,41 @@
 [
   {
-    "category_name": "综合类"
+    "name": "综合类"
   },
   {
-    "category_name": "财经类"
+    "name": "财经类"
   },
   {
-    "category_name": "农林类"
+    "name": "农林类"
   },
   {
-    "category_name": "理工类"
+    "name": "理工类"
   },
   {
-    "category_name": "师范类"
+    "name": "师范类"
   },
   {
-    "category_name": "民族类"
+    "name": "民族类"
   },
   {
-    "category_name": "体育类"
+    "name": "体育类"
   },
   {
-    "category_name": "语言类"
+    "name": "语言类"
   },
   {
-    "category_name": "艺术类"
+    "name": "艺术类"
   },
   {
-    "category_name": "政法类"
+    "name": "政法类"
   },
   {
-    "category_name": "军事类"
+    "name": "军事类"
   },
   {
-    "category_name": "医药类"
+    "name": "医药类"
   },
   {
-    "category_name": "其他"
+    "name": "其他"
   }
 ]

@@ -16,7 +16,7 @@
 							<div class="layui-form" style="display:inline">
 								<div class="layui-inline">
 									<div class="layui-input-inline">
-										<input type="text" name="college_name" id="college_name" value="" placeholder="@lang('admin/college.input_college_name')" autocomplete="off" class="layui-input">
+										<input type="text" name="name" id="name" value="" placeholder="@lang('admin/college.input_college_name')" autocomplete="off" class="layui-input">
 									</div>
 								</div>
 								<div class="layui-inline">
@@ -58,6 +58,16 @@
 							<span class="layui-badge layui-bg-orange">@lang('admin/college.nation')</span>
 							@{{#  } }}
 						</script>
+						<script type="text/html" id="diplomasTpl">
+							@{{# if(d.college_diplomas != null && d.college_diplomas.hasOwnProperty("name") ){ }}
+							@{{ d.college_diplomas.name }}
+							@{{#  } }}
+						</script>
+						<script type="text/html" id="categoryTpl">
+							@{{# if(d.college_category != null && d.college_category.hasOwnProperty("name") ){ }}
+							@{{ d.college_category.name }}
+							@{{#  } }}
+						</script>
 					</div>
 				</div>
 			</div>
@@ -90,11 +100,11 @@
                     , cols: [[
                         {type: 'checkbox', fixed: 'left'}
                         , {field: 'id', title: 'ID', width: 80, sort: true, fixed: 'left'}
-                        , {field: 'college_name', title: '@lang('admin/college.college_name')'}
-                        , {field: 'college_level_id', title: '@lang('admin/college.college_level_id')', templet: '<div>@{{d.college_level.level_name ||" "}}  </div>'}
-                        , {field: 'college_code', align: "center", title: '@lang('admin/college.college_code')', templet: '<div>@{{d.college_detail.college_code||" "}}  </div>'}
-                        , {field: 'province_id', align: "center", title: '@lang('admin/college.province_id')', templet: '<div>@{{d.province.province_name||" "}}  </div>'}
-                        , {field: 'college_category_id', align: "center", title: '@lang('admin/college.college_category_id')', templet: '<div>@{{d.college_category.category_name ||" "}}  </div>'}
+                        , {field: 'name', title: '@lang('admin/college.college_name')'}
+                        , {field: 'diplomas_id', title: '@lang('admin/college.college_diplomas_id')', templet: '#diplomasTpl'}
+                        , {field: 'code', title: '@lang('admin/college.college_code')', templet: '<div>@{{d.code||" "}}  </div>'}
+                        , {field: 'province_id',  title: '@lang('admin/college.province_id')', templet: '<div>@{{d.province.province_name||" "}}  </div>'}
+                        , {field: 'college_category_id',  title: '@lang('admin/college.college_category_id')', templet: '#categoryTpl'}
                         , {field: 'college_attribute', align: "center", sort: true, title: '@lang('admin/college.college_attribute')', templet: '#college_attribute'}
                         , {align: 'center', width: 200, title: '@lang('comment/table.action')', fixed: 'right', toolbar: '#collegeListOperate'}
                     ]]
@@ -104,8 +114,8 @@
             //表单监听
             form.on('select(province)', function (data) {
                 CollegeListUrl = '{{ route('admin.college.page') }}';
-                let college_name = $('#college_name').val()
-                CollegeListUrl = CollegeListUrl + '?college_name=' + college_name + '&province_id=' + data.value;
+                let name = $('#name').val()
+                CollegeListUrl = CollegeListUrl + '?name=' + name + '&province_id=' + data.value;
                 render();
             });
 
@@ -154,9 +164,9 @@
                 }
                 , Search: function () {
                     CollegeListUrl = '{{ route('admin.college.page') }}';
-                    let college_name = $('#college_name').val()
+                    let name = $('#name').val()
                     let province_id = $('#province_id').val()
-                    CollegeListUrl = CollegeListUrl + '?college_name=' + college_name + '&province_id=' + province_id;
+                    CollegeListUrl = CollegeListUrl + '?name=' + name + '&province_id=' + province_id;
                     render()
                 }
             };

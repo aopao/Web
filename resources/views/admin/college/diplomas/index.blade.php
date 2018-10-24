@@ -44,7 +44,7 @@
                 , limit: '{{ config("admin.per_page") }}'
                 , cols: [[
                     {field: 'id', title: 'ID', width: 80, sort: true, fixed: true}
-                    , {field: 'diplomas_name', title: '@lang('admin/college.diplomas_name')'}
+                    , {field: 'name', title: '@lang('admin/college.diplomas_name')'}
                     , {field: 'created_at', width: 200, title: '@lang('comment/table.created_at')', sort: true}
                     , {align: 'center', width: 200, title: '@lang('comment/table.action')', fixed: 'right', toolbar: '#CollegeDiplomasListOperate'}
                 ]]

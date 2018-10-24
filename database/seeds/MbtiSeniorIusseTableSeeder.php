@@ -14,8 +14,8 @@ class MbtiSeniorIusseTableSeeder extends Seeder
      */
     public function run()
     {
-        $mbti_senior_issue = new MbtiSeniorIssue();
+        $mbti_senior_issue_model = new MbtiSeniorIssue();
         $issue = JsonToArrayService::getJson('mbti_senior_issues.json');
-        $mbti_senior_issue->addAll($issue);
+        $mbti_senior_issue_model->addAll($issue);
     }
 }

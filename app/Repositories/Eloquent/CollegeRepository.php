@@ -44,31 +44,6 @@ class CollegeRepository extends Repository
     }
 
     /**
-     * 获取所有大学总数
-     *
-     * @param $request
-     * @return mixed
-     */
-    public function getAllCount($request)
-    {
-        $province_id = $request->get('province_id');
-        $college_name = $request->get('college_name');
-        $sql = $this->model;
-        if ($province_id || $college_name) {
-            if ($province_id) {
-                $sql = $sql->where('province_id', $province_id);
-            }
-            if ($college_name) {
-                $sql = $sql->where('college_name', 'like', '%'.$college_name.'%');
-            }
-
-            return $sql->count();
-        } else {
-            return $this->model->count();
-        }
-    }
-
-    /**
      * 根据省份 ID 获取省内大学总数
      *
      * @param $province_id
@@ -77,6 +52,31 @@ class CollegeRepository extends Repository
     public function getAllCountByProvinceId($province_id)
     {
         return $this->model->where('province_id', $province_id)->count();
+    }
+
+    /**
+     * 获取所有大学总数
+     *
+     * @param $request
+     * @return mixed
+     */
+    public function getAllCount($request)
+    {
+        $province_id = $request->get('province_id');
+        $name = $request->get('name');
+        $sql = $this->model;
+        if ($province_id || $name) {
+            if ($province_id) {
+                $sql = $sql->where('province_id', $province_id);
+            }
+            if ($name) {
+                $sql = $sql->where('name', 'like', '%'.$name.'%');
+            }
+
+            return $sql->count();
+        } else {
+            return $this->model->count();
+        }
     }
 
     /**
@@ -92,20 +92,20 @@ class CollegeRepository extends Repository
         $offset = $page * $limit;
 
         $province_id = $request->get('province_id');
-        $college_name = $request->get('college_name');
+        $name = $request->get('name');
 
         $sql = $this->model->skip($offset)->limit($limit)
             ->with('province:id,province_name')
-            ->with('CollegeDetail:college_id,id,college_code')
-            ->with('CollegeCategory:id,category_name')
-            ->with('CollegeLevel:id,level_name')
+            ->with('collegeDetail:college_id,id')
+            ->with('collegeCategory:id,name')
+            ->with('collegeDiplomas:id,name')
             ->orderBy('province_id', 'asc');
-        if ($province_id || $college_name) {
+        if ($province_id || $name) {
             if ($province_id) {
                 $sql = $sql->where('province_id', $province_id);
             }
-            if ($college_name) {
-                $sql = $sql->where('college_name', 'like', '%'.$college_name.'%');
+            if ($name) {
+                $sql = $sql->where('name', 'like', '%'.$name.'%');
             }
 
             return $sql->get();

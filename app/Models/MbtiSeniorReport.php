@@ -2,38 +2,24 @@
 
 namespace App\Models;
 
-class MbtiSeniorReport extends Model
+class MbtiPrimaryReport extends Model
 {
     protected $table = 'mbti_senior_reports';
 
     protected $fillable = [
         'mobile',
-        'username',
         'serial_number',
         'mbti_name',
         'mbti_category_id',
-        'mbti_e',
-        'mbti_i',
-        'mbti_s',
-        'mbti_n',
-        'mbti_t',
-        'mbti_f',
-        'mbti_j',
-        'mbti_p',
-        'holland_name',
-        'holland_r',
-        'holland_i',
-        'holland_a',
-        'holland_s',
-        'holland_e',
-        'holland_c',
-        'subject_scale',
+        'e',
+        'i',
+        's',
+        'n',
+        't',
+        'f',
+        'j',
+        'p',
         'answer',
-    ];
-
-    protected $casts = [
-        'subject_scale' => 'Array',
-        'answer' => 'Array',
     ];
 
     /**

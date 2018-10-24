@@ -24,7 +24,7 @@ class CollegeDiplomasRequest extends FormRequest
     public function rules()
     {
         return [
-            'diplomas_name' => 'required',
+            'name' => 'required',
         ];
     }
 
@@ -36,7 +36,7 @@ class CollegeDiplomasRequest extends FormRequest
     public function messages()
     {
         return [
-            'diplomas_name.required' => '大学文凭名称必填',
+            'name.required' => '大学文凭名称必填',
         ];
     }
 }
