@@ -23,6 +23,5 @@ $api->version('v1', ['middleware' => 'api.throttle', 'limit' => 500, 'expires' =
     $api->get('/get/provinces/', ['as' => 'region.provinces', 'uses' => 'App\Api\V1\Controllers\RegionController@getAllProvinces']);
     $api->get('/get/province/{id}/', ['as' => 'region.province.cities', 'uses' => 'App\Api\V1\Controllers\RegionController@getAllCityByProvinceId']);
     $api->get('/get/city/{id}/', ['as' => 'region.cities', 'uses' => 'App\Api\V1\Controllers\RegionController@getAllAreaByCityId']);
-
     $api->get('/get/province/control/score/{province_id}/{subject}', ['as' => 'province.control.score.subject', 'uses' => 'App\Api\V1\Controllers\ProvinceControlScore@parseSubjectCharsByProvinceId']);
 });

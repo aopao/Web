@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 测评模块管理路由
  * User: jason
@@ -48,11 +49,19 @@ Route::namespace('Assessment')->prefix(ASSESSMENT_PREFIX)->group(function () {
     Route::namespace('MajorChoice')->prefix(ASSESSMENT_MAJOR_CHOICE_PREFIX)->group(function () {
 
         /* 高级评测[霍兰德+MBTI] */
-        Route::get('/senior/', 'SeniorController@index')->name('assessment.senior');
-        Route::get('/senior/{serial_number}', 'SeniorController@show')->name('assessment.senior.show');
-        Route::post('/senior/issue', 'SeniorController@issue')->name('assessment.senior.issue');
-        Route::post('/senior/collect', 'SeniorController@collect')->name('assessment.senior.collect');
-        Route::post('/senior/report', 'SeniorController@report')->name('assessment.senior.report');
+        Route::get('/senior/', 'SeniorController@index')->name('assessment.major.senior');
+        Route::get('/senior/{serial_number}', 'SeniorController@show')->name('assessment.major.senior.show');
+        Route::post('/senior/issue', 'SeniorController@issue')->name('assessment.major.senior.issue');
+        Route::post('/senior/collect', 'SeniorController@collect')->name('assessment.major.senior.collect');
+        Route::post('/senior/report', 'SeniorController@report')->name('assessment.major.senior.report');
+        
+        /* 简单评测[霍兰德+MBTI] */
+        Route::get('/primary/', 'PrimaryController@index')->name('assessment.major.primary');
+        Route::get('/primary/{serial_number}', 'PrimaryController@show')->name('assessment.major.primary.show');
+        Route::post('/primary/issue', 'PrimaryController@issue')->name('assessment.major.primary.issue');
+        Route::post('/primary/collect', 'PrimaryController@collect')->name('assessment.major.primary.collect');
+        Route::post('/primary/report', 'PrimaryController@report')->name('assessment.major.primary.report');
+
     });
 
     /* 初级评测 */
@@ -67,8 +76,8 @@ Route::namespace('Assessment')->prefix(ASSESSMENT_PREFIX)->group(function () {
     Route::get('/sp/', 'MbtiOurController@sp')->name('assessment.sp');
     Route::get('/pp/', 'MbtiOurController@pp')->name('assessment.pp');
     Route::get('/cpp/', 'MbtiOurController@cpp')->name('assessment.cpp');
-    Route::get('/orm/', 'MbtiOurController@orm')->name('assessment.orm
-    ');
+    Route::get('/orm/', 'MbtiOurController@orm')->name('assessment.orm');
+    Route::get('/bnyc/', 'MbtiOurController@bnyc')->name('assessment.bnyc');
 });
 
 Route::namespace('Assessment')->prefix(ASSESSMENT_PREFIX)->middleware('StudentAuth:student')->group(function () {

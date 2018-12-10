@@ -1,0 +1,456 @@
+*{margin: 0;padding: 0;list-style: none;}
+/** 清除内外边距 **/
+body{ width: 100%;  overflow-x: hidden; color: #606566; }
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ { margin: 0; padding: 0;}
+/** 设置默认字体 **/
+/*body{width: 10rem;}*/
+body,button, input, select, textarea  { font: 16px/1.5 'Micorsoft YaHei', '微软雅黑', MSYH, \5b8b\4f53, sans-serif, ZZGFLQ;}
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+/*small { font-size: 12px; }  小于 12px 的中文很难阅读，让 small 正常化 */
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+/** 重置文本格式元素 **/
+a, a:link, a:visited{ text-decoration: none; color: #606566;}
+a:hover{ text-decoration: none !important; color: #57bc4c; transition-duration: .2s; -webkit-transition-duration: .2s; -o-transition-duration: .2s; -moz-transition-duration: .2s;}
+/** 重置表单元素 **/
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea { font-size: 100%; outline:none;border:none; background:none;} /* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+/*图片边框*/
+img{border: 0;}
+i{ font-style: normal;}
+
+/*头部*/
+
+.bg{
+	background: #fbfbfb;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
+.top{
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+}
+.top_right{
+	text-align: right;
+}
+.top span{
+	padding: 0 10px;
+}
+
+/*左侧导航*/
+
+.navBar{
+	background: #ffffff;
+}
+.navBar li>a span{
+	font-size: 12px;
+	padding-left: 26px;
+}
+.navBar li>ul{
+	display: none;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+	background-color: #fbfbfb;
+    border-left: 6px solid #57bc4c;
+}
+.userLeft{
+    background: #fff;
+    box-sizing: border-box;
+    min-height: 960px;
+  /*  border: 1px solid #e6e6e6;*/
+    border-top: none;
+}
+.bg .row{
+    border: 1px solid #e6e6e6;
+    -webkit-box-shadow:0px 0px 60px rgba(51,51,51,0.16);
+    -moz-box-shadow:0px 0px 60px rgba(51,51,51,0.16);
+    -ms-box-shadow:0px 0px 60px rgba(51,51,51,0.16);
+    -o-box-shadow:0px 0px 60px rgba(51,51,51,0.16);
+    box-shadow: 0px 0px 60px rgba(51,51,51,0.16);
+}
+.navBar a{
+	display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f8f8f8;
+    padding: 0 0 0 20px!important;
+    font-size: 13px;
+    position: relative;
+}
+.fa-sort-down:before, .fa-sort-desc:before{
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+}
+.nav a.active {
+    color: #57bc4c;
+    border-left: 6px solid #57bc4c;
+}
+.userPhoto{
+    margin-bottom: 30px;
+}
+.userPhotoWrap{
+	text-align: center;
+}
+.userPhoto img {
+    margin: 10px auto;
+    border: 5px solid #e6e6e6;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+}
+.userPhoto dd {
+    padding: 5px 20px;
+    font-size: 14px;
+}
+.userPhoto a{
+	color: #57bc4c;
+}
+.userRight {
+    min-height: 960px;
+    box-sizing: border-box;
+   /* padding: 0 15px;*/
+    background: #ffffff;
+}
+.userRight h2{
+    height: 54px;
+    line-height: 54px;
+    margin: 0 0 18px;
+    color: #333;
+    font-size: 18px;
+    border-bottom: 1px solid #c6d7eb;
+}
+.userRight h3 .leftBorder {
+    border-left: 4px solid #57bc4c;
+    padding-left: 10px;
+}
+.userRight form label{
+	width: 110px;
+    vertical-align: middle;
+    color: #606566;
+    font-weight: normal;
+}
+.userRight form li{
+	margin-bottom: 15px;
+    font-size: 15px;
+    color: #333;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 12px;
+}
+.userRight form li:last-child{
+	border-bottom: none;
+}
+.userRight form li .text{
+	border: 1px solid #ccc;
+    width: 230px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 5px;
+    color: #666;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.userRight .submit{
+	width: 100px;
+    height: 33px;
+    line-height: 33px;
+    border: none 0;
+    background-color: #57bc4c;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    margin: 10px 0 0 115px;
+    cursor: pointer;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.userRight .submit1{
+    margin: 0 auto;
+    display: block;
+}
+.userRight form input[type=checkbox], input[type=radio]{
+	margin-right: 5px;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    line-height: 1.3;
+}
+
+/*成绩信息*/
+
+.userTable{
+	text-align: center;
+}
+.userTable th, .userTable td{
+	font-size: 14px;
+}
+.userTable th{
+	text-align: center;
+}
+.userTable input{
+	width: 34px;
+    padding: 3px 2px;
+    margin: 0 1px;
+    border: 1px solid #c1c1c1;
+    color: #595959;
+    font-size: 12px;
+    line-height: 18px;
+}
+.w79{
+	width: 76px!important;
+}
+.userTable .table-bordered>thead>tr>td, .userTable .table-bordered>thead>tr>th{
+	border-bottom-width: 0;
+}
+
+/*职业测评*/
+
+.ceping_table td, .ceping_table th{
+    font-size: 14px;
+    text-align: center;
+}
+.ceping_table td a:hover{
+    color: #57bc4c;
+}
+.basicInfo{
+    margin-bottom: 26px;
+}
+.basicInfo select{
+    border: 1px solid #ccc;
+    color: #666;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+}
+#userInfo h3{
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #57bc4c;
+}
+
+/*账户安全*/
+
+.userPhotoInfo a,
+.U_mySituation .description p a,
+.U_mySituation .accountSafe dd a{
+    color:#57bc4c;
+}
+.userPhotoInfo a:hover,
+.U_mySituation .description p a:hover,
+.U_mySituation .accountSafe dd a:hover{
+    text-decoration:underline;
+}
+.userPhotoInfo .darkGray{
+    color:#333;
+}
+.U_mySituation .description,.U_myMember .description{
+    position:relative;
+    padding:3px 0 3px 28px;
+    margin-top:20px;
+}
+.U_mySituation .description .desIco,.U_myMember .description .infoIco{
+    width:29px;height:30px;
+    position:absolute;top:-1px;left:0;
+}
+.U_mySituation .description .desIco{
+    background-position:-31px -1916px;
+}
+.U_myMember .description .infoIco{
+    background-position:0 -1010px;
+}
+.U_mySituation .description p,.U_myMember .description p{
+    height:24px;line-height: 24px;
+    background-color:#fbfbfb;
+    padding:0 20px 0 10px;
+/*  -moz-border-top-right-radius:20px;
+    -moz-border-bottom-right-radius:20px;
+    -webkit-border-top-right-radius:20px;
+    -webkit-border-bottom-right-radius:20px;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;*/
+}
+.U_mySituation .description .orange,
+.U_mySituation .accountSafe dd .orange{
+    color:#57bc4c;
+}
+.U_mySituation .studyStat{
+    text-align:right;
+}
+.U_mySituation .studyStat .linkTime{
+    border:1px solid #dfdfdf;
+    width:70px;height:25px;line-height: 25px;
+    text-align:center;color:#333;
+}
+.U_mySituation .studyStat .linkTime:hover{
+    background-color:#96ca16;color:#fff;
+}
+.U_mySituation .DropTime{
+    width:150px;height:25px;line-height: 25px;
+    text-align:center;
+    border:1px solid #c6d7eb;
+    color:#5591d0;
+    padding-right:20px;
+    position:relative;
+    cursor:pointer;
+    *z-index:19;
+}
+.U_mySituation .DropTime .arrow{
+    position:absolute;top:8px;right:7px;
+    width:0;height:0;line-height: 0;font-size:0;overflow:hidden;
+    border-width:7px 7px 0 7px;
+    border-style:solid dashed dashed dashed;
+    border-color:#5591d0 transparent transparent transparent;
+}
+.U_mySituation .DropTime .uiSelect{
+    position: absolute;top:25px;left:-1px;
+    width:170px;
+    border:1px solid #c6d7eb;
+    display:none;
+    z-index:20;
+}
+.U_mySituation .DropTime a{
+    display:block;
+    width:100%;color:#666;
+}
+.U_mySituation .DropTime a:hover{
+    background-color: #c6d7eb;
+}
+.U_mySituation .accountSafe dl{
+    line-height:25px;
+    margin:0 auto;
+    max-width:660px;
+    min-height:240px;
+    height:auto !important;
+    height:240px;
+    font-size: 14px;
+    color: #606566;
+}
+.U_mySituation .accountSafe .bar{
+    height:11px;overflow: hidden;
+    width:400px;
+    background-color:#ecebeb;
+}
+.U_mySituation .accountSafe .bar span{
+    height:11px;line-height: 11px;
+    display: block;
+}
+.U_mySituation .accountSafe .bar .safegreen,
+.U_mySituation .accountSafe .checksafe{
+    background-color:#57bc4c;
+}
+.U_mySituation .accountSafe .bar .nosafered{
+    background-color:#f60;
+}
+.U_mySituation .accountSafe .bar .nosafeYellow{
+    background-color:#57bc4c;
+}
+.U_mySituation .accountSafe .safe{
+    line-height: 25px;
+    font-size:14px;
+    color: #606566;
+    max-width: 660px;
+    margin: 20px auto;
+}
+.U_mySituation .accountSafe .score{
+    font-size:16px;
+}
+.U_mySituation .accountSafe .scoreSafe{
+    color:#96ca16;
+}
+.U_mySituation .accountSafe .scorenoSafe{
+    color:#f60;
+}
+.U_mySituation .accountSafe .scoreYellowSafe{
+    color:#57bc4c;
+}
+.U_mySituation .accountSafe .check{
+    font-size:14px;
+    color:#fff;
+    line-height: 25px;
+    height:25px;
+    padding:0px 10px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+.U_mySituation .accountSafe dd .stateIco{
+    width:18px;height:18px;
+    vertical-align: middle;
+    margin-right:10px;
+}
+.U_mySituation .accountSafe dd .warn{
+    background-position: -42px -1874px;
+}
+.U_mySituation .accountSafe dd .nowarn{
+    background-position: -42px -1895px;
+}
+.U_mySituation .accountSafe dd .orange{
+    _display:inline;
+}
+.U_mySituation .accountSafe  .checkimg{
+    text-align:center;
+}
+.inline-block{
+    display:inline-block;*zoom:1;*display:inline;
+}
+#checkResult dd{
+    margin-bottom: 20px;
+}
+#checkResult dd span{
+    color: #57bc4c;
+}
+#checkResult dd:nth-of-type(-n+4){
+    background: url(../img/tanhao.jpg) no-repeat left center;
+    background-size: 15px 15px;
+}
+#checkResult dd:nth-of-type(n+5){
+    background: url(../img/true.jpg) no-repeat left center;
+    background-size: 15px 15px;
+}
+#unsafe{
+    margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+    .userLeft.col-md-3{
+        width: 23%;
+        margin-right: 2%;
+    }
+}
+@media (max-width:768px){
+    .userLeft{
+    	min-height: auto;
+    	margin-bottom: 20px;
+    }
+    .basicInfo select{
+        display: block;
+        margin-bottom: 15px;
+    }
+    .U_mySituation .accountSafe dl, .U_mySituation .accountSafe .safe, .U_mySituation .accountSafe .bar{
+        width: 100%;
+        margin: 0 auto;
+    }
+    #unsafe{
+        margin: 20px auto;
+    }
+}

@@ -24,4 +24,8 @@ Route::namespace('Student')->prefix(STUDENT_PREFIX)->middleware('StudentAuth:stu
     Route::get('', 'DashboardController@index');
     Route::get('dashboard', 'DashboardController@index')->name('student.dashboard');
     Route::post('logout', 'LoginController@logout')->name('student.logout');
+
+    Route::get('score/collection', 'ScoreController@collection')->name('student.score');
+    Route::post('score/collection', 'ScoreController@collection');
+    Route::get('score/show', 'ScoreController@parse_score')->name('student.score.show');
 });

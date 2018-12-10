@@ -81,7 +81,7 @@ class SerialNumberController extends ApiController
 
     public function export()
     {
-        return 111;
+        return "111";
     }
 
     public function doexport(SerialNumberRepository $serialNumberRepository)

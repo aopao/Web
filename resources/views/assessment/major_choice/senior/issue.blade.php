@@ -1,6 +1,6 @@
 @include('assessment.comment.header')
 
-<form id="question" action="{{ route('assessment.senior.report') }}" method="post">
+<form id="question" action="{{ route('assessment.major.senior.report') }}" method="post">
 	{{ csrf_field() }}
 	<input type="hidden" name="serial_number_id" value="{{ $data['serial_number_id'] }}">
 	<input type="hidden" name="serial_number" value="{{ $data['serial_number'] }}">

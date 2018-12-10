@@ -14,7 +14,6 @@ use Faker\Generator as Faker;
 */
 
 $factory->define(App\Models\Student::class, function (Faker $faker) {
-
     return [
         'mobile' => '18678199937',
         'password' => 'admin',

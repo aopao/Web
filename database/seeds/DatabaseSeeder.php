@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(MajorTableSeeder::class);
         $this->call(MajorSubjectTableSeeder::class);
         $this->call(MajorBachelorJuniorTableSeeder::class);
+        $this->call(MajorChoiceSeniorIusseTableSeeder::class);
         $this->call(MajorDetailTableSeeder::class);
         $this->call(CollegeDiplomasTableSeeder::class);
         $this->call(CollegeCategoryTableSeeder::class);
@@ -30,5 +31,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CollegeDetailsTableSeeder::class);
         $this->call(CollegeAlumnisTableSeeder::class);
         $this->call(CollegeSceneryTableSeeder::class);
+        $this->call(CollegeScoreTableSeeder::class);
     }
 }

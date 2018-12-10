@@ -8,7 +8,7 @@
 <body>
 <div class="bg">
 	<div class="wel">@lang('assessment/comment.slog_name')</div>
-	<form method="post" action="{{ route('assessment.senior.collect') }}" autocomplete="off">
+	<form method="post" action="{{ route('assessment.major.senior.collect') }}" autocomplete="off">
 		<div class="user">
 			<div id="yonghu" style="">@lang('assessment/senior.professional')</div>
 			<input id="textfield" maxlength="25" name="textfield" readonly="true" size="25" type="text" value="@lang('assessment/senior.slog_name')"/>

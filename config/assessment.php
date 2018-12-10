@@ -21,7 +21,7 @@ return [
     'cookie_primary_report_prefix' => env('COOKIE_PRIMARY_REPORT_PREFIX', "primary_report"),
     'cookie_senior_report_prefix' => env('COOKIE_SENIOR_REPORT_PREFIX', "senior_report"),
     'reprot_parse_time' => env('REPORT_PARSE_TIME', 9),
-    //'subject' => ['chinese' => 1, 'math' => 2, 'english' => 3, 'physics' => 4, 'chemistry' => 5, 'biology' => 6, 'history' => 7, 'politics' => 8, 'geography' => 9],
+    'subject_raw' => ['chinese' => 1, 'math' => 2, 'english' => 3, 'physics' => 4, 'chemistry' => 5, 'biology' => 6, 'history' => 7, 'politics' => 8, 'geography' => 9],
     'subject' => [
         '1' => 'chinese',
         '2' => 'math',

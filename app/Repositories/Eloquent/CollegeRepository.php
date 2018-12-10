@@ -40,7 +40,7 @@ class CollegeRepository extends Repository
      */
     public function getAll()
     {
-        return $this->model->get();
+        return $this->model->with("collegeDetail", "province", "collegeDiplomas", "collegeCategory", "city")->get();
     }
 
     /**

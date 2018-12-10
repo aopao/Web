@@ -1,0 +1,2365 @@
+[{
+        "college_id": "1",
+        "marjor_id": "7",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "1",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "1",
+        "marjor_id": "8",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "1",
+        "marjor_id": "6",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "1",
+        "marjor_id": "1",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "1",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "1",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "7",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "7",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "7",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "12",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "12",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "12",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "12",
+        "marjor_id": "2",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "12",
+        "marjor_id": "13",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "12",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "5",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+
+    {
+        "college_id": "5",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "5",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "5",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "10",
+        "marjor_id": "8",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "10",
+        "marjor_id": "7",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "10",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "10",
+        "marjor_id": "8",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "9",
+        "marjor_id": "8",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "9",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "9",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "9",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "9",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "9",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "9",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "9",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "9",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "9",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "9",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "21",
+        "marjor_id": "9",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "21",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "21",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "21",
+        "marjor_id": "9",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "21",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "21",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "21",
+        "marjor_id": "9",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "21",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "25",
+        "marjor_id": "4",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "25",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "25",
+        "marjor_id": "1",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "25",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "28",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "15",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "31",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "24",
+        "marjor_id": "10",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "128",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "128",
+        "marjor_id": "7",
+        "subject_id": "7"
+    },
+    {
+        "college_id": "117",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "117",
+        "marjor_id": "7",
+        "subject_id": "1"
+    }, {
+        "college_id": "117",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "117",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "117",
+        "marjor_id": "5",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "117",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "452",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "452",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "452",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "122",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "122",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "122",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "122",
+        "marjor_id": "13",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "122",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "122",
+        "marjor_id": "7",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "162",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "162",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "162",
+        "marjor_id": "4",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "162",
+        "marjor_id": "13",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "162",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "162",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "162",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "162",
+        "marjor_id": "4",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "162",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "201",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "201",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "201",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "201",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "201",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "201",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "201",
+        "marjor_id": "5",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "201",
+        "marjor_id": "3",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "220",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "220",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "201",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "34",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "34",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "34",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "34",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "34",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "194",
+        "marjor_id": "8",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "194",
+        "marjor_id": "7",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "194",
+        "marjor_id": "10",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "194",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "194",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "194",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "175",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "175",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "175",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "175",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "175",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "175",
+        "marjor_id": "4",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "175",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "172",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "172",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "172",
+        "marjor_id": "5",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "172",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "2328",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "2328",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "2328",
+        "marjor_id": "5",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "2328",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "271",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "271",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "229",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "229",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "229",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "229",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "229",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "229",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "229",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "395",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "395",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "395",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "395",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "395",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "371",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "371",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "371",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "371",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "371",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "371",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "378",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "378",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "378",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "378",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "378",
+        "marjor_id": "2",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "378",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "378",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "378",
+        "marjor_id": "13",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "522",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "522",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "522",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "522",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "522",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "522",
+        "marjor_id": "13",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "519",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "519",
+        "marjor_id": "8",
+        "subject_id": "1"
+    }, {
+        "college_id": "519",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "519",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "519",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "520",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "520",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "530",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "483",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "483",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "483",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "483",
+        "marjor_id": "7",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "483",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "469",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "469",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "469",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "469",
+        "marjor_id": "13",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "469",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "469",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "469",
+        "marjor_id": "4",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "469",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "469",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "469",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "469",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "469",
+        "marjor_id": "9",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "469",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "451",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "451",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "451",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "451",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "451",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "451",
+        "marjor_id": "13",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "529",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "529",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "293",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "293",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "293",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "293",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "293",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "293",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "6",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "6",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "435",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "435",
+        "marjor_id": "1",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "435",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "435",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "435",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "489",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "489",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "489",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "489",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "489",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "489",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "51",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "51",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "51",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "51",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "72",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "72",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "72",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "72",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "198",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "198",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "198",
+        "marjor_id": "2",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "198",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "198",
+        "marjor_id": "13",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "207",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "207",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "207",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "207",
+        "marjor_id": "4",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "207",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "207",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "416",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "416",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "416",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "416",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "416",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "416",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "416",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "372",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "372",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "372",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "372",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "372",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "380",
+        "marjor_id": "9",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "154",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "154",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "154",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "154",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "154",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "154",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "154",
+        "marjor_id": "9",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "154",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "230",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "230",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "230",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "230",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "230",
+        "marjor_id": "4",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "543",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "543",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "543",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "543",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "543",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "543",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "543",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "543",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "543",
+        "marjor_id": "9",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "543",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "13",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "221",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "221",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "221",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "221",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "222",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "222",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "222",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "222",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "222",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "222",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "222",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "237",
+        "marjor_id": "9",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "237",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "237",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "52",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "52",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "52",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "52",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "52",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "52",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "4",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "4",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "4",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "4",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "4",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "4",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "291",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "291",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "291",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "291",
+        "marjor_id": "1",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "291",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "319",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "319",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "319",
+        "marjor_id": "1",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "319",
+        "marjor_id": "6",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "319",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "319",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "532",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "532",
+        "marjor_id": "1",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "532",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "532",
+        "marjor_id": "4",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "210",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "210",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "210",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "210",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "210",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "196",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "196",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "196",
+        "marjor_id": "9",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "196",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "196",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "196",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "196",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "196",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "209",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "209",
+        "marjor_id": "4",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "209",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "209",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "449",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "449",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "449",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "449",
+        "marjor_id": "6",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "449",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "219",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "219",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "219",
+        "marjor_id": "9",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "219",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "219",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "219",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "219",
+        "marjor_id": "4",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "219",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "219",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "219",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "219",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "53",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "53",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "53",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "53",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "53",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "53",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "53",
+        "marjor_id": "4",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "53",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "195",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "195",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "450",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "450",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "450",
+        "marjor_id": "9",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "450",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "450",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "450",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "450",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "450",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "450",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "33",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "33",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "33",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "33",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "413",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "413",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "413",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "413",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "413",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "413",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "413",
+        "marjor_id": "1",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "413",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "413",
+        "marjor_id": "6",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "396",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "396",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "396",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "396",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "396",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "388",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "388",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "388",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "388",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "388",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "388",
+        "marjor_id": "1",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "388",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "50",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "50",
+        "marjor_id": "1",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "50",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "50",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "50",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "50",
+        "marjor_id": "6",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "241",
+        "marjor_id": "9",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "241",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "241",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "241",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "241",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "741",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "741",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "741",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "741",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "322",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "322",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "322",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "322",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "322",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "322",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "3",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "3",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "3",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "3",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "3",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "224",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "270",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "270",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "320",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "320",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "320",
+        "marjor_id": "10",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "320",
+        "marjor_id": "9",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "320",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "320",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "320",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "376",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "376",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "376",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "376",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "376",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "32",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "32",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "251",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "251",
+        "marjor_id": "3",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "251",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "251",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "251",
+        "marjor_id": "13",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "171",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "171",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "171",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "171",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "402",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "402",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "402",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "402",
+        "marjor_id": "7",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "402",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "2",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "4",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "218",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "217",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "217",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "217",
+        "marjor_id": "1",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "217",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "217",
+        "marjor_id": "2",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "217",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "463",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "463",
+        "marjor_id": "9",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "463",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "463",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "463",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "518",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "518",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "484",
+        "marjor_id": "3",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "484",
+        "marjor_id": "5",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "484",
+        "marjor_id": "2",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "484",
+        "marjor_id": "13",
+        "subject_id": "2"
+    },
+    {
+        "college_id": "500",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "500",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "500",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "500",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "500",
+        "marjor_id": "7",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "500",
+        "marjor_id": "8",
+        "subject_id": "1"
+    },
+    {
+        "college_id": "349",
+        "marjor_id": "6",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "349",
+        "marjor_id": "1",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "349",
+        "marjor_id": "3",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "349",
+        "marjor_id": "5",
+        "subject_id": "0"
+    },
+    {
+        "college_id": "349",
+        "marjor_id": "8",
+        "subject_id": "1"
+    }
+]

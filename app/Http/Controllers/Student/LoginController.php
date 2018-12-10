@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Student;
 
 use Auth;
-use App\Events\LoginEvent;
 use Hash;
+use App\Events\LoginEvent;
 use Jenssegers\Agent\Agent;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;

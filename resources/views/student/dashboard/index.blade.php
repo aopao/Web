@@ -1,34 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
-</head>
-<body>
-@guest('student')
-    <li><a href="{{ route('student.login') }}">Login</a></li>
-@else
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-            {{ Auth::guard('student')->user()->nickname }} <span class="caret"></span>
-        </a>
-        
-        <ul class="dropdown-menu">
-            <li>
-                <a href="{{ route('student.logout') }}"
-                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                    Logout
-                </a>
-                
-                <form id="logout-form" action="{{ route('student.logout') }}" method="POST" style="display: none;">
-                    {{ csrf_field() }}
-                </form>
-            </li>
-        </ul>
-    </li>
-@endguest
-</body>
-</html>
+@extends('student.layout.layout')
+@section('content')
+	<div class="userRight col-md-9 col-sm-9">
+		<h2><i class="fa fa-fw fa-user" aria-hidden="true"></i>用户信息</h2>
+		<form id="userInfo" action="#">
+			<h3><span class="leftBorder">基本信息</span></h3>
+			<ul class="basicInfo">
+				<li>
+					<label class="inline-block">会员账号：</label>{{ Auth::guard('student')->user()->nickname }}</li>
+				<li>
+					<label class="inline-block">手机：</label>{{ Auth::guard('student')->user()->mobile }}
+			</ul>
+		</form>
+	</div>
+	</div>
+	</div>
+@endsection()

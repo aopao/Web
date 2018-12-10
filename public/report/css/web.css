@@ -31,7 +31,10 @@ body {
   font-family: 'Roboto', sans-serif;
 
 }
-
+.pull-left { float: left; }
+.pull-right { float: right; }
+.clearfix::after{content:"";display:block;height:0;clear:both;visibility:hidden;line-height:0;}
+.clearfix{*zoom:1;}
 .wrap {
 
   max-width: 830px;
@@ -464,3 +467,51 @@ from{
 .youshi .zui p i{ color:#ff0;font-size:24px; font-style:normal; font-weight:bold;}
 .youshi .zui a{ width:200px; height:40px; line-height:40px; background:#ff0; color:#000; display:block; margin:50px auto 0; border-radius:30px; text-align:center; font-size:16px;}
 /************************************************优势***********************************************/
+
+/*优势与劣势*/
+
+.ys_r1 h4{
+  font-size: 20px;
+}
+.ys_r1 p{
+  font-size: 16px;
+  margin: 10px 0;
+}
+.ys_r1 span{
+  display:block; 
+  color:#999;
+  line-height: 28px;
+}
+
+/*基本描述*/
+
+.describe_box_left{
+    width: 200px;
+    margin-right: 30px;
+    background-color: rgba(8,49,92,0.5);
+}
+.describe_box_left>div{
+  padding: 10px 8px;
+}
+.describe_box_left img{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+.describe_box_left p, .describe_box1>p, .describe_box_right p{
+    text-indent: 0!important;
+    line-height: 20px;
+    color: #999999;
+    font-size: 14px;
+}
+.describe_box_right p{
+   line-height: 28px!important;
+}
+.describe_box1{
+    margin-top: 20px;
+}
+
+/*#canvas_1, #canvas_2, #canvas_3{
+  width: 1040px;
+  height: 450px;
+}*/

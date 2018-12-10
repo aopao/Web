@@ -38,6 +38,7 @@ Route::namespace('Admin')->prefix(ADMIN_PREFIX)->middleware('AdminAuth:admin')->
     Route::resource('college/diplomas', 'CollegeDiplomasController', ['as' => 'admin.college']);
 
     /* 大学管理路由 */
+    Route::get('college/export', 'CollegeController@export')->name('admin.college.export');
     Route::delete('college/delete', 'CollegeController@deleteByIds')->name('admin.college.delete');
     Route::get('college/page', 'CollegeController@getListByPageId')->name('admin.college.page');
     Route::resource('college', 'CollegeController', ['as' => 'admin']);

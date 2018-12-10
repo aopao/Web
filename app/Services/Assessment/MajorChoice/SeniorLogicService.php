@@ -326,6 +326,35 @@ class SeniorLogicService
         $data['subject_ratio']['history'] = ceil($history / 7 * 100) > 10 ? ceil($history / 7 * 100) : 10.0;
         $data['subject_ratio']['politics'] = ceil($politics / 7 * 100) > 10 ? ceil($politics / 7 * 100) : 10.0;
         $data['subject_ratio']['geography'] = ceil($geography / 7 * 100) > 10 ? ceil($geography / 7 * 100) : 10.0;
+
+        if ($data['subject_ratio']['chinese'] > 95) {
+            $data['subject_ratio']['chinese'] = $data['subject_ratio']['chinese'] - 10;
+        }
+        if ($data['subject_ratio']['math'] > 95) {
+            $data['subject_ratio']['math'] = $data['subject_ratio']['math'] - 10;
+        }
+        if ($data['subject_ratio']['english'] > 95) {
+            $data['subject_ratio']['english'] = $data['subject_ratio']['english'] - 10;
+        }
+        if ($data['subject_ratio']['physics'] > 95) {
+            $data['subject_ratio']['physics'] = $data['subject_ratio']['physics'] - 10;
+        }
+        if ($data['subject_ratio']['chemistry'] > 95) {
+            $data['subject_ratio']['chemistry'] = $data['subject_ratio']['chemistry'] - 10;
+        }
+        if ($data['subject_ratio']['biology'] > 95) {
+            $data['subject_ratio']['biology'] = $data['subject_ratio']['biology'] - 10;
+        }
+        if ($data['subject_ratio']['history'] > 95) {
+            $data['subject_ratio']['history'] = $data['subject_ratio']['history'] - 10;
+        }
+        if ($data['subject_ratio']['politics'] > 95) {
+            $data['subject_ratio']['politics'] = $data['subject_ratio']['politics'] - 10;
+        }
+        if ($data['subject_ratio']['geography'] > 95) {
+            $data['subject_ratio']['geography'] = $data['subject_ratio']['geography'] - 10;
+        }
+
         /* 保留键值进行排序 */
         arsort($data['subject_ratio']);
 

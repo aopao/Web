@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return redirect(route('assessment.major.senior'));
+//});
 
 //Auth::routes();
-
-//Route::get('/home', 'HomeController@index')->name('home');
+#加载前端管理模块路由
+include_once __DIR__.'/home.php';
 
 #加载后台管理模块路由
 include_once __DIR__.'/admin.php';

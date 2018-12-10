@@ -72,6 +72,7 @@ class SeniorReportRepository extends Repository
         return $data;
     }
 
+
     /**
      * 报告分页
      *

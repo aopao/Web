@@ -1,7 +1,7 @@
 @include('assessment.comment.header')
 <div class="bgf">
 	<div class="tem_div test_input">
-		<form action="{{ route('assessment.senior.issue') }}" class="form_info layui-form" method="post">
+		<form action="{{ route('assessment.major.senior.issue') }}" class="form_info layui-form" method="post">
 			<input type="hidden" name="serial_number_id" value="{{ $data['id'] }}">
 			<input type="hidden" name="serial_number" value="{{ $data['number'] }}">
 			{{ csrf_field() }}

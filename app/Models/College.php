@@ -73,4 +73,9 @@ class College extends Model
     {
         return $this->belongsTo('App\Models\Province');
     }
+
+    public function city()
+    {
+        return $this->belongsTo('App\Models\City');
+    }
 }

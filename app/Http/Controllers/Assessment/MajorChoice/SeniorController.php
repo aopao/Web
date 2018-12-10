@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Assessment\MajorChoice;
 
+use App\Models\HollandMajor;
+use App\Models\MajorSubject;
 use Cache;
 use Illuminate\Http\Request;
 use App\Http\Requests\SerialNumberSeniorRequest;
@@ -118,7 +120,24 @@ class SeniorController extends BaseController
 
         //}
         //print_r($report);
-        dd($report);
+        $data = $report['majors_subject'];
+        $num = 0;
+        foreach ($data as $key => $value) {
+            if (count($value) > 1) {
+                $num += count($value);
+            }
+        }
+        if ($num < 3) {
+            foreach ($data as $key => $value) {
+                $tag = "assessment.subject_raw".$key;
+                $subject = config($tag);
+                $info = HollandMajor::where('subject', $subject)->limit(4)->get();
+                $report['majors_subject'][$key] = $info;
+            }
+        }
+        $report['subject_ratio'] = json_decode($report['subject_ratio'], true);
+        //dd($report);
+
         return view('assessment.major_choice.senior.show', compact('report'));
     }
 
@@ -133,7 +152,7 @@ class SeniorController extends BaseController
         if (isset($data) && $data['is_invalid'] == 0) {
             return view('assessment.major_choice.senior.collect', compact('data'));
         } else {
-            return redirect(route('assessment.major_choice.senior.show', ['serial_number' => $data['number']]));
+            return redirect(route('assessment.major.senior.show', ['serial_number' => $data['number']]));
         }
     }
 

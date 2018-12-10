@@ -72,77 +72,77 @@ option[0] = {
 };
 
 
-myChart[1] = echarts.init(document.getElementById('main2'));
-option[1] = {
-	tooltip: {},
-	radar: {
-		shape: 'circle',
-		name: {
-			textStyle: {
-				color: '#fff',
-				backgroundColor: '#f00',
-				borderRadius: 3,
-				padding: [5, 7]
-			}
-		},
-		indicator: [{
-				name: '实用型',
-				max: 100
-			},
-			{
-				name: '研究型',
-				max: 100
-			},
-			{
-				name: '艺术型',
-				max: 100
-			},
-			{
-				name: '社会型',
-				max: 100
-			},
-			{
-				name: '企业型',
-				max: 100
-			},
-			{
-				name: '常规型',
-				max: 100
-			}
-		]
-	},
-	series: [{
-		name: '兴趣分析',
-		type: 'radar',
-		data: [{
-			value: [30, 50, 40, 70, 30, 80],
-			name: '兴趣分值',
-			label: {
-				normal: {
-					show: true,
-					formatter: function(params) {
-						return params.value;
-					},
-					position: 'insideBottom'
-				}
-			}
-		}],
-		areaStyle: {
-			normal: {
-				opacity: 0.9,
-				color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
-						color: '#e83f3b',
-						offset: 0
-					},
-					{
-						color: '#C23531',
-						offset: 1
-					}
-				])
-			}
-		}
-	}]
-};
+// myChart[1] = echarts.init(document.getElementById('main2'));
+// option[1] = {
+// 	tooltip: {},
+// 	radar: {
+// 		shape: 'circle',
+// 		name: {
+// 			textStyle: {
+// 				color: '#fff',
+// 				backgroundColor: '#f00',
+// 				borderRadius: 3,
+// 				padding: [5, 7]
+// 			}
+// 		},
+// 		indicator: [{
+// 				name: '实用型',
+// 				max: 100
+// 			},
+// 			{
+// 				name: '研究型',
+// 				max: 100
+// 			},
+// 			{
+// 				name: '艺术型',
+// 				max: 100
+// 			},
+// 			{
+// 				name: '社会型',
+// 				max: 100
+// 			},
+// 			{
+// 				name: '企业型',
+// 				max: 100
+// 			},
+// 			{
+// 				name: '常规型',
+// 				max: 100
+// 			}
+// 		]
+// 	},
+// 	series: [{
+// 		name: '兴趣分析',
+// 		type: 'radar',
+// 		data: [{
+// 			value: [30, 50, 40, 70, 30, 80],
+// 			name: '兴趣分值',
+// 			label: {
+// 				normal: {
+// 					show: true,
+// 					formatter: function(params) {
+// 						return params.value;
+// 					},
+// 					position: 'insideBottom'
+// 				}
+// 			}
+// 		}],
+// 		areaStyle: {
+// 			normal: {
+// 				opacity: 0.9,
+// 				color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+// 						color: '#e83f3b',
+// 						offset: 0
+// 					},
+// 					{
+// 						color: '#C23531',
+// 						offset: 1
+// 					}
+// 				])
+// 			}
+// 		}
+// 	}]
+// };
 
 myChart[2] = echarts.init(document.getElementById('main3'));
 option[2] = {

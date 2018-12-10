@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Assessment;
 use App\Models\Batch;
 use App\Models\City;
 use App\Models\College;
+use App\Models\Course;
+use App\Models\CourseList;
 use App\Models\HollandDimension;
 use App\Models\HollandProfessionalCode;
 use App\Models\Major;
@@ -408,5 +410,29 @@ class MbtiOurController extends Controller
         print ($info->getBatchDescription());
         print ($info->batch_description);
         dd($info);
+    }
+
+    public function bnyc()
+    {
+
+        $data = [];
+        $courses = Course::select('tid', 'name')->get()->toArray();
+        foreach ($courses as $key => $value) {
+            $data[$key]['Tid'] = $value['tid'];
+            $data[$key]['Name'] = $value['name'];
+            $course_lists = CourseList::select('vid', 'tid', 'category', 'title', 'm3u8')->where("tid", $value['tid'])->get()->toArray();
+            $data[$key]['Chapter'] = [];
+            foreach ($course_lists as $ke => $va) {
+                $data[$key]['Chapter'][$ke]['Category'] = $va['category'];
+                $data[$key]['Chapter'][$ke]['id'] = $va['vid'];
+                $data[$key]['Chapter'][$ke]['Lession'] = $va['title'];
+                $data[$key]['Chapter'][$ke]['M3u8'] = $va['m3u8'];
+            }
+        }
+
+        $handle = fopen("new.json", 'w');
+        fwrite($handle, json_encode($data, JSON_UNESCAPED_UNICODE));
+        fclose($handle);
+        exit();
     }
 }

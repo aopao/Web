@@ -33,7 +33,7 @@
 	<div class="tem_div tem_div1">
 		<h2 class="i_h">测评项目：@lang('assessment/primary.primary_name')</h2>
 		<p class="i_date">测评日期：{{ date('Y年m月d日',time()) }}</p>
-		<a target="_blank" href="{{ route('assessment.senior.show',['serial_number'=>$db_report['serial_number']]) }}" class="start_a">查看报告</a>
+		<a target="_blank" href="{{ route('assessment.major.senior.show',['serial_number'=>$db_report['serial_number']]) }}" class="start_a">查看报告</a>
 	</div>
 </div>
 
